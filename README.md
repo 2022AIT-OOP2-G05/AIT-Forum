@@ -33,19 +33,11 @@
 
     1. index.html を渡す
     2. /<授業名>で 詳細画面を渡す。 HTML の中身は JavaScript で描画するのでどの授業名でも同じ HTML を渡してくれれば大丈夫です。
-    3. api.py で REST API 形式で作成できるように BluePrint を登録してください。
-       BluePrint を設定すると api.py で作成する api が api/<授業名など>と api/のあとに続く REST API を作成することができるようになります。
-       参考に使ってください（https://snowsystem.net/python/flask/rest-api-blueprint/)
-    4. static フォルダと template フォルダの場所が frontend にあるので読み込めるように設定してください (https://lightgauge.net/language/python/flask-default-path-change)
-
-       <br/>
-
-  - api.py
-    <br/>
-    1. api/<授業名> method=GET で授業名に応じた output/json を渡してください。
-    2. api/ method=GET で main.json を渡してください。
-    3. api/<授業名> method=POST で 授業名に応じた入力が**JSON 形式**で渡ってくるので input/json に登録していってください。(以前入ってきた値は消さない)
-    4. 3 の続きで登録したら input/json 内のすべての値の平均値など計算して output/json に書き込んで返却してください
+    3. static フォルダと template フォルダの場所が frontend にあるので読み込めるように設定してください (https://lightgauge.net/language/python/flask-default-path-change)
+    4. api/<授業名> method=GET で授業名に応じた output/json を渡してください。
+    5. api/ method=GET で main.json を渡してください。
+    6. api/<授業名> method=POST で 授業名に応じた入力が**JSON 形式**で渡ってくるので input/json に登録していってください。(以前入ってきた値は消さない)
+    7. 3 の続きで登録したら input/json 内のすべての値の平均値など計算して output/json に書き込んで返却してください
        参考にどうぞ (https://amateur-engineer-blog.com/flask-api/)
        <br/>
 
