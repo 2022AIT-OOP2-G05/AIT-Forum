@@ -1,13 +1,12 @@
 [
   {
-    "id": "",
-    "lesson_name": "",
-    "teacher_name": "",
-    "level": "",
-    "day_of_week": "",
-    "time": "",
-    "total": "",
-    "items_path": ""
+    "id": 1,
+    "lesson_name": "obj2",
+    "teacher_name": "?",
+    "level": 4,
+    "day_of_week": "木曜日",
+    "time": "３・４限目",
+    "total": 4
   },
   {
     "id": "",
@@ -16,8 +15,7 @@
     "level": "",
     "day_of_week": "",
     "time": "",
-    "total": "",
-    "items_path": ""
+    "total": ""
   },
   {
     "id": "",
@@ -26,7 +24,6 @@
     "level": "",
     "day_of_week": "",
     "time": "",
-    "total": "",
-    "items_path": ""
+    "total": ""
   }
 ]
