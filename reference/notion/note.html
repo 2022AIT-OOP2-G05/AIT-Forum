@@ -1,0 +1,701 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>仕様</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="56685997-f405-482e-a294-4a00f1a1b0b5" class="page sans"><header><h1 class="page-title">仕様</h1></header><div class="page-body"><h1 id="6f207e8d-672a-456d-86ee-09562bebb565" class="">リファレンス</h1><hr id="5f6f3133-fd10-49d4-b7dc-9018ea392ec5"/><p id="f739b4d2-8f11-403a-9850-20ae6ca59eb4" class="">デザイン ai<div class="indented"><figure id="cd87b860-c26f-4266-a070-3956ad24529f"><a href="https://assets.adobe.com/id/urn:aaid:sc:AP:b7be42c6-7a0c-4053-ae36-b7f0c8bd86ee?view=published" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Files | Adobe Creative Cloud</div><div class="bookmark-description">Javascript Disabled Adobe Creative Cloud requires JavaScript in order to load properly. Please enable JavaScript in your browser and reload the page. JavaScript est désactivé Pour pouvoir se charger correctement, Adobe Creative Cloud requiert JavaScript. Veuillez activer JavaScript dans votre navigateur et recharger la page.</div></div><div class="bookmark-href"><img src="https://assets.adobe.com/favicon.ico" class="icon bookmark-icon"/>https://assets.adobe.com/id/urn:aaid:sc:AP:b7be42c6-7a0c-4053-ae36-b7f0c8bd86ee?view=published</div></div></a></figure></div></p><p id="36f38688-2ddd-4a52-80c5-0d4cfcd91e64" class="">ワード<div class="indented"><figure id="5d2abc58-74fb-470b-a166-c8f71e9238fd"><div class="source">https://itcait-my.sharepoint.com/:w:/g/personal/k21053kk_aitech_ac_jp/EUoNw52xw1BGspVK2dgwG9wBLrSGr7GPpp6uXmo9nUh2nQ</div></figure></div></p><p id="6cb5d605-06c8-43cf-87df-b9e6c8d0cbae" class="">
+</p><p id="cb72a329-94f1-4dd9-bc3f-3cf6499e32b3" class="">
+</p><p id="7cf89a4c-09d8-4f5b-8007-9bed16290412" class="">
+</p><h1 id="8c5f3a71-bc4b-4729-b98e-15e20825a29a" class="">作るもの</h1><hr id="bfd86e3b-a561-4707-872f-79425abcd83d"/><p id="59d6907e-c2e4-4955-83e9-68ae926461f4" class="">授業の難易度などを可視化するサイト<div class="indented"><p id="dec6f5d5-8e21-4e55-a2d7-a114a00c7f8f" class="">楽天 みんなの掲示板　を参考に</p></div></p><p id="3ca73bb3-38aa-40e0-af1d-c65831ce6ccb" class="">
+</p><p id="a016597a-ea16-4ad9-acb5-e070d5d7056d" class="">
+</p><p id="f9162033-c7c9-435e-8e70-070b19715eb5" class="">
+</p><p id="fb07bcc2-39e4-4882-a82b-0019decb9ccb" class="">
+</p><h1 id="ae1e7a63-837e-4d4e-9023-434ce3c2f9b8" class="">仕様・設計</h1><hr id="9693da1a-0338-4b2a-9e4a-8647e7a2dbfc"/><h3 id="baec4820-1485-4748-be88-82f5c83bdd8d" class="">メインページ</h3><p id="01722520-c00f-4896-a917-8a577e2826eb" class="">kk授業一覧の表示<div class="indented"><p id="62648039-129f-43f4-b2d6-70ec02605002" class="">前期と後期の2パターン</p><p id="f1653d1d-54bd-450c-932c-b7dceb5ba9a7" class="">追加は不可</p></div></p><p id="a7f7091e-b4f5-4893-87ae-4c8889770f2c" class="">ここから書く授業ごとのページへ遷移</p><p id="735baf3f-460a-4439-932a-146ca9abc77f" class="">表示するもの<div class="indented"><p id="fa6b0110-9a00-485f-a4a4-78ec38fb9055" class="">授業名</p><p id="86e766f7-6c16-4e46-9846-962fe612b5aa" class="">先生の名前</p><p id="3fb02e3f-11bf-497f-95f6-2dd73c0f2c09" class="">単位の難易度</p><p id="c4b8974e-d4f0-48ab-977d-c3b51242142b" class="">曜日</p><p id="e5cc3378-e2ff-42c7-a231-2fc5321be67b" class="">時間</p><p id="69065072-70e7-40f4-87a0-29c12fdab4a8" class="">総合評価</p></div></p><p id="d66c1e1a-3ded-4dcc-9b5c-73125180e08f" class="">
+</p><p id="20f0e2f3-8ed3-47a9-af39-9050535c8b94" class="">
+</p><p id="7d929371-b6f6-492f-9db6-b62c2a2c3199" class="">
+</p><h3 id="07311aed-b70b-4823-8612-5cd9c1ee77f4" class="">各授業ページ</h3><p id="faff3873-9047-4dfd-af88-67442fa6537e" class="">表示するもの<div class="indented"><p id="30c5daf8-fbd1-484e-88f3-c75f737ca5c8" class="">出欠をとるか</p><p id="945932b7-98e1-44b2-9f13-c90905b64148" class="">授業の名前</p><p id="0a4e3915-eef0-42a2-98e0-1ec51ac06fac" class="">先生の名前</p><p id="d95404b6-9585-48c4-9789-660c48a41630" class="">曜日</p><p id="08524cee-523b-4134-9067-36d74c4b1c89" class="">時間（何時限目か</p><p id="46d3f1d6-380f-4541-a4ad-839a15e55247" class="">単位数</p><p id="e3b1852d-e1d3-4e4a-a52e-dcd331c04e77" class="">難易度</p><p id="ae14dae3-e46d-4454-9606-78922144e402" class="">当てられるか</p><p id="a5ce24fc-a0a3-4066-ba10-985c4a321e03" class="">先生の評価（総合評価</p><p id="cf4a43cf-c441-47d7-8b19-a228b69f0d01" class="">充実度</p><p id="84ec35e4-d0bc-4eab-92bf-d6fb0b12c2d0" class="">テスト難易度</p><p id="12963d9e-879f-489c-89c1-52b6612bcc20" class="">課題難易度</p><p id="43c408a3-c9d8-417e-9ff2-fea939329b8e" class="">中間難易度</p><p id="51ef2dfa-2604-47bc-96f5-c4746a52a4d0" class="">テストの持ち込み可かどうか</p><p id="c3e4d449-58e7-4017-a084-e7d56a173726" class="">授業の総合評価</p></div></p><p id="40866b1e-d189-4b63-a3ba-02733c04e842" class="">
+</p><p id="651f5d1f-1041-49d0-8c84-c9e6403cfad4" class="">
+</p><p id="2596cd3b-bce9-461e-8ee8-6a89d3c30c3b" class="">
+</p><h3 id="09e6f2a5-67de-4e09-a340-e3c96b1cc650" class="">入力フォーム</h3><p id="b914dda0-491a-4f5c-9c97-4c4d3aff1d68" class="">表示するもの<div class="indented"><p id="d91e08af-a2bf-428d-b3cf-07380eda73ca" class="">出欠をとるか</p><p id="6773d932-f0e9-4514-88d7-9091a6098ec4" class="">難易度</p><p id="2dd3670c-24a3-4599-964d-5fba5b2fa9ec" class="">当てられるか</p><p id="6935d016-ed93-4ef1-8bc3-2a289c236c3b" class="">先生の評価（総合評価</p><p id="60850a4b-6845-44fd-92cc-98086ce7667a" class="">充実度</p><p id="463e25a4-fa8f-44da-b6a9-db7f5a59da32" class="">テスト難易度</p><p id="5c7189ba-f8cc-4750-af46-eeeb2f564877" class="">課題難易度</p><p id="c7b7e7d6-729e-4b51-bc75-22f292426508" class="">中間難易度</p><p id="c197282f-5dab-407a-86f3-04864d9a872a" class="">テストの持ち込み可かどうか</p><p id="a08c5a4b-fd62-44fb-a1fc-4f0302bd33c8" class="">授業の総合評価</p></div></p><p id="04e26b72-2f1c-49de-a54f-bb2d308b3359" class="">
+</p><p id="b5f1cee3-7d0e-4b84-8151-ede569391310" class="">
+</p><h1 id="12f8ec14-77a2-48bc-afbf-e6df011c8a14" class="">役割</h1><hr id="f263bbd0-53af-4402-a32d-9e3b31e64ae6"/><ul id="ccc8bcc8-2c2d-4e45-a775-9c6a453fcda7" class="bulleted-list"><li style="list-style-type:disc">メインページ<ul id="4a50151c-8a52-4d3e-8630-08b7e6a7d9b7" class="bulleted-list"><li style="list-style-type:circle">フロント<ul id="2b2002c2-86fa-47ac-879a-646985da0812" class="bulleted-list"><li style="list-style-type:square">html<ul id="c8e6df2d-3503-4ba0-a8a6-e208f7c007f2" class="bulleted-list"><li style="list-style-type:disc">倉橋さん</li></ul></li></ul><ul id="daa7f624-5238-435e-86f3-821e126a1879" class="bulleted-list"><li style="list-style-type:square">css<ul id="b529b386-b695-404b-901c-47378f7bf87c" class="bulleted-list"><li style="list-style-type:disc">山本</li></ul></li></ul><ul id="2abc4511-9b46-4ebf-b04a-1ce4d3a2c0e2" class="bulleted-list"><li style="list-style-type:square">js<ul id="222ac216-8c59-4b8c-846f-a99fc0297d31" class="bulleted-list"><li style="list-style-type:disc">倉橋さん</li></ul></li></ul></li></ul><ul id="0bc45e2d-2042-4c9a-87ac-db038901929b" class="bulleted-list"><li style="list-style-type:circle">バックエンド<ul id="bf899642-a09e-4159-8486-0700e43cd49e" class="bulleted-list"><li style="list-style-type:square">酒井さん</li></ul></li></ul></li></ul><ul id="1bf26b26-623d-487d-87cc-2b2b6e7f6eef" class="bulleted-list"><li style="list-style-type:disc">各授業ページ<ul id="2f79a794-10fb-4c83-9908-8105c0610db5" class="bulleted-list"><li style="list-style-type:circle">フロントエンド<ul id="6337dc8c-dda9-4adf-9877-6a4957e8feed" class="bulleted-list"><li style="list-style-type:square">html<ul id="50d003a3-9163-4707-87d3-e9dba1a6fe07" class="bulleted-list"><li style="list-style-type:disc">倉橋さん</li></ul></li></ul><ul id="569c8e2d-3f82-4987-bd7d-5d487c35163c" class="bulleted-list"><li style="list-style-type:square">css<ul id="5835ab6f-bb9a-485d-af7a-f8c93c2ef8c8" class="bulleted-list"><li style="list-style-type:disc">山本</li></ul></li></ul><ul id="4f361b23-c57d-4c21-b3eb-c03e9dfd6b96" class="bulleted-list"><li style="list-style-type:square">js<ul id="875f5d7d-d185-415e-8a5a-3975e660b9a7" class="bulleted-list"><li style="list-style-type:disc">倉橋さん</li></ul></li></ul></li></ul><ul id="ea25239d-b76c-4aa1-b85c-e4fde9446bec" class="bulleted-list"><li style="list-style-type:circle">バックエンド<ul id="81d54ef9-ea05-4114-b910-f781808ba360" class="bulleted-list"><li style="list-style-type:square">嶋田さん</li></ul></li></ul></li></ul><ul id="22d36351-5c3b-4336-b561-9c5df19eaaae" class="bulleted-list"><li style="list-style-type:disc">入力フォーム<ul id="2550e4cd-bf8d-45da-95d6-fcc60d25574d" class="bulleted-list"><li style="list-style-type:circle">フロント<ul id="0d6c8f30-20fc-4990-9770-5be33a506c22" class="bulleted-list"><li style="list-style-type:square">html<ul id="0c528fdc-8f56-4945-a9e9-251c39a4229a" class="bulleted-list"><li style="list-style-type:disc">倉橋さん</li></ul></li></ul><ul id="94f9a8e3-94b6-4b28-a90d-cd77b831f385" class="bulleted-list"><li style="list-style-type:square">css<ul id="39bd2b77-fd74-41f6-b294-9501d16ff27c" class="bulleted-list"><li style="list-style-type:disc">山本</li></ul></li></ul><ul id="54d7a98f-9996-4441-9749-e51748a45d8e" class="bulleted-list"><li style="list-style-type:square">js<ul id="9f53bbb6-3131-4f25-afbd-b7d0786818d8" class="bulleted-list"><li style="list-style-type:disc">倉橋さん</li></ul></li></ul></li></ul><ul id="362d9bc0-b5e7-4afb-9a84-49edadcab952" class="bulleted-list"><li style="list-style-type:circle">バック<ul id="9c03a7fe-c24a-4a9f-a517-6a6bef7d6700" class="bulleted-list"><li style="list-style-type:square">中村さん</li></ul><ul id="fdde5481-7b71-4219-b90e-8f77c5790bf0" class="bulleted-list"><li style="list-style-type:square">浅井さん</li></ul></li></ul></li></ul><p id="d8c6dd07-b554-41ff-ac2e-0824c0def78d" class="">
+</p><hr id="7873a73a-5abd-4939-9854-3c04e0202b09"/><p id="d777de34-2d23-4aae-851d-1db163643bd5" class="">
+</p><ul id="2f0a72a4-16cc-40ab-9090-c80763e85e79" class="toggle"><li><details open=""><summary>酒井さん</summary><p id="3ac6b589-c7cd-42f2-abef-75a5e9c9844d" class=""><a href="http://main.py">main.py</a>の基礎の作成</p><p id="748f6147-80e7-4325-a5c8-2b89ef441b3c" class="">main.pyからindex.html（メインページ）へ飛ぶ関数の作成</p><p id="a9f2e4b6-e8c2-4174-85e3-fd6bb753775c" class="">メインページのバックエンドの作成</p></details></li></ul><ul id="74ee24a9-ba37-40a5-8835-90d7c7a115ad" class="toggle"><li><details open=""><summary>やまもと</summary><p id="38ae2dd0-7427-4f26-a17c-078c9ab4a1a8" class="">デザインをaiで作成</p><p id="f708577c-5c33-4858-800e-76f795a3384c" class="">css</p></details></li></ul><ul id="d9c90896-16b2-4f84-9963-5c885101948a" class="toggle"><li><details open=""><summary>倉橋さん</summary><p id="ad5aefd9-18a0-4745-9256-9dc1a3a5210e" class="">3つのhtmlの追加及び作成</p><p id="1889a698-e8ee-4db8-9f83-e4eb376369b8" class="">3つのjsの作成</p></details></li></ul><ul id="597723e6-2a0a-4ca8-8a29-6dfb32f3b66f" class="toggle"><li><details open=""><summary>嶋田さん</summary><p id="78a3e4c7-8df4-4936-a14c-897fbbf56cdb" class="">main.pyから各授業ページへ飛ぶ関数の作成</p><p id="dca54729-3da8-485f-8c99-b84fec729a06" class="">各授業ページのバックエンド作成</p><p id="68e61484-d6f9-4f9a-ad1a-49aea2d4ead9" class="">2年の前期の授業一覧を探してくる　リスト化</p><p id="e68aeab3-a522-49db-bc46-6900b831f66e" class="">前期のjsonファイルの名前決定と、jsonの作成</p></details></li></ul><ul id="4d058b06-cd88-46f8-8778-eb1c3ccef102" class="toggle"><li><details open=""><summary>中村さん</summary><p id="720c0a51-f5de-42a7-b84d-bc2da1866459" class="">main.pyから入力フォームへ飛ぶ関数の作成</p><p id="8d59c3a5-e325-4a89-a062-30b558f2d83b" class="">下記2つの関数を実行をまとめる大元の関数</p><p id="e9b5f720-2760-42aa-89c5-e0d60957732d" class="">データを受け取って返す関数の作成</p></details></li></ul><ul id="0b076517-ae73-4b1b-a801-4b622ab9761f" class="toggle"><li><details open=""><summary>浅井さん</summary><p id="20981dbd-0db1-4149-aff5-97d44da5e645" class="">上記で受け取ったデータを元に計算して、jsonに書き込む関数の作成(main.jsonの書き換えとoutputのjsonの書き換え</p><p id="1bc13b0c-e3b8-4812-823a-5245e83364e1" class="">2年の後期の授業一覧を探してくる　リスト化</p><p id="6a480088-0213-447c-9b6b-f7051ebf7734" class="">後期のjsonファイルの名前決定と、jsonの作成</p><p id="b7605ddf-10cb-433b-ab35-e50bef1168aa" class="">
+</p></details></li></ul><p id="8795f186-bf8f-41fa-a745-b6de594b8d3a" class="">
+</p><h1 id="02538dd8-53b7-41aa-a8a0-ce741652c276" class="">TODO</h1><hr id="1ef99787-6f22-4a2e-a3be-d9e76921ece7"/><h3 id="c767fa93-d20c-4fc3-bdf2-f5151f95ded3" class="">1/6までの課題</h3><ul id="acdb5b88-b8c0-410c-afc6-c5c367e14af0" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">2年の前期の授業一覧を探してくる　リスト化</span></li></ul><ul id="aff5ba29-da14-42a7-8fa3-78849788e0a8" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">2年の後期の授業一覧を探してくる　リスト化</span></li></ul><ul id="f4d4ecfa-e509-4bcd-a3f2-46860dc70ad4" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">前期のjsonファイルの名前決定と、jsonの作成</span></li></ul><ul id="d83c0fc5-563d-4d5b-bd8d-1d4e9286009b" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">後期のjsonファイルの名前決定と、jsonの作成</span></li></ul><ul id="e5e806ae-6e21-4a1b-b49b-02b3de757317" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">main.pyの基礎の作成</span></li></ul><ul id="22a89be8-22c4-4fcd-aa95-8bf9d335a04a" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">デザインの作成(デザイン案欲しいなー</span></li></ul><ul id="60fafb41-b0d6-4cac-ab17-68e68220cc04" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">index.htmlの作成</span></li></ul><ul id="0c825eb8-c87c-4268-9c39-d4c7506b8012" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">作成授業ページのhtmlの作成</span></li></ul><ul id="62e31284-6867-4071-91fe-8b318703e11a" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">入力フォームのhtmlの作成</span></li></ul><ul id="15e5154d-d695-4222-991f-ec5149411a43" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">main.pyからindex.html（メインページ）へ飛ぶ関数の作成</span></li></ul><ul id="591e6ea4-b715-4d35-a457-520482a4175d" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">main.pyから各授業ページへ飛ぶ関数の作成</span></li></ul><ul id="7d423081-e638-4b6a-be12-29b2afac5498" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">main.pyから入力フォームへ飛ぶ関数の作成</span></li></ul><p id="993bfcf3-682c-4871-b20c-9c0237001064" class="">
+</p><h3 id="4849330f-bcda-46fe-b563-a314404f31e6" class="">1/15までの課題</h3><ul id="e5332ef8-8809-41cd-b462-810554b86a93" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">メインページのバックエンド作成</span></li></ul><ul id="60fdeafb-3a7d-45c6-924a-adaa9ed9176d" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">各授業ページのバックエンド作成</span></li></ul><ul id="01a2407e-1124-4aec-8060-fdbf8ef203b4" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">各入力フォームのバックエンド作成</span><ul id="48161c8a-a967-4cf7-8f69-742fd0822f32" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">下記2つの関数を実行をまとめる大元の関数</span></li></ul><ul id="39e98966-9735-4d7b-9655-7ad617203e21" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">データを受け取って返す関数の作成</span></li></ul><ul id="2cbb09a8-7c38-4646-9744-1d5c409ab6a7" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">上記で受け取ったデータを元に計算して、jsonに書き込む関数の作成(main.jsonの書き換えとoutputのjsonの書き換え</span></li></ul></li></ul><ul id="8d6fabdd-e032-4cfe-9e99-85b6500d5e58" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">css</span></li></ul><p id="02b843f2-72e0-41df-b863-3bd5b61c71ba" class="">
+</p><h3 id="51e0db4c-bb02-4976-b6ae-9b33eb1e261b" class="">1/22までの課題</h3><ul id="ca453c67-f4d4-4a75-9fdf-7cb0e7c97d49" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">3つのjsの作成</span></li></ul><p id="99a7bbb4-2b32-46f6-a7ff-87efb3afbb1d" class="">
+</p><p id="bd176898-3dee-4500-bed7-1be9d978475c" class="">
+</p><p id="1a754c60-2434-4d28-ad46-409f5e0d6860" class="">
+</p><p id="b5199468-41ec-40c7-9db9-3a05b07d9ed2" class="">
+</p><p id="72b9559d-46e9-4703-a595-281fdffbc96f" class="">
+</p><p id="e6a920ab-8f76-4562-8c50-4e63509eaa47" class="">
+</p><h1 id="6931a1b1-9913-413a-a375-16291d393447" class="">1/22までに仮完成！！</h1><h1 id="1a83a578-9cd5-434c-a743-835f6b364d65" class="">1/26までに完成！！</h1><p id="7c8f7550-926e-4349-a5da-56aad3beb759" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="428ac54c-ca2d-4597-a5da-962c2e98f6ed"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">授業一覧で書かないといけないこと
+
+授業の名前<p id="8ef00c25-78a8-40f4-9cfd-1270a963c877" class="">先生の名前</p><p id="fb6ac814-a885-4ac4-af39-a297e6df15c2" class="">曜日</p><p id="b2321081-c6de-4df9-9760-70784ae6a588" class="">時間（何時間目か</p><p id="1bd57d09-7fe7-4e71-a5d3-b8128ebdd306" class="">単位数</p></div></figure><p id="35d0781e-438f-4e62-9054-128348905b48" class="">
+</p><p id="5375ae4e-5263-4c2d-8c9c-635e731373f0" class="">
+</p></div></article></body></html>
