@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.DS_Store
+
+# css生成時の不要なファイル
+*.min.css
+*.map
