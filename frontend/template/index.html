@@ -4,7 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/aac0ed468b.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <!-- どちらを選択しているかは currentのクラスがついているかついていないかでCSSを変えてください。JavaScriptで押した方にcurrentをつけます。 -->
+          <li><a href="" class="js-current js-tab">前期</a></li>
+          <li><a href="" class="js-current js-tab">後期</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <ul>
+          <li>
+            <div>
+              <h2>---授業名---</h2>
+            </div>
+            <div>
+              <div>
+                <!-- CSSで星に変えてください checkedが入っているものが色付きの星になります。checkedは評価数によってJavaScriptで変更します。なので、checkedが歩かないかで色の判定をお願いします。 -->
+                <input
+                  type="radio"
+                  name=""
+                  id=""
+                  class="js-ratio"
+                  disabled
+                  checked
+                />
+                <input
+                  type="radio"
+                  name=""
+                  id=""
+                  class="js-ratio"
+                  disabled
+                  checked
+                />
+                <input
+                  type="radio"
+                  name=""
+                  id=""
+                  class="js-ratio"
+                  disabled
+                  checked
+                />
+                <input
+                  type="radio"
+                  name=""
+                  id=""
+                  class="js-ratio"
+                  disabled
+                  checked
+                />
+                <input type="radio" name="" id="" class="js-ratio" disabled />
+              </div>
+              <div>
+                <i class="fa-regular fa-comment"></i>
+                <span class="js-comment-number">7</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
 </html>
