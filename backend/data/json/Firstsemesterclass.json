@@ -1,37 +1,9 @@
-﻿[
+[
     {
         "lesson_name": "キャリア意識形成",
         "teacher_name": "水野　勝教",
         "day_of_week": "月",
         "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "経済基礎知識",
-        "teacher_name": "東谷　仁志",
-        "day_of_week": "木",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "プログラミング及び演習１ ",
-        "teacher_name": "河辺　義信",
-        "day_of_week": "木",
-        "time": "1,2",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "情報数学1",
-        "teacher_name": "鈴木　晋 ",
-        "day_of_week": "水",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "情報数学1",
-        "teacher_name": "中村　栄治 ",
-        "day_of_week": "水",
-        "time": "2",
         "number_of_credits": "2"
     },
     {
@@ -42,97 +14,6 @@
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "基礎数学及び演習",
-        "teacher_name": "柳井　裕道 ",
-        "day_of_week": "月",
-        "time": "5",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "組み込みシステム概論 ",
-        "teacher_name": "中條　直也 ",
-        "day_of_week": "月",
-        "time": "1",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "コンピュータリテラシ",
-        "teacher_name": "水野　勝教 ",
-        "day_of_week": "月",
-        "time": "1",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "コンピュータリテラシ ",
-        "teacher_name": "内藤　克浩 ",
-        "day_of_week": "月",
-        "time": "1",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "物理学（力学）",
-        "teacher_name": "村中　正 ",
-        "day_of_week": "木",
-        "time": "5",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "物理学（力学）",
-        "teacher_name": "高木　淳",
-        "day_of_week": "火",
-        "time": "5",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "データサイエンス基礎数理 ",
-        "teacher_name": "隅山　孝夫",
-        "day_of_week": "木",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "データサイエンス基礎数理 ",
-        "teacher_name": "遠藤　健太 ",
-        "day_of_week": "木",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "情報社会及び情報倫理 ",
-        "teacher_name": "中村　栄治",
-        "day_of_week": "月",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "キャリアデザイン１",
-        "teacher_name": "全教員 ",
-        "day_of_week": "月",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "言語理論及びコンパイラ ",
-        "teacher_name": "小野木　克明",
-        "day_of_week": "月",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "オペレーションズ・リサーチ１",
-        "teacher_name": "伊藤　雅",
-        "day_of_week": "水",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "論理回路",
-        "teacher_name": "河辺　義信 ",
-        "day_of_week": "金",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
         "lesson_name": "人工知能",
         "teacher_name": "中村　栄治",
         "day_of_week": "水",
@@ -140,42 +21,14 @@
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "微分積分１",
-        "teacher_name": "真島　一成 ",
-        "day_of_week": "木",
-        "time": "4",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "微分積分１",
-        "teacher_name": "田中　諒 ",
-        "day_of_week": "木",
-        "time": "4",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "線形代数１",
-        "teacher_name": "増本　周平 ",
-        "day_of_week": "火",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "線形代数１ ",
-        "teacher_name": "伊藤　健 ",
-        "day_of_week": "火",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "オブジェクト指向プログラミング及び演習１ ",
-        "teacher_name": "内種　岳詞 ",
+        "lesson_name": "オブジェクト指向プログラミング及び演習１",
+        "teacher_name": "内種　岳詞",
         "day_of_week": "木",
         "time": "3,4",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "コンピュータアーキテクチャ１ ",
+        "lesson_name": "コンピュータアーキテクチャ１",
         "teacher_name": "伊藤　暢浩",
         "day_of_week": "火",
         "time": "3",
@@ -190,59 +43,17 @@
     },
     {
         "lesson_name": "物理学（電磁気学）",
-        "teacher_name": "一刀　祐一 ",
+        "teacher_name": "一刀　祐一",
         "day_of_week": "月",
         "time": "2",
         "number_of_credits": "2"
     },
     {
         "lesson_name": "物理学（電磁気学）",
-        "teacher_name": "田中　優作 ",
+        "teacher_name": "田中　優作",
         "day_of_week": "月",
         "time": "2",
         "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "アルゴリズムとデータ構造 ",
-        "teacher_name": "鈴木　晋",
-        "day_of_week": "火",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "アルゴリズムとデータ構造演習 ",
-        "teacher_name": "鈴木　晋",
-        "day_of_week": "火",
-        "time": "3",
-        "number_of_credits": "1"
-    },
-    {
-        "lesson_name": "情報セキュリティ ",
-        "teacher_name": "河辺　義信",
-        "day_of_week": "水",
-        "time": "4",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "コンピュータ概論",
-        "teacher_name": "小野木　克明",
-        "day_of_week": "水",
-        "time": "1",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "ソフトウェア工学１ ",
-        "teacher_name": "佐藤　守一",
-        "day_of_week": "木",
-        "time": "5",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "ＣＧプログラミング及び演習 ",
-        "teacher_name": "石丸　緑",
-        "day_of_week": "火",
-        "time": "4,5",
-        "number_of_credits": "3"
     },
     {
         "lesson_name": "画像処理及び演習",
@@ -252,136 +63,31 @@
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "ネットワーク及び演習 ",
-        "teacher_name": "菱田　隆彰",
-        "day_of_week": "木",
-        "time": "1,2",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "マイコン制御及び演習 ",
-        "teacher_name": "伊藤　暢浩",
-        "day_of_week": "木",
-        "time": "1,2",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "データベース及び演習 ",
-        "teacher_name": "内藤　克浩",
-        "day_of_week": "月",
-        "time": "3,4",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "キャリアデザイン２ ",
-        "teacher_name": "本間　英彦",
-        "day_of_week": "月",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "キャリアデザイン２ ",
-        "teacher_name": "角田　伸彦",
-        "day_of_week": "月",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "経済基礎知識",
-        "teacher_name": "東谷　仁志 ",
-        "day_of_week": "木",
-        "time": "4",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "コンピュータリテラシ ",
-        "teacher_name": "北坂　孝幸",
-        "day_of_week": "金",
-        "time": "4,5",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "コンピュータリテラシ ",
-        "teacher_name": "水野　慎士",
-        "day_of_week": "金",
-        "time": "4,5",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "プログラミング及び演習１ ",
-        "teacher_name": "玉森　聡",
-        "day_of_week": "水",
-        "time": "3,4",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "Ｗｅｂデザイン及び演習 ",
+        "lesson_name": "Ｗｅｂデザイン及び演習",
         "teacher_name": "北坂　孝幸",
         "day_of_week": "月",
         "time": "1,2",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "画像処理及び演習 ",
+        "lesson_name": "画像処理及び演習",
         "teacher_name": "澤野　弘明",
         "day_of_week": "火",
         "time": "3,4",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "基礎数学及び演習 ",
-        "teacher_name": "柳井　裕道",
-        "day_of_week": "月",
-        "time": "5",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "データサイエンス基礎数理 ",
-        "teacher_name": "柳井　裕道",
-        "day_of_week": "水",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "データサイエンス基礎数理 ",
-        "teacher_name": "岡本　直也",
-        "day_of_week": "水",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "情報社会及び情報倫理 ",
-        "teacher_name": "中村　栄治",
-        "day_of_week": "月",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "キャリアデザイン１ ",
-        "teacher_name": "全教員 ",
-        "day_of_week": "月",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "微分積分１ ",
-        "teacher_name": "岡本　直也",
+        "lesson_name": "カラーデザイン",
+        "teacher_name": "河合　忍",
         "day_of_week": "水",
         "time": "1",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "微分積分１",
-        "teacher_name": "中村　豪 ",
+        "lesson_name": "カラーデザイン",
+        "teacher_name": "河合　忍",
         "day_of_week": "水",
-        "time": "1",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "線形代数１ ",
-        "teacher_name": "中村　豪",
-        "day_of_week": "火",
-        "time": "1",
+        "time": "2",
         "number_of_credits": "2"
     },
     {
@@ -399,56 +105,21 @@
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "ユーザインタフェース ",
+        "lesson_name": "ユーザインタフェース",
         "teacher_name": "小栗　真弥",
         "day_of_week": "火",
         "time": "2",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "ゲームプログラミング ",
-        "teacher_name": "水野　慎士",
-        "day_of_week": "火",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "メディア産業論 ",
+        "lesson_name": "メディア産業論",
         "teacher_name": "久留宮　眞",
         "day_of_week": "木",
         "time": "3",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "ＣＡＤ及び演習１",
-        "teacher_name": "日比　貴子",
-        "day_of_week": "金",
-        "time": "3,4",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "人工知能 ",
-        "teacher_name": "中村　栄治",
-        "day_of_week": "水",
-        "time": "3",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "経営学概論 ",
-        "teacher_name": "佐橋　倫一 ",
-        "day_of_week": "金",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "ベンチャービジネス論 ",
-        "teacher_name": "浦野　隆好",
-        "day_of_week": "水",
-        "time": "1",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "ＣＧコンテンツ基礎２ ",
+        "lesson_name": "ＣＧコンテンツ基礎２",
         "teacher_name": "鳥居　一平",
         "day_of_week": "木",
         "time": "1,2",
@@ -462,58 +133,9 @@
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "マルチメディア情報処理及び演習２",
-        "teacher_name": "林　一嘉",
-        "day_of_week": "木",
-        "time": "1,2",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "情報セキュリティ",
-        "teacher_name": "河辺　義信",
-        "day_of_week": "水",
-        "time": "4",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "ディジタル映像処理及び演習 ",
-        "teacher_name": "北坂　孝幸",
-        "day_of_week": "火",
-        "time": "3,4",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "ディジタル映像処理及び演習 ",
-        "teacher_name": "北坂　孝幸",
-        "day_of_week": "火",
-        "time": "3,4",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "マルチメディア情報処理及び演習１",
-        "teacher_name": "松河　剛司",
-        "day_of_week": "木",
-        "time": "3,4",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "マルチメディア情報処理及び演習１ ",
-        "teacher_name": "松河　剛司",
-        "day_of_week": "金",
-        "time": "1,2",
-        "number_of_credits": "3"
-    },
-    {
-        "lesson_name": "コンピュータネットワーク ",
+        "lesson_name": "コンピュータネットワーク",
         "teacher_name": "水野　勝教",
         "day_of_week": "金",
-        "time": "1",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "コンピュータ概論",
-        "teacher_name": "小野木　克明 ",
-        "day_of_week": "月",
         "time": "1",
         "number_of_credits": "2"
     }
