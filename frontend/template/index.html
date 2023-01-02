@@ -13,74 +13,74 @@
   <body>
     <div id="app">
       <header>
-        <nav>
-          <ul>
-            <!-- どちらを選択しているかは currentのクラスがついているかついていないかでCSSを変えてください。JavaScriptで押した方にcurrentをつけます。 -->
-            <li><a href="" class="js-current js-tab">前期</a></li>
-            <li><a href="" class="js-tab">後期</a></li>
-          </ul>
-        </nav>
+        <div>
+          <h1>アプリの名前</h1>
+        </div>
       </header>
       <main>
         <div>
-          <ul>
-            <li>
-              <a href="">
-                <div>
-                  <h2 class="js-lesson_name">---授業名---</h2>
-                </div>
-                <div>
+          <nav>
+            <ul class="js-tab">
+              <li class=""><a href="" class="js-tab__link"></a></li>
+              <li class=""><a href="" class="js-tab__link"></a></li>
+            </ul>
+          </nav>
+          <section>
+            <ul>
+              <li>
+                <a href="">
+                  <h2>授業名</h2>
                   <div>
-                    <!-- CSSで星に変えてください checkedが入っているものが色付きの星になります。checkedは評価数によってJavaScriptで変更します。なので、checkedが歩かないかで色の判定をお願いします。 -->
-                    <input
-                      type="radio"
-                      name=""
-                      id=""
-                      class="js-ratio"
-                      disabled
-                      checked
-                    />
-                    <input
-                      type="radio"
-                      name=""
-                      id=""
-                      class="js-ratio"
-                      disabled
-                      checked
-                    />
-                    <input
-                      type="radio"
-                      name=""
-                      id=""
-                      class="js-ratio"
-                      disabled
-                      checked
-                    />
-                    <input
-                      type="radio"
-                      name=""
-                      id=""
-                      class="js-ratio"
-                      disabled
-                      checked
-                    />
-                    <input
-                      type="radio"
-                      name=""
-                      id=""
-                      class="js-ratio"
-                      disabled
-                    />
+                    <p>名前 太郎</p>
+                    <p>曜日</p>
+                    <p>時間</p>
+                    <div>
+                      <!-- js-ratio-isActiveまでが星に色がついている要素です。CSSだとcheckedが入っているやつに色つきにすればよいかと -->
+                      <input
+                        type="radio"
+                        name=""
+                        id="js-ratio-className-1"
+                        class="js-ratio"
+                        checked
+                        disabled
+                      />
+                      <input
+                        type="radio"
+                        name=""
+                        class="js-ratio"
+                        id="js-ratio-className-2"
+                        checked
+                        disabled
+                      />
+                      <input
+                        type="radio"
+                        name=""
+                        class="js-ratio"
+                        id="js-ratio-className-3"
+                        checked
+                        disabled
+                      />
+                      <input
+                        type="radio"
+                        name=""
+                        class="js-ratio js-ratio-isActive"
+                        id="js-ratio-className-4"
+                        checked
+                        disabled
+                      />
+                      <input
+                        type="radio"
+                        name=""
+                        class="js-ratio"
+                        id="js-ratio-className-5"
+                        disabled
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <i class="fa-regular fa-comment"></i>
-                    <span class="js-comment_number">7</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <!-- 授業の数だけliタグが生成されます。 -->
-          </ul>
+                </a>
+              </li>
+            </ul>
+          </section>
         </div>
       </main>
     </div>
