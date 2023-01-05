@@ -1,0 +1,142 @@
+[
+    {
+        "lesson_name": "キャリア意識形成",
+        "teacher_name": "水野　勝教",
+        "day_of_week": "月",
+        "time": "3",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "コンピュータネットワーク",
+        "teacher_name": "水野　勝教",
+        "day_of_week": "水",
+        "time": "4",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "人工知能",
+        "teacher_name": "中村　栄治",
+        "day_of_week": "水",
+        "time": "3",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "オブジェクト指向プログラミング及び演習１",
+        "teacher_name": "内種　岳詞",
+        "day_of_week": "木",
+        "time": "3,4",
+        "number_of_credits": "3"
+    },
+    {
+        "lesson_name": "コンピュータアーキテクチャ１",
+        "teacher_name": "伊藤　暢浩",
+        "day_of_week": "火",
+        "time": "3",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "プロジェクト演習１",
+        "teacher_name": "伊藤　暢浩",
+        "day_of_week": "火",
+        "time": "4",
+        "number_of_credits": "1"
+    },
+    {
+        "lesson_name": "物理学（電磁気学）",
+        "teacher_name": "一刀　祐一",
+        "day_of_week": "月",
+        "time": "2",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "物理学（電磁気学）",
+        "teacher_name": "田中　優作",
+        "day_of_week": "月",
+        "time": "2",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "画像処理及び演習",
+        "teacher_name": "塚田　敏彦",
+        "day_of_week": "水",
+        "time": "1,2",
+        "number_of_credits": "3"
+    },
+    {
+        "lesson_name": "Ｗｅｂデザイン及び演習",
+        "teacher_name": "北坂　孝幸",
+        "day_of_week": "月",
+        "time": "1,2",
+        "number_of_credits": "3"
+    },
+    {
+        "lesson_name": "画像処理及び演習",
+        "teacher_name": "澤野　弘明",
+        "day_of_week": "火",
+        "time": "3,4",
+        "number_of_credits": "3"
+    },
+    {
+        "lesson_name": "カラーデザイン",
+        "teacher_name": "河合　忍",
+        "day_of_week": "水",
+        "time": "1",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "カラーデザイン",
+        "teacher_name": "河合　忍",
+        "day_of_week": "水",
+        "time": "2",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "カラーデザイン",
+        "teacher_name": "河合　忍",
+        "day_of_week": "水",
+        "time": "1",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "カラーデザイン",
+        "teacher_name": "河合　忍",
+        "day_of_week": "水",
+        "time": "2",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "ユーザインタフェース",
+        "teacher_name": "小栗　真弥",
+        "day_of_week": "火",
+        "time": "2",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "メディア産業論",
+        "teacher_name": "久留宮　眞",
+        "day_of_week": "木",
+        "time": "3",
+        "number_of_credits": "2"
+    },
+    {
+        "lesson_name": "ＣＧコンテンツ基礎２",
+        "teacher_name": "鳥居　一平",
+        "day_of_week": "木",
+        "time": "1,2",
+        "number_of_credits": "3"
+    },
+    {
+        "lesson_name": "ＣＧコンテンツ基礎２",
+        "teacher_name": "鳥居　一平",
+        "day_of_week": "水",
+        "time": "3,4",
+        "number_of_credits": "3"
+    },
+    {
+        "lesson_name": "コンピュータネットワーク",
+        "teacher_name": "水野　勝教",
+        "day_of_week": "金",
+        "time": "1",
+        "number_of_credits": "2"
+    }
+]
