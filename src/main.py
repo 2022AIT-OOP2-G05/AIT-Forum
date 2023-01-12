@@ -4,6 +4,7 @@ import json
 
 #flaskの初期化
 app = Flask(__name__)
+app.config["JSON_AS_ASCII"] = Flask
 
 @app.route('/')
 def index():
@@ -34,7 +35,7 @@ def detail():
 @app.route('/api/detail/<name>',methods=['POST'])
 def form(name = "no name"):
     
-    with open(f'./data/json/items/{name}/input/item.json') as f:
+    with open(f'src/data/json/items/{name}/input/item.json') as f:
             json_data = json.load(f)
 
     
@@ -42,10 +43,10 @@ def form(name = "no name"):
         print(request.headers['Content-Type'])
         return jsonify(res='error'), 400
 
-    data = request.get_json
+    data = request.get_json()
     json_data.append(data)
 
-    with open(f'./data/json/items/{name}/input/obj2-item.json', 'w') as f:
+    with open(f'src/data/json/items/{name}/input/item.json', 'w') as f:
         json.dump(json_data, f, indent=4)
     
     print (data)
