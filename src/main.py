@@ -10,6 +10,21 @@ def index():
 
     return render_template('index.html')
 
+
+@app.route('/api/first')
+def firstsemester():
+    with open('src/data/json/Firstsemesterclass.json') as f:
+        json_data = json.load(f)
+    print(json_data)
+    return jsonify(json_data)
+
+@app.route('/api/last')
+def lastsemester():
+    with open('src/data/json/Lateclass.json', 'r') as f:
+        json_data = json.load(f)
+    print(json_data)
+    return jsonify(json_data)
+
 @app.route('/detail')
 def detail():
    
