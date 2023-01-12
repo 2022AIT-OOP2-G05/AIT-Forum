@@ -21,6 +21,14 @@ def form(name = "no name"):
     
     with open(f'./data/json/items/{name}/input/obj2-item.json') as f:
             json_data = json.load(f)
+
+    
+    if request.headers['Content-Type'] != 'application/json':
+        print(request.headers['Content-Type'])
+        return flask.jsonify(res='error'), 400
+
+    print (request.json)
+
     return jsonify(json_data)
     
 if __name__ == "__main__":
