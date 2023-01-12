@@ -10,7 +10,6 @@ def index():
 
     return render_template('index.html')
 
-
 @app.route('/api/first')
 def firstsemester():
     with open('src/data/json/Firstsemesterclass.json') as f:
@@ -25,11 +24,6 @@ def lastsemester():
     print(json_data)
     return jsonify(json_data)
 
-@app.route('/detail')
-def detail():
-   
-    return render_template('detail.html')
-
 @app.route('/api/detail')
 @app.route('/api/detail/<name>',methods=['POST'])
 def form(name = "no name"):
@@ -37,7 +31,6 @@ def form(name = "no name"):
     with open(f'./data/json/items/{name}/input/item.json') as f:
             json_data = json.load(f)
 
-    
     if request.headers['Content-Type'] != 'application/json':
         print(request.headers['Content-Type'])
         return jsonify(res='error'), 400
@@ -58,13 +51,9 @@ def subject(subject):
 def subject_json(subject):
 
     with open('src/data/json/items/'+subject+'/output/'+subject+'.json') as f:
-    
         json_data = json.load(f)
-
 
     return jsonify(json_data)
 
-
-    
 if __name__ == "__main__":
     app.run(debug=True)
