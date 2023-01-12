@@ -43,6 +43,11 @@ def form(name = "no name"):
         return jsonify(res='error'), 400
 
     data = request.get_json
+    json_data.append(data)
+
+    with open(f'./data/json/items/{name}/input/obj2-item.json', 'w') as f:
+        json.dump(json_data, f, indent=4)
+    
     print (data)
 
     return jsonify(json_data)
