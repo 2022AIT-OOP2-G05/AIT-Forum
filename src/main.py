@@ -25,7 +25,7 @@ def form(name = "no name"):
     
     if request.headers['Content-Type'] != 'application/json':
         print(request.headers['Content-Type'])
-        return flask.jsonify(res='error'), 400
+        return jsonify(res='error'), 400
 
     print (request.json)
 
