@@ -27,13 +27,19 @@
     <!-- main-page用 -->
     <template id="main-page">
       <main>
-        <div>
+        <div id="main__inner">
           <nav class="tab">
             <ul id="tab-list"></ul>
           </nav>
-          <section><ul id="subject-list"></ul></section>
         </div>
       </main>
+    </template>
+
+    <!-- 授業個別ページを表示するエリア -->
+    <template id="subject-list">
+      <section>
+        <ul id="subject-list__inner"></ul>
+      </section>
     </template>
 
     <!-- tab用 -->
