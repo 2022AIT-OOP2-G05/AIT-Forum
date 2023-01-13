@@ -15,78 +15,54 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="app">
+    <!-- header用 -->
+    <template id="main-header">
       <header>
         <div>
           <h1>アプリの名前</h1>
         </div>
       </header>
+    </template>
+
+    <!-- main-page用 -->
+    <template id="main-page">
       <main>
         <div>
-          <nav>
-            <ul class="js-tab">
-              <li class=""><a href="" class="js-tab__link"></a></li>
-              <li class=""><a href="" class="js-tab__link"></a></li>
-            </ul>
+          <nav class="tab">
+            <ul class="tab__list"></ul>
           </nav>
-          <section>
-            <ul>
-              <li>
-                <a href="">
-                  <h2>授業名</h2>
-                  <div>
-                    <p>名前 太郎</p>
-                    <p>曜日</p>
-                    <p>時間</p>
-                    <div>
-                      <!-- js-ratio-isActiveまでが星に色がついている要素です。CSSだとcheckedが入っているやつに色つきにすればよいかと -->
-                      <input
-                        type="radio"
-                        name=""
-                        id="js-ratio-className-1"
-                        class="js-ratio"
-                        checked
-                        disabled
-                      />
-                      <input
-                        type="radio"
-                        name=""
-                        class="js-ratio"
-                        id="js-ratio-className-2"
-                        checked
-                        disabled
-                      />
-                      <input
-                        type="radio"
-                        name=""
-                        class="js-ratio"
-                        id="js-ratio-className-3"
-                        checked
-                        disabled
-                      />
-                      <input
-                        type="radio"
-                        name=""
-                        class="js-ratio js-ratio-isActive"
-                        id="js-ratio-className-4"
-                        checked
-                        disabled
-                      />
-                      <input
-                        type="radio"
-                        name=""
-                        class="js-ratio"
-                        id="js-ratio-className-5"
-                        disabled
-                      />
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </section>
+          <section><ul id="subject-list"></ul></section>
         </div>
       </main>
-    </div>
+    </template>
+
+    <!-- tab用 -->
+    <template id="tab__item">
+      <li class="tab__item">
+        <a href="" class="tab__link"></a>
+      </li>
+    </template>
+
+    <!-- 授業個別ページ遷移用 -->
+    <template id="subject-list-item">
+      <li>
+        <a href="" class="subject">
+          <h2></h2>
+          <div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div></div>
+          </div>
+        </a>
+      </li>
+    </template>
+
+    <!-- 星用 -->
+    <template id="star">
+      <input type="radio" name="" id="" class="js-ratio" />
+    </template>
+
+    <div id="app"></div>
   </body>
 </html>
