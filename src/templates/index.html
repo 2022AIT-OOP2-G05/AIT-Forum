@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       type="module"
-      src="{{ url_for('static', filename='scripts/public/main.js') }}"
+      src="{{ url_for('static', filename='scripts/dist/main.js') }}"
     ></script>
     <script
       src="https://kit.fontawesome.com/aac0ed468b.js"
@@ -29,7 +29,7 @@
       <main>
         <div>
           <nav class="tab">
-            <ul class="tab__list"></ul>
+            <ul id="tab-list"></ul>
           </nav>
           <section><ul id="subject-list"></ul></section>
         </div>
