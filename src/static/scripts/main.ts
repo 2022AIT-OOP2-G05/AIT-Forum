@@ -1,4 +1,4 @@
-import { MainPage } from "./components/main-page.js";
+import { MainPage } from "./components/mainPage/main-page.js";
 
 class Main {
   constructor() {
