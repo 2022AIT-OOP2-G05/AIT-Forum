@@ -49,11 +49,21 @@ html {
                             display: flex;
                             justify-content: flex-start;
                             .main-content-nav-content-content {
+                                position: relative;
                                 aspect-ratio: 3.75 / 1;
                                 height: $Cmain_content_nav-height;
                                 background-image: url(../image/nav-i.svg);
                                 background-position: center;
                                 background-repeat: no-repeat;
+                                .main-content-nav-content-content-border {
+                                    position: absolute;
+                                    bottom: 4px;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: 75%;
+                                    height: 1px;
+                                    background-color: black;
+                                }
                                 a {
                                     display: inline-block;
                                     width: 100%;

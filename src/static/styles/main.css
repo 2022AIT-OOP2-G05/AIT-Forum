@@ -54,11 +54,21 @@ html body .main-page .main .main-content .main-content-nav .main-content-nav-con
   justify-content: flex-start;
 }
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content {
+  position: relative;
   aspect-ratio: 3.75/1;
   height: 50px;
   background-image: url(../image/nav-i.svg);
   background-position: center;
   background-repeat: no-repeat;
+}
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content .main-content-nav-content-content-border {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 1px;
+  background-color: black;
 }
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a {
   display: inline-block;
