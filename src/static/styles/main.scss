@@ -5,5 +5,27 @@
 }
 
 html {
-    body {}
+    body {
+        .main {
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            padding-top: $Cmain-padding-top;
+            .header {
+                width: 100%;
+                height: $header-height;
+                position: fixed;
+                display: flex;
+                justify-content: center;
+                top: $Cmain-padding-top;
+                left: 0;
+                &-h1 {
+                    line-height: $header-height;
+                    width: 60%;
+                    border-bottom: 1px solid black;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
