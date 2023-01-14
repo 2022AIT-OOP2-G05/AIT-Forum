@@ -44,22 +44,26 @@
       <section>
         <h2>
           <span></span>
-          <div id="start-box"></div>
+          <div id="star-box"></div>
         </h2>
       </section>
     </template>
 
     <!-- 評価の場所 -->
     <template id="evaluation-list">
-      <section>
-        <ul id="evolution-list__inner"></ul>
-      </section>
+      <main>
+        <section>
+          <ul id="evolution-list__inner"></ul>
+        </section>
+      </main>
     </template>
 
     <!-- 評価の場所の中身 -->
     <template id="evolution-item">
-      <p></p>
-      <div id="evolution-box"></div>
+      <li>
+        <p></p>
+        <div></div>
+      </li>
     </template>
 
     <!-- 星用 -->
@@ -70,7 +74,7 @@
     <!-- %表示用 -->
 
     <template id="progress">
-      <progress></progress>
+      <progress max="100" min="0"></progress>
     </template>
 
     <div id="app"></div>
