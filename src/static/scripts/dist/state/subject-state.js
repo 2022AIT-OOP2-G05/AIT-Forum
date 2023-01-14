@@ -1,13 +1,6 @@
 import { Fetch } from "../libs/fetch.js";
+import { State } from "../models/state.js";
 import { Subject } from "../models/subject.js";
-class State {
-    constructor() {
-        this.listeners = [];
-    }
-    addListener(listenerFn) {
-        this.listeners.push(listenerFn);
-    }
-}
 export class SubjectState extends State {
     constructor() {
         super();
