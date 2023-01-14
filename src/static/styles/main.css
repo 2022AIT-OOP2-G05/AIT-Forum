@@ -76,12 +76,15 @@ html body .main-page .main .main-content .main-content-nav .main-content-nav-con
   height: 100%;
   text-decoration: none;
   color: black;
+  transition: 0.25s;
 }
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a:link,
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a :visited,
-html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a :hover,
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a :active {
   color: black;
+}
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a:hover {
+  color: lightslategray;
 }
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a .main-content-nav-content-content-text {
   line-height: 50px;

@@ -70,11 +70,14 @@ html {
                                     height: 100%;
                                     text-decoration: none;
                                     color: black;
+                                    transition: .25s;
                                     &:link,
                                      :visited,
-                                     :hover,
                                      :active {
                                         color: black;
+                                    }
+                                    &:hover {
+                                        color: lightslategray;
                                     }
                                     .main-content-nav-content-content-text {
                                         line-height: $Cmain_content_nav-height;
