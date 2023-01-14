@@ -1,15 +1,6 @@
 import { Fetch } from "../libs/fetch.js";
+import { State } from "../models/state.js";
 import { Subject } from "../models/subject.js";
-
-type Listener<T> = (items: T[]) => void;
-
-class State<T> {
-  protected listeners: Listener<T>[] = [];
-
-  addListener(listenerFn: Listener<T>) {
-    this.listeners.push(listenerFn);
-  }
-}
 
 export class SubjectState extends State<Subject> {
   private subjects: Subject[] = [];
@@ -28,10 +19,10 @@ export class SubjectState extends State<Subject> {
   }
 
   async fetchSubjects(path: string) {
-    const subjects = await Fetch.get(path);
+    const subjects: Subject[] = await Fetch.get(path);
     this.clearSubjects();
 
-    this.subjects = subjects.map((subject: any) => {
+    this.subjects = subjects.map((subject) => {
       return new Subject(
         subject.lesson_name,
         subject.teacher_name,
