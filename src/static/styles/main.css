@@ -28,6 +28,9 @@ html body .main-page .header-h1 {
   border-bottom: 1px solid black;
   text-align: center;
 }
+html body .main-page .header-h1 h1 {
+  font-weight: normal;
+}
 html body .main-page .main {
   box-sizing: border-box;
   width: 100%;
