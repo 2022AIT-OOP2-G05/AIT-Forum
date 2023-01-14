@@ -1,15 +1,19 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
 }
 
-html body .main {
+html {
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+html body .main-page {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   padding-top: 20px;
 }
-html body .main .header {
+html body .main-page .header {
   width: 100%;
   height: 50px;
   position: fixed;
@@ -18,10 +22,116 @@ html body .main .header {
   top: 20px;
   left: 0;
 }
-html body .main .header-h1 {
+html body .main-page .header-h1 {
   line-height: 50px;
   width: 60%;
   border-bottom: 1px solid black;
   text-align: center;
+}
+html body .main-page .main {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+html body .main-page .main .main-content {
+  box-sizing: border-box;
+  margin-top: 20px;
+  width: 100%;
+  height: calc(100% - 20px);
+  padding: 0 50px;
+}
+html body .main-page .main .main-content .main-content-nav {
+  width: 100%;
+  height: 50px;
+}
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content {
+  aspect-ratio: 3.75/1;
+  height: 50px;
+  background-image: url(../image/nav-i.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a .main-content-nav-content-content-text {
+  line-height: 50px;
+  font-size: 1.25rem;
+  padding-left: 10px;
+}
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content-off {
+  background-image: url(../image/nav-o.svg);
+}
+html body .main-page .main .main-content .main-content-section {
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: #E5E5E5;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul {
+  height: calc(100% - 20px);
+  width: calc(100% - 40px);
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  list-style: none;
+  overflow-y: auto;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  background-color: #F2F2F2;
+  margin: 30px;
+  padding: 30px;
+  transition: 0.25s;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content:hover {
+  background-color: #D8D8D8;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-name {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-meta {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 75px - 35px);
+  padding-top: 10px;
+  padding-left: 10px;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-rank {
+  position: relative;
+  width: 100%;
+  height: 35px;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-rank .main-content-section-ul-content-rank-content {
+  position: absolute;
+  right: 0;
+  height: 35px;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-rank .main-content-section-ul-content-rank-content input[type=radio] {
+  display: none;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-rank .main-content-section-ul-content-rank-content input[type=radio] + label {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  width: 35px;
+  background-image: url(../image/star-o.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-rank .main-content-section-ul-content-rank-content input[type=radio]:checked + label {
+  background-image: url(../image/star-i.svg);
 }
 /*# sourceMappingURL=main.css.map */

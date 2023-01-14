@@ -5,25 +5,133 @@
 }
 
 html {
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
     body {
-        .main {
+        .main-page {
             box-sizing: border-box;
             width: 100vw;
             height: 100vh;
-            padding-top: $Cmain-padding-top;
+            padding-top: $Cmain_page-padding-top;
             .header {
                 width: 100%;
                 height: $header-height;
                 position: fixed;
                 display: flex;
                 justify-content: center;
-                top: $Cmain-padding-top;
+                top: $Cmain_page-padding-top;
                 left: 0;
                 &-h1 {
                     line-height: $header-height;
                     width: 60%;
                     border-bottom: 1px solid black;
                     text-align: center;
+                }
+            }
+            .main {
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                padding-top: $header-height;
+                .main-content {
+                    box-sizing: border-box;
+                    margin-top: $Cmain_content-margin-top;
+                    width: 100%;
+                    height: calc(100% - $Cmain_content-margin-top);
+                    padding: 0 $Cmain_content-padding-LR;
+                    .main-content-nav {
+                        width: 100%;
+                        height: $Cmain_content_nav-height;
+                        .main-content-nav-content {
+                            list-style: none;
+                            display: flex;
+                            justify-content: flex-start;
+                            .main-content-nav-content-content {
+                                aspect-ratio: 3.75 / 1;
+                                height: $Cmain_content_nav-height;
+                                background-image: url(../image/nav-i.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                a {
+                                    display: inline-block;
+                                    width: 100%;
+                                    height: 100%;
+                                    .main-content-nav-content-content-text {
+                                        line-height: $Cmain_content_nav-height;
+                                        font-size: 1.25rem;
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+                            .main-content-nav-content-content-off {
+                                background-image: url(../image/nav-o.svg);
+                                // &:hover {}
+                            }
+                        }
+                    }
+                    .main-content-section {
+                        width: 100%;
+                        height: calc(100% - $Cmain_content_nav_height);
+                        background-color: #E5E5E5;
+                        .main-content-section-ul {
+                            height: calc(100% - $Cmain_content_section_ul-padding-top);
+                            width: calc(100% - ($Cmain_content_section_ul-padding-LR * 2));
+                            padding: $Cmain_content_section_ul-padding-top $Cmain_content_section_ul-padding-LR 0 $Cmain_content_section_ul-padding-LR;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            align-content: flex-start;
+                            list-style: none;
+                            overflow-y: auto;
+                            .main-content-section-ul-content {
+                                display: inline-block;
+                                width: $Cmain_content_section_ul_content-size;
+                                height: $Cmain_content_section_ul_content-size;
+                                background-color: #F2F2F2;
+                                margin: 30px;
+                                padding: 30px;
+                                transition: .25s;
+                                &:hover {
+                                    background-color: #D8D8D8;
+                                }
+                                .main-content-section-ul-content-name {
+                                    width: 100%;
+                                    height: $Cmain_content_section_ul_content_name_height;
+                                    line-height: $Cmain_content_section_ul_content_name_height;
+                                }
+                                .main-content-section-ul-content-meta {
+                                    box-sizing: border-box;
+                                    width: 100%;
+                                    height: calc(100% - $Cmain_content_section_ul_content_name_height - $Cmain_content_section_ul_content_rank_height);
+                                    padding-top: 10px;
+                                    padding-left: 10px;
+                                }
+                                .main-content-section-ul-content-rank {
+                                    position: relative;
+                                    width: 100%;
+                                    height: $Cmain_content_section_ul_content_rank_height;
+                                    .main-content-section-ul-content-rank-content {
+                                        position: absolute;
+                                        right: 0;
+                                        height: $Cmain_content_section_ul_content_rank_height;
+                                        input[type="radio"] {
+                                            display: none;
+                                        }
+                                        input[type="radio"]+label {
+                                            display: inline-block;
+                                            aspect-ratio: 1 / 1;
+                                            width: $Cmain_content_section_ul_content_rank_height;
+                                            background-image: url(../image/star-o.svg);
+                                            background-position: center;
+                                            background-repeat: no-repeat;
+                                        }
+                                        input[type="radio"]:checked+label {
+                                            background-image: url(../image/star-i.svg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
