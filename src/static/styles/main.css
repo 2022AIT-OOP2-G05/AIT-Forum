@@ -61,6 +61,13 @@ html body .main-page .main .main-content .main-content-nav .main-content-nav-con
   display: inline-block;
   width: 100%;
   height: 100%;
+  color: black;
+}
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a:link,
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a :visited,
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a :hover,
+html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a :active {
+  color: black;
 }
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a .main-content-nav-content-content-text {
   line-height: 50px;
@@ -94,6 +101,13 @@ html body .main-page .main .main-content .main-content-section .main-content-sec
   margin: 30px;
   padding: 30px;
   transition: 0.25s;
+  color: black;
+}
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content:link,
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content :visited,
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content :hover,
+html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content :active {
+  color: black;
 }
 html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content:hover {
   background-color: #D8D8D8;
