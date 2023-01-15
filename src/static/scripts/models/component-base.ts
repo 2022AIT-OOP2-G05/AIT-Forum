@@ -6,7 +6,7 @@ export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
     templateId: string,
     hostElId: string,
     insertBefore: boolean,
-    newId: string
+    newId?: string
   ) {
     this.templateEl = document.getElementById(
       templateId

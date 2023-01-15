@@ -1,5 +1,5 @@
-import { Fetch } from "../libs/fetch.js";
-import { Component } from "../models/component-base.js";
+import { Component } from "../../models/component-base.js";
+import { subjectState } from "../../state/subject-state.js";
 
 export class Tab extends Component<HTMLUListElement, HTMLUListElement> {
   constructor(private name: "first" | "last") {
@@ -17,5 +17,7 @@ export class Tab extends Component<HTMLUListElement, HTMLUListElement> {
     children.textContent = this.name === "first" ? "前期" : "後期";
   }
 
-  private clickHandler = () => {};
+  private clickHandler = () => {
+    subjectState.fetchSubjects(this.name);
+  };
 }
