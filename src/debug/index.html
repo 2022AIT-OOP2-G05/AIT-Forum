@@ -6,40 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       type="module"
-      src="{{ url_for('static', filename='scripts/public/main.js') }}"
+      src="{{ url_for('static', filename='scripts/dist/main.js') }}"
     ></script>
     <script
       src="https://kit.fontawesome.com/aac0ed468b.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="../static/styles/main.css" />
     <title>Document</title>
   </head>
+
   <body>
-    <div id="app">
-      <header>
-        <div>
+    <div id="app" class="main-page">
+      <header class="header">
+        <div class="header-h1">
           <h1>アプリの名前</h1>
         </div>
       </header>
-      <main>
-        <div>
-          <nav>
-            <ul class="js-tab">
-              <li class=""><a href="" class="js-tab__link"></a></li>
-              <li class=""><a href="" class="js-tab__link"></a></li>
+      <main class="main">
+        <div class="main-content">
+          <nav class="main-content-nav">
+            <ul class="js-tab main-content-nav-content">
+              <li class="main-content-nav-content-content">
+                <a href="" class="js-tab__link">
+                  <div class="main-content-nav-content-content-text">前期</div>
+                </a>
+                <div class="main-content-nav-content-content-border"></div>
+              </li>
+              <li
+                class="main-content-nav-content-content main-content-nav-content-content-off"
+              >
+                <a href="" class="js-tab__link">
+                  <div class="main-content-nav-content-content-text">後期</div>
+                </a>
+              </li>
             </ul>
           </nav>
-          <section>
-            <ul>
+          <section class="main-content-section">
+            <ul class="main-content-section-ul">
               <li>
-                <a href="">
-                  <h2>授業名</h2>
-                  <div>
+                <a href="" class="main-content-section-ul-content">
+                  <h2 class="main-content-section-ul-content-name">授業名</h2>
+                  <div class="main-content-section-ul-content-meta">
                     <p>名前 太郎</p>
                     <p>曜日</p>
                     <p>時間</p>
-                    <div>
-                      <!-- js-ratio-isActiveまでが星に色がついている要素です。CSSだとcheckedが入っているやつに色つきにすればよいかと -->
+                  </div>
+                  <div class="main-content-section-ul-content-rank">
+                    <!-- js-ratio-isActiveまでが星に色がついている要素です。CSSだとcheckedが入っているやつに色つきにすればよいかと -->
+                    <div class="main-content-section-ul-content-rank-content">
                       <input
                         type="radio"
                         name=""
@@ -48,6 +63,7 @@
                         checked
                         disabled
                       />
+                      <label for="js-ratio-className-1"></label>
                       <input
                         type="radio"
                         name=""
@@ -56,6 +72,7 @@
                         checked
                         disabled
                       />
+                      <label for="js-ratio-className-2"></label>
                       <input
                         type="radio"
                         name=""
@@ -64,6 +81,7 @@
                         checked
                         disabled
                       />
+                      <label for="js-ratio-className-3"></label>
                       <input
                         type="radio"
                         name=""
@@ -72,6 +90,7 @@
                         checked
                         disabled
                       />
+                      <label for="js-ratio-className-4"></label>
                       <input
                         type="radio"
                         name=""
@@ -79,6 +98,7 @@
                         id="js-ratio-className-5"
                         disabled
                       />
+                      <label for="js-ratio-className-5"></label>
                     </div>
                   </div>
                 </a>
@@ -88,5 +108,6 @@
         </div>
       </main>
     </div>
+    <script src="/src/static/scripts/main.js"></script>
   </body>
 </html>
