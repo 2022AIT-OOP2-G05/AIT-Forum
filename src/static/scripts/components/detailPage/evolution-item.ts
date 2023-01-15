@@ -49,7 +49,7 @@ export class EvolutionItem extends Component<HTMLUListElement, HTMLLIElement> {
 
   renderStar() {
     Array.from({ length: 5 }).forEach((_, i) => {
-      new Star(`star-${this.text}`, i < this.value, true);
+      new Star(`star-${this.text}`, i < this.value, true, i);
     });
   }
 
