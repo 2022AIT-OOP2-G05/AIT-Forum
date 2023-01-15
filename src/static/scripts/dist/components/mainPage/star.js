@@ -1,17 +1,24 @@
 import { Component } from "../../models/component-base.js";
 export class Star extends Component {
-    constructor(hostId, checked, disabled) {
+    constructor(hostId, checked, disabled, index) {
         super("star", hostId, false, "");
         this.checked = checked;
         this.disabled = disabled;
+        this.index = index;
+        this.hostId = "";
+        this.hostId = hostId;
         this.configure();
         this.renderContent();
     }
     configure() {
+        const input = this.el.querySelector("input");
+        const label = this.el.querySelector("label");
+        input.id = `${this.hostId}-${this.index}`;
+        label.htmlFor = `${this.hostId}-${this.index}`;
         if (this.checked)
-            this.el.checked = true;
+            input.checked = true;
         if (this.disabled)
-            this.el.disabled = true;
+            this.el.querySelector("input").disabled = true;
     }
     renderContent() { }
 }

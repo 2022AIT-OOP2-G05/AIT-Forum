@@ -45,7 +45,8 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
         new Star(
           `star-box-${this.subject.lesson_name}`,
           this.subject.number_of_credits - 1 >= i,
-          true
+          true,
+          i
         )
     );
   }
