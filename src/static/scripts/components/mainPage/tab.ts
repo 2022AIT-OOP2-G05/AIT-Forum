@@ -1,7 +1,7 @@
 import { Component } from "../../models/component-base.js";
 import { subjectState } from "../../state/subject-state.js";
 
-export class Tab extends Component<HTMLUListElement, HTMLLIElement> {
+export class Tab extends Component<HTMLUListElement, HTMLUListElement> {
   constructor(private name: "first" | "last") {
     super("tab__item", "tab-list", false, `${name}-tab`);
     this.configure();

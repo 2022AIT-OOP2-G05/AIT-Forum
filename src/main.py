@@ -56,7 +56,7 @@ def subject(subject):
 @app.route('/api/detail/<subject>', methods=['GET'])
 def subject_json(subject):
 
-    with open('src/data/json/items/'+subject+'/output/item.json') as f:
+    with open('src/data/json/items/'+subject+'/output/'+subject+'.json') as f:
         json_data = json.load(f)
 
     return jsonify(json_data)
