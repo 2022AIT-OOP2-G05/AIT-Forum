@@ -15,7 +15,7 @@ export class Total extends Component {
     }
     renderStart() {
         Array.from({ length: 5 }).forEach((_, i) => {
-            new Star("star-box", this.detail.total - 1 >= i, true);
+            new Star("star-box", this.detail.total - 1 >= i, true, i);
         });
     }
 }

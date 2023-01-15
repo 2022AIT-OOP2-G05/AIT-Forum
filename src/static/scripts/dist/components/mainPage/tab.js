@@ -6,7 +6,13 @@ export class Tab extends Component {
         this.name = name;
         this.clickHandler = () => {
             subjectState.fetchSubjects(this.name);
+            this.parentNode.querySelectorAll("li").forEach((li) => {
+                li !== this.el
+                    ? li.classList.add("main-content-nav-content-content-off")
+                    : li.classList.remove("main-content-nav-content-content-off");
+            });
         };
+        this.parentNode = document.querySelector("#tab-list");
         this.configure();
         this.renderContent();
     }
@@ -16,5 +22,8 @@ export class Tab extends Component {
     renderContent() {
         const children = this.el.querySelector("span");
         children.textContent = this.name === "first" ? "前期" : "後期";
+        this.name === "last"
+            ? this.el.classList.add("main-content-nav-content-content-off")
+            : "";
     }
 }
