@@ -2,7 +2,7 @@ import { Component } from "../../models/component-base.js";
 import { Subject } from "../../models/subject.js";
 import { Star } from "./star.js";
 
-export class SubjectItem extends Component<HTMLUListElement, HTMLUListElement> {
+export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
   private subject: Subject;
   constructor({
     lesson_name,
@@ -40,11 +40,13 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLUListElement> {
   }
 
   renderStars() {
-    for (let i = 0; i < 5; i++) {
-      new Star(
-        this.subject.number_of_credits - 1 === i,
-        `star-box-${this.subject.lesson_name}`
-      );
-    }
+    Array.from({ length: 5 }).forEach(
+      (_, i) =>
+        new Star(
+          `star-box-${this.subject.lesson_name}`,
+          this.subject.number_of_credits - 1 >= i,
+          true
+        )
+    );
   }
 }

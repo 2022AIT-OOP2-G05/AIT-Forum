@@ -28,8 +28,6 @@ export class SubjectItem extends Component {
         paragraph[2].textContent = `${this.subject.time}時限目`;
     }
     renderStars() {
-        for (let i = 0; i < 5; i++) {
-            new Star(this.subject.number_of_credits - 1 === i, `star-box-${this.subject.lesson_name}`);
-        }
+        Array.from({ length: 5 }).forEach((_, i) => new Star(`star-box-${this.subject.lesson_name}`, this.subject.number_of_credits - 1 >= i, true));
     }
 }
