@@ -1,4 +1,5 @@
 import { MainPage } from "./components/main-page.js";
+import { Tab } from "./components/tab.js";
 
 class Main {
   constructor() {
@@ -7,6 +8,8 @@ class Main {
 
   private init() {
     new MainPage();
+    new Tab("first");
+    new Tab("last");
   }
 }
 
