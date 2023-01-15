@@ -1,7 +1,7 @@
 [
     {
         "lesson_name": "キャリア意識形成",
-        "lesson_name_en": "career",
+        "lesson_name_en": "first_career_3",
         "teacher_name": "水野　勝教",
         "day_of_week": "月",
         "time": "3",
@@ -9,7 +9,7 @@
     },
     {
         "lesson_name": "コンピュータネットワーク",
-        "lesson_name_en": "cmpnet",
+        "lesson_name_en": "first_cmpnet_4",
         "teacher_name": "水野　勝教",
         "day_of_week": "水",
         "time": "4",
@@ -17,7 +17,7 @@
     },
     {
         "lesson_name": "人工知能",
-        "lesson_name_en": "ai",
+        "lesson_name_en": "first_ai_3",
         "teacher_name": "中村　栄治",
         "day_of_week": "水",
         "time": "3",
@@ -25,7 +25,7 @@
     },
     {
         "lesson_name": "オブジェクト指向プログラミング及び演習１",
-        "lesson_name_en": "obj1",
+        "lesson_name_en": "first_obj1_3",
         "teacher_name": "内種　岳詞",
         "day_of_week": "木",
         "time": "3,4",
@@ -33,7 +33,7 @@
     },
     {
         "lesson_name": "コンピュータアーキテクチャ１",
-        "lesson_name_en": "cmparc",
+        "lesson_name_en": "first_cmparc_3",
         "teacher_name": "伊藤　暢浩",
         "day_of_week": "火",
         "time": "3",
@@ -41,7 +41,7 @@
     },
     {
         "lesson_name": "プロジェクト演習１",
-        "lesson_name_en": "prj1",
+        "lesson_name_en": "first_prj1_4",
         "teacher_name": "伊藤　暢浩",
         "day_of_week": "火",
         "time": "4",
@@ -49,7 +49,7 @@
     },
     {
         "lesson_name": "物理学（電磁気学）",
-        "lesson_name_en": "phyelec",
+        "lesson_name_en": "first_phyelec_2_itto",
         "teacher_name": "一刀　祐一",
         "day_of_week": "月",
         "time": "2",
@@ -57,7 +57,7 @@
     },
     {
         "lesson_name": "物理学（電磁気学）",
-        "lesson_name_en": "phyelec",
+        "lesson_name_en": "first_phyelec_2_tanaka",
         "teacher_name": "田中　優作",
         "day_of_week": "月",
         "time": "2",
@@ -65,7 +65,7 @@
     },
     {
         "lesson_name": "画像処理及び演習",
-        "lesson_name_en": "imgprs",
+        "lesson_name_en": "first_imgprs_1",
         "teacher_name": "塚田　敏彦",
         "day_of_week": "水",
         "time": "1,2",
@@ -73,7 +73,7 @@
     },
     {
         "lesson_name": "Ｗｅｂデザイン及び演習",
-        "lesson_name_en": "webdes",
+        "lesson_name_en": "first_webdes_1",
         "teacher_name": "北坂　孝幸",
         "day_of_week": "月",
         "time": "1,2",
@@ -81,7 +81,7 @@
     },
     {
         "lesson_name": "画像処理及び演習",
-        "lesson_name_en": "imgprs",
+        "lesson_name_en": "first_imgprs_3",
         "teacher_name": "澤野　弘明",
         "day_of_week": "火",
         "time": "3,4",
@@ -89,7 +89,7 @@
     },
     {
         "lesson_name": "カラーデザイン",
-        "lesson_name_en": "colordes",
+        "lesson_name_en": "first_colordes_1",
         "teacher_name": "河合　忍",
         "day_of_week": "水",
         "time": "1",
@@ -97,7 +97,7 @@
     },
     {
         "lesson_name": "カラーデザイン",
-        "lesson_name_en": "colordes",
+        "lesson_name_en": "first_colordes_2",
         "teacher_name": "河合　忍",
         "day_of_week": "水",
         "time": "2",
@@ -105,7 +105,7 @@
     },
     {
         "lesson_name": "カラーデザイン",
-        "lesson_name_en": "colordes",
+        "lesson_name_en": "first_colordes_1",
         "teacher_name": "河合　忍",
         "day_of_week": "水",
         "time": "1",
@@ -113,7 +113,7 @@
     },
     {
         "lesson_name": "カラーデザイン",
-        "lesson_name_en": "colordes",
+        "lesson_name_en": "first_colordes_2",
         "teacher_name": "河合　忍",
         "day_of_week": "水",
         "time": "2",
@@ -121,7 +121,7 @@
     },
     {
         "lesson_name": "ユーザインタフェース",
-        "lesson_name_en": "userface",
+        "lesson_name_en": "first_userface_2",
         "teacher_name": "小栗　真弥",
         "day_of_week": "火",
         "time": "2",
@@ -129,7 +129,7 @@
     },
     {
         "lesson_name": "メディア産業論",
-        "lesson_name_en": "media",
+        "lesson_name_en": "first_media_3",
         "teacher_name": "久留宮　眞",
         "day_of_week": "木",
         "time": "3",
@@ -137,7 +137,7 @@
     },
     {
         "lesson_name": "ＣＧコンテンツ基礎２",
-        "lesson_name_en": "cgcont2",
+        "lesson_name_en": "first_cgcont2_1",
         "teacher_name": "鳥居　一平",
         "day_of_week": "木",
         "time": "1,2",
@@ -145,7 +145,7 @@
     },
     {
         "lesson_name": "ＣＧコンテンツ基礎２",
-        "lesson_name_en": "cgcont2",
+        "lesson_name_en": "first_cgcont2_3",
         "teacher_name": "鳥居　一平",
         "day_of_week": "水",
         "time": "3,4",
@@ -153,7 +153,7 @@
     },
     {
         "lesson_name": "コンピュータネットワーク",
-        "lesson_name_en": "cmpnet",
+        "lesson_name_en": "first_cmpnet_4",
         "teacher_name": "水野　勝教",
         "day_of_week": "金",
         "time": "1",
