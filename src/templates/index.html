@@ -8,17 +8,22 @@
       type="module"
       src="{{ url_for('static', filename='scripts/dist/main.js') }}"
     ></script>
+
     <script
       src="https://kit.fontawesome.com/aac0ed468b.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/main.css') }}"
+    />
     <title>Document</title>
   </head>
   <body>
     <!-- header用 -->
     <template id="main-header">
-      <header>
-        <div>
+      <header class="header">
+        <div class="header-h1">
           <h1>アプリの名前</h1>
         </div>
       </header>
@@ -26,10 +31,10 @@
 
     <!-- main-page用 -->
     <template id="main-page">
-      <main>
-        <div id="main__inner">
-          <nav class="tab">
-            <ul id="tab-list"></ul>
+      <main class="main">
+        <div id="main__inner" class="main-content">
+          <nav class="tab main-content-nav">
+            <ul id="tab-list" class="js-tab main-content-nav-content"></ul>
           </nav>
         </div>
       </main>
@@ -37,28 +42,36 @@
 
     <!-- 授業個別ページを表示するエリア -->
     <template id="subject-list">
-      <section>
-        <ul id="subject-list__inner"></ul>
+      <section class="main-content-section">
+        <ul id="subject-list__inner" class="main-content-section-ul"></ul>
       </section>
     </template>
 
     <!-- tab用 -->
+    <!-- todo main-content-nav-content-content-offのtoggle  -->
     <template id="tab__item">
-      <li class="tab__item">
-        <span></span>
+      <li class="tab__item main-content-nav-content-content">
+        <span class="main-content-nav-content-content-text"></span>
+        <div
+          class="main-content-nav-content-content-border main-content-nav-content-content-off"
+        ></div>
       </li>
     </template>
 
     <!-- 授業個別ページ遷移用 -->
     <template id="subject-list-item">
       <li>
-        <a href="" class="subject">
-          <h2></h2>
-          <div>
+        <a href="" class="subject main-content-section-ul-content">
+          <h2 class="main-content-section-ul-content-name"></h2>
+          <div class="main-content-section-ul-content-meta">
             <p></p>
             <p></p>
             <p></p>
-            <div class="star-box"></div>
+          </div>
+          <div class="main-content-section-ul-content-rank">
+            <div
+              class="main-content-section-ul-content-rank-content star-box"
+            ></div>
           </div>
         </a>
       </li>
@@ -66,9 +79,12 @@
 
     <!-- 星用 -->
     <template id="star">
-      <input type="radio" name="" id="" class="js-ratio" disabled />
+      <div class="star-wrapper">
+        <input type="radio" />
+        <label></label>
+      </div>
     </template>
 
-    <div id="app"></div>
+    <div id="app" class="main-page"></div>
   </body>
 </html>
