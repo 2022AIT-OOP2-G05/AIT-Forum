@@ -31,12 +31,16 @@ export class EvolutionList extends Component<HTMLDivElement, HTMLElement> {
       ...showEvolution
     } = this.detail;
 
-    console.log(showEvolution);
-
     return showEvolution;
   }
 
-  configure() {}
+  configure() {
+    detailState.addListener((details: Detail[]) => {
+      this.detail = details[0];
+      this.evolutionItems = this.detailProcessing();
+      this.renderList();
+    });
+  }
 
   renderContent() {}
 
