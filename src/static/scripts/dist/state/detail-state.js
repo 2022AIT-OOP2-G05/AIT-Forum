@@ -14,7 +14,8 @@ class DetailState extends State {
         return this.instance;
     }
     async fetchDetails() {
-        const detail = await Fetch.get(`detail/${"obj2"}`);
+        const pathname = location.pathname;
+        const detail = await Fetch.get(`detail/${pathname}`);
         this.detail = new Detail(detail.lesson_name, detail.teacher_name, detail.day_of_week, detail.time, detail.number_of_credits, detail.level, detail.hit_level, detail.teacher_review, detail.adequacy, detail.test_level, detail.task_level, detail.middle_test_level, detail.carry, detail.total);
         this.updateListeners();
     }

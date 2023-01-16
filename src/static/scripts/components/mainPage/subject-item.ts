@@ -6,6 +6,7 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
   private subject: Subject;
   constructor({
     lesson_name,
+    lesson_name_en,
     teacher_name,
     day_of_week,
     time,
@@ -15,6 +16,7 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
     this.subject = {
       lesson_name,
       teacher_name,
+      lesson_name_en,
       day_of_week,
       time,
       number_of_credits,
@@ -26,9 +28,9 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
 
   configure() {
     const link = this.el.querySelector("a")!;
-    link.href = `/${this.subject.lesson_name}}`;
+    link.href = `/${this.subject.lesson_name_en}`;
     const starBox = this.el.querySelector(".star-box")!;
-    starBox.id = `star-box-${this.subject.lesson_name}`;
+    starBox.id = `star-box-${this.subject.lesson_name_en}`;
   }
 
   renderContent() {
@@ -40,10 +42,11 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
   }
 
   renderStars() {
+    console.log(`star-box-${this.subject.lesson_name_en}`);
     Array.from({ length: 5 }).forEach(
       (_, i) =>
         new Star(
-          `star-box-${this.subject.lesson_name}`,
+          `star-box-${this.subject.lesson_name_en}`,
           this.subject.number_of_credits - 1 >= i,
           true,
           i

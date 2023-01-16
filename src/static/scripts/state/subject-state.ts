@@ -25,6 +25,7 @@ export class SubjectState extends State<Subject> {
     this.subjects = subjects.map((subject) => {
       return new Subject(
         subject.lesson_name,
+        subject.lesson_name_en,
         subject.teacher_name,
         subject.day_of_week,
         subject.time,

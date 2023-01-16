@@ -20,9 +20,8 @@ class DetailState extends State<Detail> {
   }
 
   async fetchDetails() {
-    // const pathname = location.pathname;
-    // const details: Detail[] = await Fetch.get(`detail/${pathname}`);
-    const detail: Detail = await Fetch.get(`detail/${"obj2"}`);
+    const pathname = location.pathname;
+    const detail: Detail = await Fetch.get(`detail/${pathname}`);
 
     this.detail = new Detail(
       detail.lesson_name,
