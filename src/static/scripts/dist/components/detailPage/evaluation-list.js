@@ -12,10 +12,15 @@ export class EvolutionList extends Component {
     }
     detailProcessing() {
         const { lesson_name, teacher_name, day_of_week, time, number_of_credits, total, ...showEvolution } = this.detail;
-        console.log(showEvolution);
         return showEvolution;
     }
-    configure() { }
+    configure() {
+        detailState.addListener((details) => {
+            this.detail = details[0];
+            this.evolutionItems = this.detailProcessing();
+            this.renderList();
+        });
+    }
     renderContent() { }
     renderList() {
         for (const key in this.evolutionItems) {

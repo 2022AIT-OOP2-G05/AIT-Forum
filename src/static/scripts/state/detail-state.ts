@@ -43,10 +43,19 @@ class DetailState extends State<Detail> {
     this.updateListeners();
   }
 
-  getDetails() {
-    if (!this.detail) {
-      this.fetchDetails().then((detail) => {});
+  private cleanDom() {
+    const app = document.getElementById("app")!;
+
+    while (app.firstChild) {
+      app.removeChild(app.firstChild);
     }
+  }
+
+  forceRender() {
+    this.updateListeners();
+  }
+
+  getDetails() {
     return { ...this.detail };
   }
 
