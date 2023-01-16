@@ -1,11 +1,12 @@
 import { Component } from "../../models/component-base.js";
 import { Star } from "./star.js";
 export class SubjectItem extends Component {
-    constructor({ lesson_name, teacher_name, day_of_week, time, number_of_credits, }) {
+    constructor({ lesson_name, lesson_name_en, teacher_name, day_of_week, time, number_of_credits, }) {
         super("subject-list-item", "subject-list__inner", false, "");
         this.subject = {
             lesson_name,
             teacher_name,
+            lesson_name_en,
             day_of_week,
             time,
             number_of_credits,
@@ -16,9 +17,9 @@ export class SubjectItem extends Component {
     }
     configure() {
         const link = this.el.querySelector("a");
-        link.href = `/${this.subject.lesson_name}}`;
+        link.href = `/${this.subject.lesson_name_en}`;
         const starBox = this.el.querySelector(".star-box");
-        starBox.id = `star-box-${this.subject.lesson_name}`;
+        starBox.id = `star-box-${this.subject.lesson_name_en}`;
     }
     renderContent() {
         const paragraph = this.el.querySelectorAll("p");
@@ -28,6 +29,7 @@ export class SubjectItem extends Component {
         paragraph[2].textContent = `${this.subject.time}時限目`;
     }
     renderStars() {
-        Array.from({ length: 5 }).forEach((_, i) => new Star(`star-box-${this.subject.lesson_name}`, this.subject.number_of_credits - 1 >= i, true, i));
+        console.log(`star-box-${this.subject.lesson_name_en}`);
+        Array.from({ length: 5 }).forEach((_, i) => new Star(`star-box-${this.subject.lesson_name_en}`, this.subject.number_of_credits - 1 >= i, true, i));
     }
 }

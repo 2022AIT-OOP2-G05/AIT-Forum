@@ -59,6 +59,8 @@ def subject_json(subject):
     with open('src/data/json/items/'+subject+'/output/item.json') as f:
         json_data = json.load(f)
 
+    print(json_data)
+
     return jsonify(json_data)
 
 if __name__ == "__main__":
