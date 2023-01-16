@@ -104,22 +104,6 @@
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "カラーデザイン",
-        "lesson_name_en": "first_colordes_1",
-        "teacher_name": "河合　忍",
-        "day_of_week": "水",
-        "time": "1",
-        "number_of_credits": "2"
-    },
-    {
-        "lesson_name": "カラーデザイン",
-        "lesson_name_en": "first_colordes_2",
-        "teacher_name": "河合　忍",
-        "day_of_week": "水",
-        "time": "2",
-        "number_of_credits": "2"
-    },
-    {
         "lesson_name": "ユーザインタフェース",
         "lesson_name_en": "first_userface_2",
         "teacher_name": "小栗　真弥",
@@ -153,7 +137,7 @@
     },
     {
         "lesson_name": "コンピュータネットワーク",
-        "lesson_name_en": "first_cmpnet_4",
+        "lesson_name_en": "first_cmpnet_1",
         "teacher_name": "水野　勝教",
         "day_of_week": "金",
         "time": "1",
