@@ -1,7 +1,7 @@
 [
     {
         "lesson_name": "キャリア意識形成",
-        "lesson_name_en": "career",
+        "lesson_name_en": "last_career_3",
         "teacher_name": "水野　勝教",
         "day_of_week": "月",
         "time": "3",
@@ -9,7 +9,7 @@
     },
     {
         "lesson_name": "物理実験",
-        "lesson_name_en": "phyexp",
+        "lesson_name_en": "last_phyexp_3",
         "teacher_name": "村中　正",
         "day_of_week": "金",
         "time": "3,4",
@@ -17,7 +17,7 @@
     },
     {
         "lesson_name": "数値計算",
-        "lesson_name_en": "numcalc",
+        "lesson_name_en": "last_numcalc_2",
         "teacher_name": "中条　直也",
         "day_of_week": "火",
         "time": "2",
@@ -25,7 +25,7 @@
     },
     {
         "lesson_name": "オブジェクト指向プログラミング及び演習2",
-        "lesson_name_en": "obj2",
+        "lesson_name_en": "last_obj2_3",
         "teacher_name": "内種　岳詞",
         "day_of_week": "木",
         "time": "3,4",
@@ -33,7 +33,7 @@
     },
     {
         "lesson_name": "コンピュータアーキテクチャ2",
-        "lesson_name_en": "cmparc2",
+        "lesson_name_en": "last_cmparc2_3",
         "teacher_name": "伊藤　暢浩",
         "day_of_week": "火",
         "time": "3",
@@ -41,7 +41,7 @@
     },
     {
         "lesson_name": "プロジェクト演習2",
-        "lesson_name_en": "prj2",
+        "lesson_name_en": "last_prj2_4",
         "teacher_name": "伊藤　暢浩",
         "day_of_week": "火",
         "time": "4",
@@ -49,7 +49,7 @@
     },
     {
         "lesson_name": "確率統計",
-        "lesson_name_en": "prosta",
+        "lesson_name_en": "last_prosta_2",
         "teacher_name": "内種　岳詞 ",
         "day_of_week": "水",
         "time": "2",
@@ -57,7 +57,7 @@
     },
     {
         "lesson_name": "幾何学",
-        "lesson_name_en": "geome",
+        "lesson_name_en": "last_geome_1",
         "teacher_name": "柳井　裕道 ",
         "day_of_week": "水",
         "time": "1",
@@ -65,7 +65,7 @@
     },
     {
         "lesson_name": "モバイルネットワーク",
-        "lesson_name_en": "mobnet",
+        "lesson_name_en": "last_mobnet_5",
         "teacher_name": "内藤　克浩 ",
         "day_of_week": "金",
         "time": "5",
@@ -73,7 +73,7 @@
     },
     {
         "lesson_name": "情報システム概論",
-        "lesson_name_en": "infosys",
+        "lesson_name_en": "last_infosys_4",
         "teacher_name": "梶　克彦 ",
         "day_of_week": "水",
         "time": "4",
@@ -81,7 +81,7 @@
     },
     {
         "lesson_name": "数理論論学",
-        "lesson_name_en": "mathlogi",
+        "lesson_name_en": "last_mathlogi_2",
         "teacher_name": "河辺　義信 ",
         "day_of_week": "月",
         "time": "2",
@@ -89,7 +89,7 @@
     },
     {
         "lesson_name": "オペレーティングシステム ",
-        "lesson_name_en": "opesys",
+        "lesson_name_en": "last_opesys_1",
         "teacher_name": "菱田　隆彰",
         "day_of_week": "木",
         "time": "1",
