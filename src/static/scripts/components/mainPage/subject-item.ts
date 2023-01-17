@@ -42,7 +42,6 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
   }
 
   renderStars() {
-    console.log(`star-box-${this.subject.lesson_name_en}`);
     Array.from({ length: 5 }).forEach(
       (_, i) =>
         new Star(
