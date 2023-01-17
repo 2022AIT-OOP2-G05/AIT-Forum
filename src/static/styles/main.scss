@@ -131,6 +131,9 @@ html {
                                     width: 100%;
                                     height: $Cmain_content_section_ul_content_name_height;
                                     line-height: $Cmain_content_section_ul_content_name_height;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
                                     font-weight: normal;
                                 }
                                 .main-content-section-ul-content-meta {
