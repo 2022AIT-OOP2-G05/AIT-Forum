@@ -44,7 +44,27 @@ def form(name = "no name"):
     
     print (data)
 
+    ave = average(name)
+
     return jsonify(json_data)
+
+def average(str) -> None:
+
+ json_open = open(f'src/data/json/items/{str}/input/item.json','r')
+ json_load = json.load(json_open)
+
+ total_s = 0 #評価の合計
+ count = 0 #評価数
+
+ for v in json_load:#inputに入っているデータの平均を出す
+    total_s += v["total"]
+    print(v["total"]) #確認用
+    count += 1
+
+ ave = total_s/count
+ print(ave)#評価の平均を表示する
+
+ return ave #平均返す
     
 @app.route('/')
 @app.route('/<subject>')
