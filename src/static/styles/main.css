@@ -11,6 +11,7 @@ html body .main-page {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  min-width: 880px;
   padding-top: 20px;
 }
 html body .main-page .header {
