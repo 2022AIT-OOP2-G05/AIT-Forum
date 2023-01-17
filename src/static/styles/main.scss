@@ -113,8 +113,8 @@ html {
                                 width: $Cmain_content_section_ul_content-size;
                                 height: $Cmain_content_section_ul_content-size;
                                 background-color: #f2f2f2;
-                                margin: 30px;
-                                padding: 30px;
+                                margin: $Cmain_content_section_ul_content-margin;
+                                padding: $Cmain_content_section_ul_content-padding;
                                 transition: 0.25s;
                                 text-decoration: none;
                                 color: black;
