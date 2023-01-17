@@ -58,15 +58,15 @@ html {
                 background-image: url(../image/nav-i.svg);
                 background-position: center;
                 background-repeat: no-repeat;
-                .main-content-nav-content-content-border {
-                  position: absolute;
-                  bottom: 4px;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  width: 75%;
-                  height: 1px;
-                  background-color: black;
-                }
+                // .main-content-nav-content-content-border {
+                //   position: absolute;
+                //   bottom: 4px;
+                //   left: 50%;
+                //   transform: translate(-50%, -50%);
+                //   width: 75%;
+                //   height: 1px;
+                //   background-color: black;
+                // }
                 a {
                   display: inline-block;
                   width: 100%;
@@ -186,4 +186,19 @@ html {
   &:not(:last-child) {
     margin-right: 4px;
   }
+}
+
+/* borderに関してはdiv要素をjsで追加するのは非効率なので疑似要素で対応させてもらいました。 */
+
+.main-content-nav-content-content:not(
+    :is(.main-content-nav-content-content-off)
+  )::before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 1px;
+  background-color: black;
 }

@@ -35,7 +35,6 @@ export class EvolutionItem extends Component {
     }
     configure() { }
     renderContent() {
-        console.log(this.value);
         this.el.querySelector("p").textContent = this.changeToJapanese(this.text);
         this.el.querySelector("div").id = `${this.isStar ? "star" : "progress"}-${this.text}`;
     }
