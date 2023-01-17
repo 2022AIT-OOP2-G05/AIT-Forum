@@ -62,15 +62,6 @@ html body .main-page .main .main-content .main-content-nav .main-content-nav-con
   background-position: center;
   background-repeat: no-repeat;
 }
-html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content .main-content-nav-content-content-border {
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 75%;
-  height: 1px;
-  background-color: black;
-}
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content a {
   display: inline-block;
   width: 100%;
@@ -174,4 +165,16 @@ html body .main-page .main .main-content .main-content-section .main-content-sec
 }
 .star-wrapper:not(:last-child) {
   margin-right: 4px;
+}
+
+/* borderに関してはdiv要素をjsで追加するのは非効率なので疑似要素で対応させてもらいました。 */
+.main-content-nav-content-content:not(:is(.main-content-nav-content-content-off))::before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 1px;
+  background-color: black;
 }/*# sourceMappingURL=main.css.map */
