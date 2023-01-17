@@ -11,6 +11,7 @@ html {
             box-sizing: border-box;
             width: 100vw;
             height: 100vh;
+            min-width: calc(($Cmain_content-padding-LR * 2) + ($Cmain_content_section_ul-padding-LR * 2) + (($Cmain_content_section_ul_content-margin * 2) * 2) + (($Cmain_content_section_ul_content-padding * 2) * 2) + ( $Cmain_content_section_ul_content-size * 2));
             padding-top: $Cmain_page-padding-top;
             .header {
                 width: 100%;
