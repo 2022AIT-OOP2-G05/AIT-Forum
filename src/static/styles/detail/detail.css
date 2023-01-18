@@ -108,7 +108,7 @@ html body .evo_item {
 html body .evo_item .evo_item-text {
   line-height: 50px;
 }
-html body .evo_item .evo_item-star {
+html body .evo_item .evo_item-item {
   box-sizing: border-box;
   padding: 7px 0;
   height: 50px;
