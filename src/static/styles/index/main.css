@@ -11,7 +11,7 @@ html body .main-page {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  min-width: 880px;
+  min-width: 830px;
   padding-top: 20px;
 }
 html body .main-page .header {
@@ -59,7 +59,7 @@ html body .main-page .main .main-content .main-content-nav .main-content-nav-con
   position: relative;
   aspect-ratio: 3.75/1;
   height: 50px;
-  background-image: url(../image/nav-i.svg);
+  background-image: url(../../image/nav-i.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -78,7 +78,7 @@ html body .main-page .main .main-content .main-content-nav .main-content-nav-con
   color: lightslategray;
 }
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content-off {
-  background-image: url(../image/nav-o.svg);
+  background-image: url(../../image/nav-o.svg);
 }
 html body .main-page .main .main-content .main-content-section {
   width: 100%;
@@ -149,12 +149,12 @@ html body .main-page .main .main-content .main-content-section .main-content-sec
   display: inline-block;
   aspect-ratio: 1/1;
   width: 35px;
-  background-image: url(../image/star-o.svg);
+  background-image: url(../../image/star-o.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-rank .main-content-section-ul-content-rank-content input[type=radio]:checked + label {
-  background-image: url(../image/star-i.svg);
+  background-image: url(../../image/star-i.svg);
 }
 
 .star-wrapper {
