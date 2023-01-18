@@ -86,6 +86,16 @@ html {
             background-color: #B7B7B7;
             margin: 0 auto;
         }
+        .main {
+            width: $main-width;
+            margin: 0 auto;
+            margin-top: 25px;
+            height: 200px;
+            ul {
+                width: 10%;
+                list-style: none;
+            }
+        }
         .star {
             display: inline-block;
             aspect-ratio: 1 / 1;

@@ -88,6 +88,16 @@ html body .total-bottom-border {
   background-color: #B7B7B7;
   margin: 0 auto;
 }
+html body .main {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 25px;
+  height: 200px;
+}
+html body .main ul {
+  width: 10%;
+  list-style: none;
+}
 html body .star {
   display: inline-block;
   aspect-ratio: 1/1;
