@@ -46,7 +46,7 @@ html body .header {
   margin: 0 auto;
   margin-top: 50px;
   border-radius: 25px;
-  padding: 0 25px;
+  padding: 0 50px;
 }
 html body .header .header-title {
   box-sizing: border-box;
