@@ -70,7 +70,7 @@ html body .total {
   justify-content: space-between;
   width: 800px;
   height: 50px;
-  margin: 25px auto;
+  margin: 30px auto;
 }
 html body .total .total-text {
   line-height: 50px;
@@ -78,6 +78,40 @@ html body .total .total-text {
   font-weight: normal;
 }
 html body .total .total-star_BG {
+  box-sizing: border-box;
+  padding: 4px 0;
   height: 50px;
+}
+html body .total-bottom-border {
+  width: 640px;
+  height: 2px;
+  background-color: #B7B7B7;
+  margin: 0 auto;
+}
+html body .star {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  height: 100%;
+  margin: 0 5px;
+}
+html body .star:first-child {
+  margin-right: 0;
+}
+html body .star:last-child {
+  margin-right: 0;
+}
+html body .star input[type=radio] {
+  display: none;
+}
+html body .star input[type=radio] + label {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  height: 100%;
+  background-image: url(../../image/star-o.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html body .star input[type=radio]:checked + label {
+  background-image: url(../../image/star-i.svg);
 }
 /*# sourceMappingURL=detail.css.map */

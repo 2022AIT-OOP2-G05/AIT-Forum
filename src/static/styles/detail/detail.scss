@@ -68,14 +68,48 @@ html {
             justify-content: space-between;
             width: $main-width;
             height: $Ctotal-height;
-            margin: 25px auto;
+            margin: 30px auto;
             .total-text {
                 line-height: $Ctotal-height;
                 height: $Ctotal-height;
                 font-weight: normal;
             }
             .total-star_BG {
+                box-sizing: border-box;
+                padding: 4px 0;
                 height: $Ctotal-height;
+            }
+        }
+        .total-bottom-border {
+            width: calc( $main-width * 0.8);
+            height: 2px;
+            background-color: #B7B7B7;
+            margin: 0 auto;
+        }
+        .star {
+            display: inline-block;
+            aspect-ratio: 1 / 1;
+            height: 100%;
+            margin: 0 5px;
+            &:first-child {
+                margin-right: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            input[type="radio"] {
+                display: none;
+            }
+            input[type="radio"]+label {
+                display: inline-block;
+                aspect-ratio: 1 / 1;
+                height: 100%;
+                background-image: url(../../image/star-o.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            input[type="radio"]:checked+label {
+                background-image: url(../../image/star-i.svg);
             }
         }
     }
