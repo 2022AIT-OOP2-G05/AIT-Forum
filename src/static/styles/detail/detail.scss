@@ -133,6 +133,9 @@ html {
                 padding: 7px 0;
                 height: $Ctotal-height;
                 padding-left: 40px;
+                .star {
+                    height: 85%;
+                }
             }
         }
         .star {

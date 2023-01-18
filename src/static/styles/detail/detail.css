@@ -137,6 +137,9 @@ html body .evo_item .evo_item-item {
   height: 50px;
   padding-left: 40px;
 }
+html body .evo_item .evo_item-item .star {
+  height: 85%;
+}
 html body .star {
   display: inline-block;
   aspect-ratio: 1/1;
