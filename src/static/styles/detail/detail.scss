@@ -137,5 +137,44 @@ html {
                 background-image: url(../../image/star-i.svg);
             }
         }
+        .progress_BG {
+            box-sizing: border-box;
+            padding: 5px 0;
+            height: 100%;
+            width: 250px;
+            font-size: 0;
+            .progress_BG-top {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: calc(100% - $Cprogress_BG_bottom-height);
+                .progress_BG-top-left {
+                    font-size: 1rem;
+                }
+                .progress_BG-top-right {
+                    font-size: 1rem;
+                }
+            }
+            .progress_BG-bottom {
+                width: 100%;
+                height: $Cprogress_BG_bottom-height;
+                .progress_BG-bottom-line {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0;
+                    border: none;
+                    background-color: lightgray;
+                    &::-webkit-progress-bar {
+                        background-color: lightcoral;
+                    }
+                    &::-webkit-progress-value {
+                        background-color: lightcoral;
+                    }
+                    &::-moz-progress-bar {
+                        background-color: lightcoral;
+                    }
+                }
+            }
+        }
     }
 }

@@ -139,4 +139,43 @@ html body .star input[type=radio] + label {
 html body .star input[type=radio]:checked + label {
   background-image: url(../../image/star-i.svg);
 }
+html body .progress_BG {
+  box-sizing: border-box;
+  padding: 5px 0;
+  height: 100%;
+  width: 250px;
+  font-size: 0;
+}
+html body .progress_BG .progress_BG-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100% - 4px);
+}
+html body .progress_BG .progress_BG-top .progress_BG-top-left {
+  font-size: 1rem;
+}
+html body .progress_BG .progress_BG-top .progress_BG-top-right {
+  font-size: 1rem;
+}
+html body .progress_BG .progress_BG-bottom {
+  width: 100%;
+  height: 4px;
+}
+html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  background-color: lightgray;
+}
+html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-webkit-progress-bar {
+  background-color: lightcoral;
+}
+html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-webkit-progress-value {
+  background-color: lightcoral;
+}
+html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-moz-progress-bar {
+  background-color: lightcoral;
+}
 /*# sourceMappingURL=detail.css.map */
