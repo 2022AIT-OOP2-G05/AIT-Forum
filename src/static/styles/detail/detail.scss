@@ -213,6 +213,7 @@ html {
             transition: .25s;
             color: white;
             font-size: 1.1rem;
+            z-index: 999;
             &:hover {
                 background-color: #4AA8C6;
             }
