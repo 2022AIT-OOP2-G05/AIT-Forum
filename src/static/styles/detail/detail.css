@@ -94,7 +94,7 @@ html body .total .total-star_BG {
 html body .total-bottom-border {
   width: 640px;
   height: 2px;
-  background-color: #B7B7B7;
+  background-color: lightgray;
   margin: 0 auto;
 }
 html body .main {
