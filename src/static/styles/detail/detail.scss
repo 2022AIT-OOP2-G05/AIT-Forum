@@ -30,5 +30,32 @@ html {
                 }
             }
         }
+        .header {
+            box-sizing: border-box;
+            width: $main-width;
+            background-color: lavenderblush;
+            margin: 0 auto;
+            border-radius: 25px;
+            padding: 0 25px;
+            .header-title {
+                box-sizing: border-box;
+                width: 100%;
+                height: $Cheader_title-heigh;
+                line-height: $Cheader_title-heigh;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .header-meta_BG {
+                position: relative;
+                width: 100%;
+                height: calc(4rem * 1.5);
+                padding-bottom: 15px;
+                .header-meta_BG-text {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
     }
 }
