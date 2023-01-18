@@ -18,11 +18,15 @@ html {
             background-color: rgba(255, 255, 255, 0.75);
             .back_btn_BG-content {
                 position: absolute;
+                display: inline-block;
                 top: 50%;
                 left: 20px;
+                height: $Cback_btn_BG-height;
+                line-height: $Cback_btn_BG-height;
                 transform: translate(0, -50%);
                 vertical-align: middle;
                 cursor: pointer;
+                padding-right: 25px;
                 .back_btn_BG-content-icon {
                     aspect-ratio: 1 / 1;
                     height: 15px;
