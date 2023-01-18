@@ -65,4 +65,19 @@ html body .header .header-meta_BG .header-meta_BG-text p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+html body .total {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  height: 50px;
+  margin: 25px auto;
+}
+html body .total .total-text {
+  line-height: 50px;
+  height: 50px;
+  font-weight: normal;
+}
+html body .total .total-star_BG {
+  height: 50px;
+}
 /*# sourceMappingURL=detail.css.map */

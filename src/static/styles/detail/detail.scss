@@ -63,5 +63,20 @@ html {
                 }
             }
         }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            width: $main-width;
+            height: $Ctotal-height;
+            margin: 25px auto;
+            .total-text {
+                line-height: $Ctotal-height;
+                height: $Ctotal-height;
+                font-weight: normal;
+            }
+            .total-star_BG {
+                height: $Ctotal-height;
+            }
+        }
     }
 }
