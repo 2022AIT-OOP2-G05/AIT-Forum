@@ -95,7 +95,7 @@ html body .main {
   height: 200px;
 }
 html body .main ul {
-  width: 10%;
+  width: 100%;
   list-style: none;
 }
 html body .star {
