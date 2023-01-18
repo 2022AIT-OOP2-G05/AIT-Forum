@@ -96,6 +96,21 @@ html {
                 list-style: none;
             }
         }
+        .evo_item {
+            display: flex;
+            justify-content: space-between;
+            height: $Ctotal-height;
+            width: 100%;
+            margin: 25px 0;
+            .evo_item-text {
+                line-height: $Ctotal-height;
+            }
+            .evo_item-star {
+                box-sizing: border-box;
+                padding: 7px 0;
+                height: $Ctotal-height;
+            }
+        }
         .star {
             display: inline-block;
             aspect-ratio: 1 / 1;

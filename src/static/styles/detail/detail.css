@@ -98,6 +98,21 @@ html body .main ul {
   width: 100%;
   list-style: none;
 }
+html body .evo_item {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  margin: 25px 0;
+}
+html body .evo_item .evo_item-text {
+  line-height: 50px;
+}
+html body .evo_item .evo_item-star {
+  box-sizing: border-box;
+  padding: 7px 0;
+  height: 50px;
+}
 html body .star {
   display: inline-block;
   aspect-ratio: 1/1;
