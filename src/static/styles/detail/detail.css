@@ -58,5 +58,11 @@ html body .header .header-meta_BG {
 html body .header .header-meta_BG .header-meta_BG-text {
   position: absolute;
   right: 0;
+  max-width: 300px;
+}
+html body .header .header-meta_BG .header-meta_BG-text p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 /*# sourceMappingURL=detail.css.map */

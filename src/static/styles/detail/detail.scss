@@ -54,6 +54,12 @@ html {
                 .header-meta_BG-text {
                     position: absolute;
                     right: 0;
+                    max-width: 300px;
+                    p {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
                 }
             }
         }
