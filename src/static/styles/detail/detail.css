@@ -48,6 +48,7 @@ html body .header .header-title {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-weight: normal;
 }
 html body .header .header-meta_BG {
   position: relative;
