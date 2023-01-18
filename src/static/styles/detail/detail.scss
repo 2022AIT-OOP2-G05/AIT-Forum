@@ -102,17 +102,33 @@ html {
         }
         .evo_item {
             display: flex;
+            position: relative;
             justify-content: space-between;
             height: $Ctotal-height;
             width: 100%;
             margin: 25px 0;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                height: 1px;
+                border-bottom: 3px dotted rgb(171, 171, 171);
+                z-index: -10;
+            }
             .evo_item-text {
+                background-color: white;
                 line-height: $Ctotal-height;
+                padding-right: 40px;
             }
             .evo_item-item {
+                background-color: white;
                 box-sizing: border-box;
                 padding: 7px 0;
                 height: $Ctotal-height;
+                padding-left: 40px;
             }
         }
         .star {

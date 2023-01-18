@@ -104,18 +104,34 @@ html body .main ul {
 }
 html body .evo_item {
   display: flex;
+  position: relative;
   justify-content: space-between;
   height: 50px;
   width: 100%;
   margin: 25px 0;
 }
+html body .evo_item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 1px;
+  border-bottom: 3px dotted rgb(171, 171, 171);
+  z-index: -10;
+}
 html body .evo_item .evo_item-text {
+  background-color: white;
   line-height: 50px;
+  padding-right: 40px;
 }
 html body .evo_item .evo_item-item {
+  background-color: white;
   box-sizing: border-box;
   padding: 7px 0;
   height: 50px;
+  padding-left: 40px;
 }
 html body .star {
   display: inline-block;
