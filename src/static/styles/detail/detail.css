@@ -1,0 +1,227 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+html body {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 50px);
+}
+html body .back_btn_BG {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+html body .back_btn_BG .back_btn_BG-content {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 30px;
+  height: 50px;
+  line-height: 50px;
+  transform: translate(0, -50%);
+  vertical-align: middle;
+  cursor: pointer;
+  padding-right: 25px;
+}
+html body .back_btn_BG .back_btn_BG-content .back_btn_BG-content-icon {
+  aspect-ratio: 1/1;
+  height: 15px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(45deg);
+}
+html body .header {
+  box-sizing: border-box;
+  width: 800px;
+  background-color: #E2E2E2;
+  margin: 0 auto;
+  margin-top: 75px;
+  border-radius: 25px;
+  padding: 0 50px;
+}
+html body .header .header-title {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: normal;
+}
+html body .header .header-meta_BG {
+  position: relative;
+  width: 100%;
+  height: 6rem;
+  padding-bottom: 15px;
+}
+html body .header .header-meta_BG .header-meta_BG-text {
+  position: absolute;
+  right: 0;
+  max-width: 300px;
+}
+html body .header .header-meta_BG .header-meta_BG-text p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .total {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  height: 50px;
+  margin: 40px auto;
+}
+html body .total .total-text {
+  line-height: 50px;
+  height: 50px;
+  font-weight: normal;
+}
+html body .total .total-star_BG {
+  box-sizing: border-box;
+  padding: 4px 0;
+  height: 50px;
+}
+html body .total-bottom-border {
+  width: 640px;
+  height: 2px;
+  background-color: lightgray;
+  margin: 0 auto;
+}
+html body .main {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 80px;
+}
+html body .main ul {
+  width: 100%;
+  list-style: none;
+}
+html body .evo_item {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  margin: 30px 0;
+}
+html body .evo_item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 1px;
+  border-bottom: 3px dotted rgb(171, 171, 171);
+  z-index: -10;
+}
+html body .evo_item .evo_item-text {
+  background-color: white;
+  line-height: 50px;
+  padding-right: 40px;
+}
+html body .evo_item .evo_item-item {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 7px 0;
+  height: 50px;
+  padding-left: 40px;
+}
+html body .evo_item .evo_item-item .star {
+  height: 85%;
+}
+html body .star {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  height: 100%;
+  margin: 0 5px;
+}
+html body .star:first-child {
+  margin-right: 0;
+}
+html body .star:last-child {
+  margin-right: 0;
+}
+html body .star input[type=radio] {
+  display: none;
+}
+html body .star input[type=radio] + label {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  height: 100%;
+  background-image: url(../../image/star-o.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html body .star input[type=radio]:checked + label {
+  background-image: url(../../image/star-i.svg);
+}
+html body .progress_BG {
+  box-sizing: border-box;
+  padding: 5px 0;
+  height: 100%;
+  width: 250px;
+  font-size: 0;
+}
+html body .progress_BG .progress_BG-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100% - 4px);
+}
+html body .progress_BG .progress_BG-top .progress_BG-top-left {
+  font-size: 1rem;
+}
+html body .progress_BG .progress_BG-top .progress_BG-top-right {
+  font-size: 1rem;
+}
+html body .progress_BG .progress_BG-bottom {
+  width: 100%;
+  height: 4px;
+}
+html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  background-color: lightgray;
+}
+html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-webkit-progress-bar {
+  background-color: lightcoral;
+}
+html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-webkit-progress-value {
+  background-color: lightcoral;
+}
+html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-moz-progress-bar {
+  background-color: lightcoral;
+}
+html body .send_btn {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  width: 150px;
+  height: 40px;
+  background-color: #78D9FF;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.25s;
+  color: white;
+  font-size: 1.1rem;
+  z-index: 999;
+}
+html body .send_btn:hover {
+  background-color: #4AA8C6;
+}
+/*# sourceMappingURL=detail.css.map */

@@ -54,7 +54,7 @@ html {
                                 position: relative;
                                 aspect-ratio: 3.75 / 1;
                                 height: $Cmain_content_nav-height;
-                                background-image: url(../image/nav-i.svg);
+                                background-image: url(../../image/nav-i.svg);
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 // .main-content-nav-content-content-border {
@@ -82,7 +82,7 @@ html {
                                 }
                             }
                             .main-content-nav-content-content-off {
-                                background-image: url(../image/nav-o.svg);
+                                background-image: url(../../image/nav-o.svg);
                                 // &:hover {}
                             }
                         }
@@ -151,12 +151,12 @@ html {
                                             display: inline-block;
                                             aspect-ratio: 1 / 1;
                                             width: $Cmain_content_section_ul_content_rank_height;
-                                            background-image: url(../image/star-o.svg);
+                                            background-image: url(../../image/star-o.svg);
                                             background-position: center;
                                             background-repeat: no-repeat;
                                         }
                                         input[type="radio"]:checked+label {
-                                            background-image: url(../image/star-i.svg);
+                                            background-image: url(../../image/star-i.svg);
                                         }
                                     }
                                 }
