@@ -193,13 +193,13 @@ html {
                     border: none;
                     background-color: lightgray;
                     &::-webkit-progress-bar {
-                        background-color: lightcoral;
+                        background-color: lightgray;
                     }
                     &::-webkit-progress-value {
                         background-color: lightcoral;
                     }
                     &::-moz-progress-bar {
-                        background-color: lightcoral;
+                        background-color: lightgray;
                     }
                 }
             }

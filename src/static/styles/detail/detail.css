@@ -198,13 +198,13 @@ html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line {
   background-color: lightgray;
 }
 html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-webkit-progress-bar {
-  background-color: lightcoral;
+  background-color: lightgray;
 }
 html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-webkit-progress-value {
   background-color: lightcoral;
 }
 html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-moz-progress-bar {
-  background-color: lightcoral;
+  background-color: lightgray;
 }
 html body .send_btn {
   position: fixed;
