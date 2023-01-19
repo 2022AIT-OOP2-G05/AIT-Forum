@@ -99,6 +99,7 @@ html {
             width: $main-width;
             margin: 0 auto;
             margin-top: 25px;
+            margin-bottom: calc($Csend_btn-height + ($Csend_btn-bottom * 2));
             ul {
                 width: 100%;
                 list-style: none;
@@ -205,10 +206,10 @@ html {
         }
         .send_btn {
             position: fixed;
-            bottom: 20px;
+            bottom: $Csend_btn-bottom;
             right: 40px;
             width: 150px;
-            height: 40px;
+            height: $Csend_btn-height;
             background-color: #78D9FF;
             border: none;
             border-radius: 25px;
