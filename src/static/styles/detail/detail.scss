@@ -29,6 +29,8 @@ html {
                 cursor: pointer;
                 padding-right: 25px;
                 .back_btn_BG-content-icon {
+                    position: relative;
+                    top: 2px;
                     aspect-ratio: 1 / 1;
                     height: 15px;
                     border-left: 2px solid black;
