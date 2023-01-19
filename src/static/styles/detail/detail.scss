@@ -191,15 +191,15 @@ html {
                     height: 100%;
                     border-radius: 0;
                     border: none;
-                    background-color: lightgray;
+                    background-color: lightblue;
                     &::-webkit-progress-bar {
-                        background-color: lightgray;
+                        background-color: lightblue;
                     }
                     &::-webkit-progress-value {
                         background-color: lightcoral;
                     }
                     &::-moz-progress-bar {
-                        background-color: lightgray;
+                        background-color: lightblue;
                     }
                 }
             }
