@@ -42,7 +42,8 @@ html body .back_btn_BG .back_btn_BG-content .back_btn_BG-content-icon {
 html body .header {
   box-sizing: border-box;
   width: 800px;
-  background-color: #E2E2E2;
+  background-color: #F3F9FF;
+  border: 1px solid lightgray;
   margin: 0 auto;
   margin-top: 75px;
   border-radius: 25px;
