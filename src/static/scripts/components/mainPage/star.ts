@@ -6,7 +6,9 @@ export class Star extends Component<HTMLDivElement, HTMLDivElement> {
     hostId: string,
     private checked: boolean,
     private disabled: boolean,
-    private index: number
+    private index: number,
+    private value = 0,
+    private clickHandler?: (value: number) => void
   ) {
     super("star", hostId, false, "");
     this.hostId = hostId;
@@ -19,6 +21,13 @@ export class Star extends Component<HTMLDivElement, HTMLDivElement> {
     const label = this.el.querySelector("label")!;
     input.id = `${this.hostId}-${this.index}`;
     label.htmlFor = `${this.hostId}-${this.index}`;
+    input.value = this.value.toString();
+
+    label.onclick = () => {
+      if (this.clickHandler) {
+        this.clickHandler(this.value);
+      }
+    };
 
     if (this.checked) input.checked = true;
     if (this.disabled) this.el.querySelector("input")!.disabled = true;
