@@ -195,16 +195,16 @@ html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line {
   height: 100%;
   border-radius: 0;
   border: none;
-  background-color: lightgray;
+  background-color: lightblue;
 }
 html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-webkit-progress-bar {
-  background-color: lightgray;
+  background-color: lightblue;
 }
 html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-webkit-progress-value {
   background-color: lightcoral;
 }
 html body .progress_BG .progress_BG-bottom .progress_BG-bottom-line::-moz-progress-bar {
-  background-color: lightgray;
+  background-color: lightblue;
 }
 html body .send_btn {
   position: fixed;
