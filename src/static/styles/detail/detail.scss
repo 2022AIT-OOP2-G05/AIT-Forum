@@ -102,7 +102,7 @@ html {
             width: $main-width;
             margin: 0 auto;
             margin-top: 25px;
-            margin-bottom: calc($Csend_btn-height + ($Csend_btn-bottom * 2));
+            padding-bottom: calc($Csend_btn-height + ($Csend_btn-bottom * 2));
             ul {
                 width: 100%;
                 list-style: none;
