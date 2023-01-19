@@ -44,7 +44,7 @@ def form(name = "no name"):
     
     print (data)
 
-    ave = average(name)
+    average(name)
 
     return jsonify(json_data)
 
@@ -53,18 +53,46 @@ def average(str) -> None:
  json_open = open(f'src/data/json/items/{str}/input/item.json','r')
  json_load = json.load(json_open)
 
- total_s = 0 #評価の合計
- count = 0 #評価数
+ number_of_credits_s = 0
+ level_s = 0
+ hit_level_s =0
+ teacher_review_s = 0
+ adequacy_s = 0
+ test_level_s = 0
+ middle_test_level_s =0
+ total_s = 0 
 
+ count = 0 #評価数
+ print(json_load)
  for v in json_load:#inputに入っているデータの平均を出す
+
+    number_of_credits_s += v["number_of_credits"]
+    level_s += v["level"]
+    hit_level_s += v["hit_level"]
+    teacher_review_s += v["teacher_review"]
+    adequacy_s += v["adequacy"]
+    test_level_s += v["test_level"]
+    middle_test_level_s += v["middle_test_level"]
     total_s += v["total"]
-    print(v["total"]) #確認用
     count += 1
 
- ave = total_s/count
- print(ave)#評価の平均を表示する
+ ave1 = number_of_credits_s/count
+ ave2 = level_s/count
+ ave3 = hit_level_s/count
+ ave4 = teacher_review_s/count
+ ave5 = adequacy_s/count
+ ave6 =test_level_s/count
+ ave7 =middle_test_level_s/count
+ ave8 = total_s/count
 
- return ave #平均返す
+ dicta = {"number_of_credits_s": ave1} 
+ print(dicta)
+ #print(ave8)#評価の平均を表示する
+
+ with open('src/data/json/items/{str}/output/item.json', "w") as f:
+   json.dump(dicta, f, indent=4)
+
+ #return  
     
 @app.route('/')
 @app.route('/<subject>')
@@ -82,4 +110,5 @@ def subject_json(subject):
     return jsonify(json_data)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    average("first_ai_3")
+    #app.run(debug=True)
