@@ -62,6 +62,15 @@ def average(stra) -> None:
  task_level_s = 0
  middle_test_level_s =0
  total_s = 0 
+ id1 = json_load[0]["id"]
+ id2 = json_load[0]["lesson_id"]
+ id3 = json_load[0]["lesson_name"]
+ id4 = json_load[0]["teacher_name"]
+ id5 = json_load[0]["day_of_week"]
+ id6 = json_load[0]["time"]
+ id7 = json_load[0]["attendance"]
+ id8 = json_load[0]["hit_level"]
+ id9 = json_load[0]["carry"]
 
  count = 0 #評価数
  print(json_load)
@@ -78,7 +87,6 @@ def average(stra) -> None:
     total_s += v["total"]
     count += 1
 
- ave1 = number_of_credits_s/count
  ave2 = level_s/count
  ave3 = hit_level_s/count
  ave4 = teacher_review_s/count
@@ -104,6 +112,15 @@ def average(stra) -> None:
  json_open = open(f'src/data/json/items/{stra}/output/item.json','r')
  json_load = json.load(json_open)
  
+ json_load["id"]=id1
+ json_load["lesson_id"]=id2
+ json_load["lesson_name"]=id3
+ json_load["teacher_name"]=id4
+ json_load["day_of_week"]=id5
+ json_load["time"]=id6
+ json_load["attendance"]=id7
+ json_load["hit_level"]=id8
+ json_load["carry"]=id9
  json_load['level'] = str(ave2)
  json_load['hit_level'] = str(ave3)
  json_load['teacher_review'] = str(ave4)
