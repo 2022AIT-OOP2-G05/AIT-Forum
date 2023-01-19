@@ -42,7 +42,7 @@ html {
             width: $main-width;
             background-color: #E2E2E2;
             margin: 0 auto;
-            margin-top: $Cback_btn_BG-height;
+            margin-top: calc($Cback_btn_BG-height + 25px);
             border-radius: 25px;
             padding: 0 50px;
             .header-title {
