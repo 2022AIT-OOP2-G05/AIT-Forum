@@ -29,6 +29,8 @@ html {
                 cursor: pointer;
                 padding-right: 25px;
                 .back_btn_BG-content-icon {
+                    position: relative;
+                    top: 2px;
                     aspect-ratio: 1 / 1;
                     height: 15px;
                     border-left: 2px solid black;
@@ -40,7 +42,8 @@ html {
         .header {
             box-sizing: border-box;
             width: $main-width;
-            background-color: #E2E2E2;
+            background-color: #F3F9FF;
+            border: 1px solid lightgray;
             margin: 0 auto;
             margin-top: calc($Cback_btn_BG-height + 25px);
             border-radius: 25px;
@@ -99,7 +102,7 @@ html {
             width: $main-width;
             margin: 0 auto;
             margin-top: 25px;
-            margin-bottom: calc($Csend_btn-height + ($Csend_btn-bottom * 2));
+            padding-bottom: calc($Csend_btn-height + ($Csend_btn-bottom * 2));
             ul {
                 width: 100%;
                 list-style: none;
@@ -191,15 +194,15 @@ html {
                     height: 100%;
                     border-radius: 0;
                     border: none;
-                    background-color: lightgray;
+                    background-color: lightblue;
                     &::-webkit-progress-bar {
-                        background-color: lightgray;
+                        background-color: lightblue;
                     }
                     &::-webkit-progress-value {
                         background-color: lightcoral;
                     }
                     &::-moz-progress-bar {
-                        background-color: lightgray;
+                        background-color: lightblue;
                     }
                 }
             }

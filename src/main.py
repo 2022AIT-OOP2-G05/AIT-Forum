@@ -74,6 +74,7 @@ def average(stra) -> None:
 
  count = 0 #評価数
  print(json_load)
+
  for v in json_load:#inputに入っているデータの平均を出す
 
     number_of_credits_s += v["number_of_credits"]
@@ -121,6 +122,7 @@ def average(stra) -> None:
  json_load["attendance"]=id7
  json_load["hit_level"]=id8
  json_load["carry"]=id9
+
  json_load['level'] = str(ave2)
  json_load['hit_level'] = str(ave3)
  json_load['teacher_review'] = str(ave4)

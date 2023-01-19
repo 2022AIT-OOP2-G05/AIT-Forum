@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40">
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188.39 50.81">
   <defs>
     <style>
       .cls-1 {
-        fill: #e5e5e5;
+        fill: #fff;
+        stroke: #4db3ff;
+        stroke-miterlimit: 10;
       }
     </style>
   </defs>
-  <g id="_レイヤー_5" data-name="レイヤー 5">
-    <path class="cls-1" d="m150,40H0V0h113.2c3.21,0,6.24,1.47,8.25,4l28.55,36Z"/>
+  <g id="_レイヤー_3" data-name="レイヤー 3">
+    <path class="cls-1" d="m188,50.5L152.31,5.5c-2.51-3.16-6.3-5-10.31-5H.5v50"/>
   </g>
 </svg>
