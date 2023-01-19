@@ -46,8 +46,10 @@ html body .main-page .main .main-content {
   padding: 0 50px;
 }
 html body .main-page .main .main-content .main-content-nav {
+  top: calc(100% + 10px);
   width: 100%;
   height: 50px;
+  z-index: 1;
 }
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content {
   list-style: none;
@@ -60,7 +62,7 @@ html body .main-page .main .main-content .main-content-nav .main-content-nav-con
   aspect-ratio: 3.75/1;
   height: 50px;
   background-image: url(../../image/nav-i.svg);
-  background-position: center;
+  background-position: left bottom;
   background-repeat: no-repeat;
 }
 html body .main-page .main .main-content .main-content-nav .main-content-nav-content .main-content-nav-content-content .main-content-nav-content-content-text {
@@ -81,9 +83,11 @@ html body .main-page .main .main-content .main-content-nav .main-content-nav-con
   background-image: url(../../image/nav-o.svg);
 }
 html body .main-page .main .main-content .main-content-section {
+  box-sizing: border-box;
   width: 100%;
   height: calc(100% - 50px);
-  background-color: #e5e5e5;
+  background-color: white;
+  border: 1px solid #4DB3FF;
 }
 html body .main-page .main .main-content .main-content-section .main-content-section-ul {
   height: calc(100% - 20px);
@@ -100,7 +104,8 @@ html body .main-page .main .main-content .main-content-section .main-content-sec
   display: inline-block;
   width: 225px;
   height: 225px;
-  background-color: #f2f2f2;
+  background-color: white;
+  border: 1px solid #4DB3FF;
   margin: 30px;
   padding: 30px;
   transition: 0.25s;
@@ -114,7 +119,8 @@ html body .main-page .main .main-content .main-content-section .main-content-sec
   color: black;
 }
 html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content:hover {
-  background-color: #d8d8d8;
+  background-color: #F5FEFF;
+  border: 1px solid #52B1BA;
 }
 html body .main-page .main .main-content .main-content-section .main-content-section-ul .main-content-section-ul-content .main-content-section-ul-content-name {
   width: 100%;
@@ -168,11 +174,11 @@ html body .main-page .main .main-content .main-content-section .main-content-sec
 .main-content-nav-content-content:not(:is(.main-content-nav-content-content-off))::before {
   content: "";
   position: absolute;
-  bottom: 4px;
   left: 50%;
+  top: calc(100% + 0.5px);
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 100%;
   height: 1px;
-  background-color: black;
+  background-color: white;
 }
 /*# sourceMappingURL=main.css.map */
