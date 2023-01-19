@@ -152,6 +152,6 @@ def subject_json(subject):
 
 if __name__ == "__main__":
     average("first_ai_3")
-    #app.run(debug=True)
+    app.run(debug=True)
 
 
