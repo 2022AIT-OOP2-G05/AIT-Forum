@@ -8,10 +8,17 @@ export class Progress extends Component<HTMLDivElement, HTMLProgressElement> {
   }
 
   configure() {
+    console.log(this.el);
     this.el.value = this.value;
   }
 
   renderContent() {
-    // this.el.textContent = `${this.value}%`;
+    this.el.querySelector("progress")!.value = this.value;
+    this.el.querySelector(
+      ".progress_BG-top-left"
+    )!.innerHTML = `yes - ${this.value}%`;
+    this.el.querySelector(".progress_BG-top-right")!.innerHTML = `no - ${
+      100 - this.value
+    }%`;
   }
 }
