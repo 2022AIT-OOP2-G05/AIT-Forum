@@ -8,7 +8,6 @@ export class Progress extends Component<HTMLDivElement, HTMLProgressElement> {
   }
 
   configure() {
-    console.log(this.el);
     this.el.value = this.value;
   }
 
