@@ -8,6 +8,7 @@ export class Detail {
     public level: number,
     public hit_level: number,
     public teacher_review: number,
+    public attendance: number,
     public adequacy: number,
     public test_level: number,
     public task_level: number,

@@ -37,6 +37,8 @@ def form(name = "no name"):
         return jsonify(res='error'), 400
 
     data = request.get_json()
+    print(data)
+
     json_data.append(data)
 
     with open(f'src/data/json/items/{name}/input/item.json', 'w') as f:
@@ -53,7 +55,7 @@ def average(stra) -> None:
  json_open = open(f'src/data/json/items/{stra}/input/item.json','r')
  json_load = json.load(json_open)
 
- number_of_credits_s = 0
+#  number_of_credits_s = 0
  level_s = 0
  hit_level_s =0
  teacher_review_s = 0
@@ -62,8 +64,8 @@ def average(stra) -> None:
  task_level_s = 0
  middle_test_level_s =0
  total_s = 0 
- id1 = json_load[0]["id"]
- id2 = json_load[0]["lesson_id"]
+#  id1 = json_load[0]["id"]
+#  id2 = json_load[0]["lesson_id"]
  id3 = json_load[0]["lesson_name"]
  id4 = json_load[0]["teacher_name"]
  id5 = json_load[0]["day_of_week"]
@@ -77,7 +79,7 @@ def average(stra) -> None:
 
  for v in json_load:#inputに入っているデータの平均を出す
 
-    number_of_credits_s += v["number_of_credits"]
+    # number_of_credits_s += v["number_of_credits"]
     level_s += v["level"]
     hit_level_s += v["hit_level"]
     teacher_review_s += v["teacher_review"]
@@ -113,8 +115,8 @@ def average(stra) -> None:
  json_open = open(f'src/data/json/items/{stra}/output/item.json','r')
  json_load = json.load(json_open)
  
- json_load["id"]=id1
- json_load["lesson_id"]=id2
+#  json_load["id"]=id1
+#  json_load["lesson_id"]=id2
  json_load["lesson_name"]=id3
  json_load["teacher_name"]=id4
  json_load["day_of_week"]=id5

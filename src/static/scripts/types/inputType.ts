@@ -4,6 +4,7 @@ export type FormInput = {
   day_of_week: string;
   time: number;
   number_of_credits: number;
+  attendance: boolean;
   level: number;
   hit_level: boolean;
   teacher_review: number;
@@ -21,6 +22,7 @@ export const initializeFormInput: FormInput = {
   day_of_week: "",
   time: 0,
   number_of_credits: 0,
+  attendance: false,
   level: 0,
   hit_level: false,
   teacher_review: 0,

@@ -30,6 +30,7 @@ class DetailState extends State<Detail> {
       detail.day_of_week,
       detail.time,
       detail.number_of_credits,
+      detail.attendance,
       detail.level,
       detail.hit_level,
       detail.teacher_review,

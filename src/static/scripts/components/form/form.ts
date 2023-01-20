@@ -63,6 +63,8 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
 
   private submitHandler(event: Event) {
     event.preventDefault();
+
+    console.log(formState.getFormState());
     if (!this.formValidation()) {
       toast.error({
         message: "入力されていない項目があります",
@@ -79,7 +81,8 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
 
   private renderList() {
     for (const key in this.inputField) {
-      const isStar = key !== "hit_level" && key !== "carry";
+      const isStar =
+        key !== "hit_level" && key !== "carry" && key !== "attendance";
       new FormInputList(isStar ? `star-${key}` : `select-${key}`, key, isStar);
     }
   }
