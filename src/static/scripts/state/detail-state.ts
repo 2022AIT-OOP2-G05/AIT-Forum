@@ -22,6 +22,7 @@ class DetailState extends State<Detail> {
   async fetchDetails() {
     const pathname = location.pathname;
     const detail: Detail = await Fetch.get(`detail/${pathname}`);
+    this.cleanDetail();
 
     this.detail = new Detail(
       detail.lesson_name,
@@ -39,15 +40,12 @@ class DetailState extends State<Detail> {
       detail.carry,
       detail.total
     );
+
     this.updateListeners();
   }
 
-  private cleanDom() {
-    const app = document.getElementById("app")!;
-
-    while (app.firstChild) {
-      app.removeChild(app.firstChild);
-    }
+  private cleanDetail() {
+    this.detail = {} as Detail;
   }
 
   forceRender() {

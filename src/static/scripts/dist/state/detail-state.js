@@ -16,14 +16,12 @@ class DetailState extends State {
     async fetchDetails() {
         const pathname = location.pathname;
         const detail = await Fetch.get(`detail/${pathname}`);
+        this.cleanDetail();
         this.detail = new Detail(detail.lesson_name, detail.teacher_name, detail.day_of_week, detail.time, detail.number_of_credits, detail.level, detail.hit_level, detail.teacher_review, detail.adequacy, detail.test_level, detail.task_level, detail.middle_test_level, detail.carry, detail.total);
         this.updateListeners();
     }
-    cleanDom() {
-        const app = document.getElementById("app");
-        while (app.firstChild) {
-            app.removeChild(app.firstChild);
-        }
+    cleanDetail() {
+        this.detail = {};
     }
     forceRender() {
         this.updateListeners();

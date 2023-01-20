@@ -51,6 +51,7 @@ export class Form extends Component {
             toast.success({
                 message: "評価を送信しました",
             });
+            formState.resetFormState();
         }
     }
     renderList() {
