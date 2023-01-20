@@ -21,21 +21,36 @@ export class Form extends Component {
             teacher_name: this.detail.teacher_name,
             day_of_week: this.detail.day_of_week,
             time: this.detail.time,
+            number_of_credits: this.detail.number_of_credits,
         });
     }
     inputFormProcessing() {
-        const { lesson_name, lesson_name_en, teacher_name, day_of_week, time, number_of_credits, total, ...inputField } = initializeFormInput;
+        const { lesson_name, teacher_name, day_of_week, time, number_of_credits, total, ...inputField } = initializeFormInput;
         return inputField;
     }
     renderContent() { }
+    formValidation() {
+        const inputs = formState.getFormState();
+        for (const key in inputs) {
+            if (inputs[key] === 0 || inputs[key] === "") {
+                return false;
+            }
+        }
+        return true;
+    }
     submitHandler(event) {
         event.preventDefault();
-        Fetch.post(`detail/${location.pathname}`, formState.getFormState());
-        console.log("submit");
+        if (!this.formValidation()) {
+            console.log("入力されていない項目があります");
+        }
+        else {
+            Fetch.post(`detail/${location.pathname}`, formState.getFormState());
+        }
     }
     renderList() {
         for (const key in this.inputField) {
-            new FormInputList(`star-${key}`);
+            const isStar = key !== "hit_level" && key !== "carry";
+            new FormInputList(isStar ? `star-${key}` : `select-${key}`, key, isStar);
         }
     }
 }

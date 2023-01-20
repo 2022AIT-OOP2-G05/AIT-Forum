@@ -6,7 +6,6 @@ import { FormMain } from "./form.js";
 import { detailState } from "./state/detail-state.js";
 class Main {
     constructor() {
-        console.log("main");
         this.init();
     }
     async init() {
@@ -18,7 +17,6 @@ class Main {
         this.initForm();
     }
     initForm() {
-        console.log("initForm");
         new FormMain();
     }
 }

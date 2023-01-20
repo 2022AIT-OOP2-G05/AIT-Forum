@@ -215,7 +215,7 @@ html body .send_btn {
   right: 40px;
   width: 150px;
   height: 40px;
-  background-color: #78D9FF;
+  background-color: #78d9ff;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -225,6 +225,10 @@ html body .send_btn {
   z-index: 999;
 }
 html body .send_btn:hover {
-  background-color: #4AA8C6;
+  background-color: #4aa8c6;
 }
-/*# sourceMappingURL=detail.css.map */
+
+.total-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}/*# sourceMappingURL=detail.css.map */
