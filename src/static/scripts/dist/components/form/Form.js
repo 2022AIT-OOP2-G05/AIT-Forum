@@ -1,8 +1,8 @@
-import { toast } from "../../detail.js";
 import { Fetch } from "../../libs/fetch.js";
 import { Component } from "../../models/component-base.js";
 import { detailState } from "../../state/detail-state.js";
 import { initializeFormInput } from "../../types/inputType.js";
+import { toast } from "../toast.js";
 import { FormInputList } from "./formInputList.js";
 import { formState } from "./formState.js";
 export class Form extends Component {
@@ -39,7 +39,7 @@ export class Form extends Component {
         }
         return true;
     }
-    submitHandler(event) {
+    async submitHandler(event) {
         event.preventDefault();
         console.log(formState.getFormState());
         if (!this.formValidation()) {
@@ -48,10 +48,17 @@ export class Form extends Component {
             });
         }
         else {
-            Fetch.post(`detail/${location.pathname}`, formState.getFormState());
-            toast.success({
-                message: "評価を送信しました",
-            });
+            const res = await Fetch.post(`detail/${location.pathname}`, formState.getFormState());
+            if (res.error) {
+                toast.error({
+                    message: "予期せぬエラーが発生しました",
+                });
+            }
+            else {
+                toast.success({
+                    message: "評価を送信しました",
+                });
+            }
             formState.resetFormState();
         }
     }

@@ -1,3 +1,4 @@
+import { toast } from "../components/toast.js";
 export class Fetch {
     static async get(url) {
         try {
@@ -5,7 +6,9 @@ export class Fetch {
             return await response.json();
         }
         catch (error) {
-            console.log(error);
+            toast.error({
+                message: "予期せぬエラーが発生しました",
+            });
         }
     }
     static async post(url, data) {
@@ -18,7 +21,10 @@ export class Fetch {
             return await response.json();
         }
         catch (error) {
-            console.log(error);
+            toast.error({
+                message: "予期せぬエラーが発生しました",
+            });
+            return { error: true };
         }
     }
 }
