@@ -6,7 +6,7 @@ export class FormHeader extends Component<HTMLDivElement, HTMLDivElement> {
   private detail: Detail;
 
   constructor() {
-    super("form_header", "form", false, "form-header");
+    super("form_header", "form", true, "form-header");
     this.detail = detailState.getDetails();
     this.configure();
     this.renderContent();

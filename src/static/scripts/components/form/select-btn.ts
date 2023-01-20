@@ -1,0 +1,42 @@
+import { Component } from "../../models/component-base.js";
+import { formState } from "./formState.js";
+
+export class SelectBtn extends Component<HTMLDivElement, HTMLDivElement> {
+  constructor(private hostId: string, private input_key: string) {
+    super("select-btn", hostId, false, "");
+    this.renderContent();
+    this.configure();
+  }
+
+  private clickHandler(target: HTMLInputElement) {
+    formState.setFormState({
+      ...formState.getFormState(),
+      [this.input_key]: target.value === "true",
+    });
+  }
+
+  configure() {
+    this.el.querySelectorAll("input")!.forEach((input, i) => {
+      input.name = this.hostId;
+      input.id = `${this.hostId}-${i}`;
+      input.value = i === 0 ? "true" : "false";
+      input.checked = i === 1;
+
+      input.addEventListener("click", (e) => {
+        this.clickHandler(e.target as HTMLInputElement);
+      });
+    });
+
+    this.el.querySelectorAll("label")!.forEach((label, i) => {
+      label.htmlFor = `${this.hostId}-${i}`;
+    });
+
+    this.el.querySelectorAll("input")!.forEach((input) => {
+      input.addEventListener("click", (e) => {
+        const target = e.target as HTMLInputElement;
+      });
+    });
+  }
+
+  renderContent() {}
+}

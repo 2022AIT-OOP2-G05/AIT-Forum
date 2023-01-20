@@ -2,8 +2,8 @@ import { Fetch } from "../../libs/fetch.js";
 import { Component } from "../../models/component-base.js";
 import { Detail } from "../../models/detail.js";
 import { detailState } from "../../state/detail-state.js";
-import { FormInput, initializeFormInput } from "../../types/inputType.js";
-import { Star } from "../mainPage/star.js";
+import { initializeFormInput } from "../../types/inputType.js";
+
 import { FormInputList } from "./formInputList.js";
 import { formState } from "./formState.js";
 
@@ -31,13 +31,13 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
       teacher_name: this.detail.teacher_name,
       day_of_week: this.detail.day_of_week,
       time: this.detail.time,
+      number_of_credits: this.detail.number_of_credits,
     });
   }
 
   inputFormProcessing() {
     const {
       lesson_name,
-      lesson_name_en,
       teacher_name,
       day_of_week,
       time,
@@ -45,21 +45,34 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
       total,
       ...inputField
     } = initializeFormInput;
-
     return inputField;
   }
 
   renderContent() {}
 
+  private formValidation() {
+    const inputs: InputField = formState.getFormState();
+    for (const key in inputs) {
+      if (inputs[key] === 0 || inputs[key] === "") {
+        return false;
+      }
+    }
+    return true;
+  }
+
   private submitHandler(event: Event) {
     event.preventDefault();
-    Fetch.post(`detail/${location.pathname}`, formState.getFormState());
-    console.log("submit");
+    if (!this.formValidation()) {
+      console.log("入力されていない項目があります");
+    } else {
+      Fetch.post(`detail/${location.pathname}`, formState.getFormState());
+    }
   }
 
   private renderList() {
     for (const key in this.inputField) {
-      new FormInputList(`star-${key}`);
+      const isStar = key !== "hit_level" && key !== "carry";
+      new FormInputList(isStar ? `star-${key}` : `select-${key}`, key, isStar);
     }
   }
 }
