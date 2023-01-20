@@ -1,6 +1,5 @@
 export const initializeFormInput = {
     lesson_name: "",
-    lesson_name_en: "",
     teacher_name: "",
     day_of_week: "",
     time: 0,

@@ -2,7 +2,7 @@ import { Component } from "../../models/component-base.js";
 import { detailState } from "../../state/detail-state.js";
 export class FormHeader extends Component {
     constructor() {
-        super("form_header", "form", false, "form-header");
+        super("form_header", "form", true, "form-header");
         this.detail = detailState.getDetails();
         this.configure();
         this.renderContent();
