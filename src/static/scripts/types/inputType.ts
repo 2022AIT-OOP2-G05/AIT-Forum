@@ -1,6 +1,5 @@
 export type FormInput = {
   lesson_name: string;
-  lesson_name_en: string;
   teacher_name: string;
   day_of_week: string;
   time: number;
@@ -18,7 +17,6 @@ export type FormInput = {
 
 export const initializeFormInput: FormInput = {
   lesson_name: "",
-  lesson_name_en: "",
   teacher_name: "",
   day_of_week: "",
   time: 0,
