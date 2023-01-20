@@ -44,27 +44,98 @@ def form(name = "no name"):
     
     print (data)
 
-    ave = average(name)
+    average(name)
 
     return jsonify(json_data)
 
-def average(str) -> None:
+def average(stra) -> None:
 
- json_open = open(f'src/data/json/items/{str}/input/item.json','r')
+ json_open = open(f'src/data/json/items/{stra}/input/item.json','r')
  json_load = json.load(json_open)
 
- total_s = 0 #評価の合計
+ number_of_credits_s = 0
+ level_s = 0
+ hit_level_s =0
+ teacher_review_s = 0
+ adequacy_s = 0
+ test_level_s = 0
+ task_level_s = 0
+ middle_test_level_s =0
+ total_s = 0 
+ id1 = json_load[0]["id"]
+ id2 = json_load[0]["lesson_id"]
+ id3 = json_load[0]["lesson_name"]
+ id4 = json_load[0]["teacher_name"]
+ id5 = json_load[0]["day_of_week"]
+ id6 = json_load[0]["time"]
+ id7 = json_load[0]["attendance"]
+ id8 = json_load[0]["hit_level"]
+ id9 = json_load[0]["carry"]
+
  count = 0 #評価数
+ print(json_load)
 
  for v in json_load:#inputに入っているデータの平均を出す
+
+    number_of_credits_s += v["number_of_credits"]
+    level_s += v["level"]
+    hit_level_s += v["hit_level"]
+    teacher_review_s += v["teacher_review"]
+    adequacy_s += v["adequacy"]
+    test_level_s += v["test_level"]
+    task_level_s += v["task_level"]
+    middle_test_level_s += v["middle_test_level"]
     total_s += v["total"]
-    print(v["total"]) #確認用
     count += 1
 
- ave = total_s/count
- print(ave)#評価の平均を表示する
+ ave2 = level_s/count
+ ave3 = hit_level_s/count
+ ave4 = teacher_review_s/count
+ ave5 = adequacy_s/count
+ ave6 = test_level_s/count
+ ave7 = task_level_s/count
+ ave8 = middle_test_level_s/count
+ ave9 = total_s/count
 
- return ave #平均返す
+#  dicta = {"number_of_credits_s": ave1}
+#  dicta = {"level": ave2} 
+#  dicta = {"hit_level": ave3} 
+#  dicta = {"teacher_review": ave4} 
+#  dicta = {"adequacy": ave5} 
+#  dicta = {"test_level": ave6} 
+#  dicta = {"task_level": ave7}
+#  dicta = {"middle_test_level": ave8} 
+#  dicta = {"total": ave9}
+
+#  print(dicta)
+ #print(ave8)#評価の平均を表示する
+
+ json_open = open(f'src/data/json/items/{stra}/output/item.json','r')
+ json_load = json.load(json_open)
+ 
+ json_load["id"]=id1
+ json_load["lesson_id"]=id2
+ json_load["lesson_name"]=id3
+ json_load["teacher_name"]=id4
+ json_load["day_of_week"]=id5
+ json_load["time"]=id6
+ json_load["attendance"]=id7
+ json_load["hit_level"]=id8
+ json_load["carry"]=id9
+
+ json_load['level'] = str(ave2)
+ json_load['hit_level'] = str(ave3)
+ json_load['teacher_review'] = str(ave4)
+ json_load['adequacy'] = str(ave5)
+ json_load['test_level'] = str(ave6)
+ json_load['task_level'] = str(ave7)
+ json_load['middle_test_level'] = str(ave8)
+ json_load['total'] = str(ave9)
+ 
+ with open(f'src/data/json/items/{stra}/output/item.json', "w") as f:
+   json.dump(json_load, f, indent=4)
+
+ #return  
     
 @app.route('/')
 @app.route('/<subject>')
@@ -79,9 +150,10 @@ def subject_json(subject):
     with open('src/data/json/items/'+subject+'/output/item.json') as f:
         json_data = json.load(f)
 
-    print(json_data)
-
     return jsonify(json_data)
 
 if __name__ == "__main__":
+    average("first_ai_3")
     app.run(debug=True)
+
+

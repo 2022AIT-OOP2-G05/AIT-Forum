@@ -5,37 +5,108 @@
 }
 
 html {
-  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
-    "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
-    "ＭＳ Ｐゴシック", "MS PGothic";
-  body {
-    position: relative;
-    width: 100vw;
-    height: calc(100vh - $Cback_btn_BG-height);
-    .back_btn_BG {
-      position: fixed;
-      top: 0;
-      z-index: 999;
-      width: 100%;
-      height: $Cback_btn_BG-height;
-      background-color: rgba(255, 255, 255, 0.75);
-      .back_btn_BG-content {
-        position: absolute;
-        display: inline-block;
-        top: 50%;
-        left: 30px;
-        height: $Cback_btn_BG-height;
-        line-height: $Cback_btn_BG-height;
-        transform: translate(0, -50%);
-        vertical-align: middle;
-        cursor: pointer;
-        padding-right: 25px;
-        .back_btn_BG-content-icon {
-          aspect-ratio: 1 / 1;
-          height: 15px;
-          border-left: 2px solid black;
-          border-bottom: 2px solid black;
-          transform: rotate(45deg);
+    font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+    body {
+        position: relative;
+        width: 100vw;
+        height: calc(100vh - $Cback_btn_BG-height);
+        .back_btn_BG {
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: $Cback_btn_BG-height;
+            background-color: rgba(255, 255, 255, 0.75);
+            .back_btn_BG-content {
+                position: absolute;
+                display: inline-block;
+                top: 50%;
+                left: 30px;
+                height: $Cback_btn_BG-height;
+                line-height: $Cback_btn_BG-height;
+                transform: translate(0, -50%);
+                vertical-align: middle;
+                cursor: pointer;
+                padding-right: 25px;
+                .back_btn_BG-content-icon {
+                    position: relative;
+                    top: 2px;
+                    aspect-ratio: 1 / 1;
+                    height: 15px;
+                    border-left: 2px solid black;
+                    border-bottom: 2px solid black;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        .header {
+            box-sizing: border-box;
+            width: $main-width;
+            background-color: #F3F9FF;
+            border: 1px solid lightgray;
+            margin: 0 auto;
+            margin-top: calc($Cback_btn_BG-height + 25px);
+            border-radius: 25px;
+            padding: 0 50px;
+            .header-title {
+                box-sizing: border-box;
+                width: 100%;
+                height: $Cheader_title-heigh;
+                line-height: $Cheader_title-heigh;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                font-weight: normal;
+            }
+            .header-meta_BG {
+                position: relative;
+                width: 100%;
+                height: calc(4rem * 1.5);
+                padding-bottom: 15px;
+                .header-meta_BG-text {
+                    position: absolute;
+                    right: 0;
+                    max-width: 300px;
+                    p {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            width: $main-width;
+            height: $Ctotal-height;
+            margin: 40px auto;
+            .total-text {
+                line-height: $Ctotal-height;
+                height: $Ctotal-height;
+                font-weight: normal;
+            }
+            .total-star_BG {
+                box-sizing: border-box;
+                padding: 4px 0;
+                height: $Ctotal-height;
+            }
+        }
+        .total-bottom-border {
+            width: calc( $main-width * 0.8);
+            height: 2px;
+            background-color: lightgray;
+            margin: 0 auto;
+        }
+        .main {
+            width: $main-width;
+            margin: 0 auto;
+            margin-top: 25px;
+            padding-bottom: calc($Csend_btn-height + ($Csend_btn-bottom * 2));
+            ul {
+                width: 100%;
+                list-style: none;
+            }
         }
       }
     }
@@ -139,47 +210,44 @@ html {
         .star {
           height: 85%;
         }
-      }
-    }
-    .star {
-      display: inline-block;
-      aspect-ratio: 1 / 1;
-      height: 100%;
-      margin: 0 5px;
-      &:first-child {
-        margin-right: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      input[type="radio"] {
-        display: none;
-      }
-      input[type="radio"] + label {
-        display: inline-block;
-        aspect-ratio: 1 / 1;
-        height: 100%;
-        background-image: url(../../image/star-o.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      input[type="radio"]:checked + label {
-        background-image: url(../../image/star-i.svg);
-      }
-    }
-    .progress_BG {
-      box-sizing: border-box;
-      padding: 5px 0;
-      height: 100%;
-      width: 250px;
-      font-size: 0;
-      .progress_BG-top {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: calc(100% - $Cprogress_BG_bottom-height);
-        .progress_BG-top-left {
-          font-size: 1rem;
+        .progress_BG {
+            box-sizing: border-box;
+            padding: 5px 0;
+            height: 100%;
+            width: 250px;
+            font-size: 0;
+            .progress_BG-top {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: calc(100% - $Cprogress_BG_bottom-height);
+                .progress_BG-top-left {
+                    font-size: 1rem;
+                }
+                .progress_BG-top-right {
+                    font-size: 1rem;
+                }
+            }
+            .progress_BG-bottom {
+                width: 100%;
+                height: $Cprogress_BG_bottom-height;
+                .progress_BG-bottom-line {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0;
+                    border: none;
+                    background-color: lightblue;
+                    &::-webkit-progress-bar {
+                        background-color: lightblue;
+                    }
+                    &::-webkit-progress-value {
+                        background-color: lightcoral;
+                    }
+                    &::-moz-progress-bar {
+                        background-color: lightblue;
+                    }
+                }
+            }
         }
         .progress_BG-top-right {
           font-size: 1rem;
