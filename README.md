@@ -8,13 +8,23 @@
 
 ##### 教科 1 個分
 
-1. "id": "数字が入ります",
-2. "lesson_name": 授業の名前が入ります,
-3. "teacher_name": 先生の名前が入ります,
-4. "level": 教科の難易度の平均が入ります。計算して入れてください,
-5. "day_of_week": 授業の曜日が入ります。,
-6. "time": 授業の時間が入ります,
-7. "total": 授業の評価の平均が入ります。計算して入れてください。
+  "lesson_name": "キャリア意識形成",
+  "teacher_name": "水野　勝教",
+  "day_of_week": "月",
+  "time": 3,
+  "number_of_credits": 2,
+  "level": 2,
+  "hit_level": 60
+  "teacher_review": 3
+  "adequacy": 3,
+  "test_level": 3,
+  "task_level": 4,
+  "middle_test_level": 5
+  "carry": 90,
+  "total": 2
+  
+  数字のところは入力で入って来る。　lesson_name teacher_name　　day_of_week time number_of_credits 手動で入れる。
+
 
 #### items フォルダにはそれぞれの教科のフォルダが入ります。
 
