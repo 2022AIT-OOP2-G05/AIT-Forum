@@ -7,7 +7,6 @@ import { detailState } from "./state/detail-state.js";
 
 class Main {
   constructor() {
-    console.log("main");
     this.init();
   }
 
@@ -21,7 +20,6 @@ class Main {
   }
 
   private initForm() {
-    console.log("initForm");
     new FormMain();
   }
 }
