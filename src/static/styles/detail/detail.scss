@@ -231,3 +231,65 @@ html {
   display: flex;
   flex-direction: column-reverse;
 }
+
+.toast {
+  position: fixed;
+  transform: translateX(100vw);
+  right: 0;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  &.show {
+    animation: show 3s ease-in-out;
+  }
+
+  .toast-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > i {
+      font-size: 1.5rem;
+    }
+
+    &.error {
+      color: red;
+    }
+
+    &.success {
+      color: limegreen;
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+
+  14% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  86% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(100vw);
+  }
+}

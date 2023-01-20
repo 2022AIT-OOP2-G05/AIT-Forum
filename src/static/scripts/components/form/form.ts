@@ -1,3 +1,4 @@
+import { toast } from "../../detail.js";
 import { Fetch } from "../../libs/fetch.js";
 import { Component } from "../../models/component-base.js";
 import { Detail } from "../../models/detail.js";
@@ -63,9 +64,14 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
   private submitHandler(event: Event) {
     event.preventDefault();
     if (!this.formValidation()) {
-      console.log("入力されていない項目があります");
+      toast.error({
+        message: "入力されていない項目があります",
+      });
     } else {
       Fetch.post(`detail/${location.pathname}`, formState.getFormState());
+      toast.success({
+        message: "評価を送信しました",
+      });
     }
   }
 
