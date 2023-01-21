@@ -4,6 +4,7 @@ export const initializeFormInput = {
     day_of_week: "",
     time: 0,
     number_of_credits: 0,
+    attendance: false,
     level: 0,
     hit_level: false,
     teacher_review: 0,

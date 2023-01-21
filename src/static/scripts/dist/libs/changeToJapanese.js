@@ -16,6 +16,8 @@ export const changeToJapanese = (text) => {
             return "課題の難易度";
         case "middle_test_level":
             return "中間テストの難易度";
+        case "attendance":
+            return "出席";
         default:
             return "";
     }

@@ -24,7 +24,7 @@ export class EvolutionList extends Component {
     renderContent() { }
     renderList() {
         for (const key in this.evolutionItems) {
-            new EvolutionItem(key, this.evolutionItems[key], key !== "hit_level" && key !== "carry");
+            new EvolutionItem(key, this.evolutionItems[key], key !== "hit_level" && key !== "carry" && key !== "attendance");
         }
     }
 }

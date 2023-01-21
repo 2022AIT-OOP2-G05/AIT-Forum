@@ -49,7 +49,7 @@ export class EvolutionList extends Component<HTMLDivElement, HTMLElement> {
       new EvolutionItem(
         key,
         this.evolutionItems[key],
-        key !== "hit_level" && key !== "carry"
+        key !== "hit_level" && key !== "carry" && key !== "attendance"
       );
     }
   }
