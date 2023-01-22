@@ -10,7 +10,25 @@ html {
 html body {
   position: relative;
   width: 100vw;
+  height: 100vh;
+}
+html body .app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: calc(100vh - 50px);
+  background-color: white;
+}
+html body .form {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  z-index: 999;
 }
 html body .back_btn_BG {
   position: fixed;
