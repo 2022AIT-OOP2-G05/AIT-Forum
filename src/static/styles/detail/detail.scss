@@ -28,20 +28,23 @@ html {
             left: 0;
             width: 100%;
             height: 100%;
-            padding: 0 calc((100vw - (100vw - $main-width)) / 2);
             background-color: white;
             z-index: 999;
             overflow-y: auto;
             .F-h2 {
                 box-sizing: border-box;
-                width: 100%;
+                width: $main-width;
                 height: $CF_h2-height;
                 line-height: $CF_h2-height;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 padding-right: 100px;
-                margin: 40px 0;
+                margin: 40px auto;
+            }
+            .F-form {
+                width: $main-width;
+                margin: 0 auto;
             }
         }
         .back_btn_BG {
