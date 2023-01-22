@@ -334,6 +334,41 @@ html body .main ul {
   background-color: #4aa8c6;
 }
 
+.select_btn_BG {
+  display: flex;
+  height: 90%;
+}
+.select_btn_BG input[type=radio] {
+  display: none;
+}
+.select_btn_BG input[type=radio] + label {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 98px;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: 0.25s;
+}
+.select_btn_BG input[type=radio] + label:last-child {
+  margin-right: 0;
+}
+.select_btn_BG input[type=radio] + label .select_btn_BG-label-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.select_btn_BG input[type=radio]:checked + .select_btn_BG-yes-label {
+  background-color: lightcoral;
+}
+.select_btn_BG input[type=radio]:checked + .select_btn_BG-no-label {
+  background-color: lightblue;
+}
+
 .total-wrapper {
   display: flex;
   flex-direction: column-reverse;
