@@ -5,6 +5,7 @@ export class Fetch {
   static async get(url: string) {
     try {
       const response = await fetch(`/api/${url}`);
+
       return await response.json();
     } catch (error) {
       toast.error({
@@ -20,6 +21,7 @@ export class Fetch {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+
       return await response.json();
     } catch (error) {
       toast.error({
