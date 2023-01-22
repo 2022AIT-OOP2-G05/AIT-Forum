@@ -22,6 +22,7 @@ html {
         }
         .form {
             box-sizing: border-box;
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
@@ -232,12 +233,13 @@ html {
         width: 90%;
         height: 1px;
         border-bottom: 3px dotted rgb(171, 171, 171);
-        z-index: -10;
+        z-index: 1;
     }
     .evo_item-text {
         background-color: white;
         line-height: $Ctotal-height;
         padding-right: 40px;
+        z-index: 2;
     }
     .evo_item-item {
         background-color: white;
@@ -245,6 +247,7 @@ html {
         padding: 7px 0;
         height: $Ctotal-height;
         padding-left: 40px;
+        z-index: 2;
         .star {
             height: 85%;
         }

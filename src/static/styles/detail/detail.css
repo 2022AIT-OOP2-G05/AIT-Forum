@@ -24,6 +24,7 @@ html body .app {
 }
 html body .form {
   box-sizing: border-box;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -233,12 +234,13 @@ html body .main ul {
   width: 90%;
   height: 1px;
   border-bottom: 3px dotted rgb(171, 171, 171);
-  z-index: -10;
+  z-index: 1;
 }
 .evo_item .evo_item-text {
   background-color: white;
   line-height: 50px;
   padding-right: 40px;
+  z-index: 2;
 }
 .evo_item .evo_item-item {
   background-color: white;
@@ -246,6 +248,7 @@ html body .main ul {
   padding: 7px 0;
   height: 50px;
   padding-left: 40px;
+  z-index: 2;
 }
 .evo_item .evo_item-item .star {
   height: 85%;
