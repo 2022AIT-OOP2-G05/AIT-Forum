@@ -6,6 +6,7 @@
 
 html {
   font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+  overflow: hidden;
 }
 html body {
   position: relative;
@@ -19,6 +20,7 @@ html body .app {
   width: 100%;
   height: calc(100vh - 50px);
   background-color: white;
+  overflow-y: auto;
 }
 html body .form {
   position: absolute;
@@ -29,6 +31,7 @@ html body .form {
   height: 100%;
   background-color: lightblue;
   z-index: 999;
+  overflow-y: auto;
 }
 html body .back_btn_BG {
   position: fixed;
