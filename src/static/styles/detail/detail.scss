@@ -31,6 +31,17 @@ html {
             background-color: white;
             z-index: 999;
             overflow-y: auto;
+            .F-h2 {
+                box-sizing: border-box;
+                width: 100%;
+                height: $CF_h2-height;
+                line-height: $CF_h2-height;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-right: 100px;
+                margin: 40px 0;
+            }
         }
         .back_btn_BG {
             position: fixed;
