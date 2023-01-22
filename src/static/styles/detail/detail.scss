@@ -22,7 +22,7 @@ html {
         }
         .form_BG {
             box-sizing: border-box;
-            // display: none;
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
@@ -66,6 +66,42 @@ html {
                     height: 1px;
                     background-color: lightgray;
                     z-index: 999;
+                }
+                .F-close_btn {
+                    box-sizing: border-box;
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translate(0, -50%) rotate(0deg);
+                    aspect-ratio: 1 / 1;
+                    height: 100%;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    background-color: white;
+                    border: 1px solid transparent;
+                    transition: .25s;
+                    &:hover {
+                        border: 1px solid #78D9FF;
+                        transform: translate(0, -50%) rotate(180deg);
+                    }
+                    .F-close_btn-border_1 {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                        width: 80%;
+                        height: 1px;
+                        background-color: black;
+                    }
+                    .F-close_btn-border_2 {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                        width: 80%;
+                        height: 1px;
+                        background-color: black;
+                    }
                 }
             }
             .F-form {
