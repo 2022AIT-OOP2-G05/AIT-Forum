@@ -1,10 +1,11 @@
 from crypt import methods
+import math
 from flask import Flask, jsonify, render_template, request
 import json
 
 #flaskの初期化
 app = Flask(__name__)
-app.config["JSON_AS_ASCII"] = Flask
+app.config["JSON_AS_ASCII"] = False
 
 @app.route('/')
 def index():
@@ -37,14 +38,14 @@ def form(name = "no name"):
         return jsonify(res='error'), 400
 
     data = request.get_json()
-    print(data)
+
 
     json_data.append(data)
 
     with open(f'src/data/json/items/{name}/input/item.json', 'w') as f:
         json.dump(json_data, f, indent=4)
     
-    print (data)
+
 
     average(name)
 
@@ -55,7 +56,6 @@ def average(stra) -> None:
  json_open = open(f'src/data/json/items/{stra}/input/item.json','r')
  json_load = json.load(json_open)
 
-#  number_of_credits_s = 0
  level_s = 0
  hit_level_s =0
  teacher_review_s = 0
@@ -64,30 +64,38 @@ def average(stra) -> None:
  task_level_s = 0
  middle_test_level_s =0
  total_s = 0 
-#  id1 = json_load[0]["id"]
-#  id2 = json_load[0]["lesson_id"]
+ attendance = 0
+ carry = 0
+
  id3 = json_load[0]["lesson_name"]
  id4 = json_load[0]["teacher_name"]
  id5 = json_load[0]["day_of_week"]
  id6 = json_load[0]["time"]
- id7 = json_load[0]["attendance"]
- id8 = json_load[0]["hit_level"]
- id9 = json_load[0]["carry"]
+
+ number_of_credits = json_load[0]["number_of_credits"]
 
  count = 0 #評価数
- print(json_load)
+#  print(json_load)
 
  for v in json_load:#inputに入っているデータの平均を出す
 
+    if v["hit_level"] == True:
+        hit_level_s += 1
+
+    if v["carry"] == True:
+        carry += 1
+
+    if v["attendance"] == True:
+        attendance += 1
     # number_of_credits_s += v["number_of_credits"]
     level_s += v["level"]
-    hit_level_s += v["hit_level"]
     teacher_review_s += v["teacher_review"]
     adequacy_s += v["adequacy"]
     test_level_s += v["test_level"]
     task_level_s += v["task_level"]
     middle_test_level_s += v["middle_test_level"]
     total_s += v["total"]
+
     count += 1
 
  ave2 = level_s/count
@@ -98,41 +106,30 @@ def average(stra) -> None:
  ave7 = task_level_s/count
  ave8 = middle_test_level_s/count
  ave9 = total_s/count
+ attendance_ave = attendance/count
+ carry_ave = carry/count
 
-#  dicta = {"number_of_credits_s": ave1}
-#  dicta = {"level": ave2} 
-#  dicta = {"hit_level": ave3} 
-#  dicta = {"teacher_review": ave4} 
-#  dicta = {"adequacy": ave5} 
-#  dicta = {"test_level": ave6} 
-#  dicta = {"task_level": ave7}
-#  dicta = {"middle_test_level": ave8} 
-#  dicta = {"total": ave9}
-
-#  print(dicta)
- #print(ave8)#評価の平均を表示する
 
  json_open = open(f'src/data/json/items/{stra}/output/item.json','r')
  json_load = json.load(json_open)
- 
-#  json_load["id"]=id1
-#  json_load["lesson_id"]=id2
+
  json_load["lesson_name"]=id3
  json_load["teacher_name"]=id4
  json_load["day_of_week"]=id5
  json_load["time"]=id6
- json_load["attendance"]=id7
- json_load["hit_level"]=id8
- json_load["carry"]=id9
 
- json_load['level'] = str(ave2)
- json_load['hit_level'] = str(ave3)
- json_load['teacher_review'] = str(ave4)
- json_load['adequacy'] = str(ave5)
- json_load['test_level'] = str(ave6)
- json_load['task_level'] = str(ave7)
- json_load['middle_test_level'] = str(ave8)
- json_load['total'] = str(ave9)
+ json_load["number_of_credits"]=number_of_credits
+
+ json_load['level'] = math.floor(ave2)
+ json_load['hit_level'] = math.floor(ave3*100)
+ json_load['teacher_review'] = math.floor(ave4)
+ json_load['adequacy'] = math.floor(ave5)
+ json_load['test_level'] = math.floor(ave6)
+ json_load['task_level'] = math.floor(ave7)
+ json_load['middle_test_level'] = math.floor(ave8)
+ json_load['total'] = math.floor(ave9)
+ json_load["attendance"]=math.floor(attendance_ave*100)
+ json_load["carry"]=math.floor(carry_ave*100)
  
  with open(f'src/data/json/items/{stra}/output/item.json', "w") as f:
    json.dump(json_load, f, indent=4)
