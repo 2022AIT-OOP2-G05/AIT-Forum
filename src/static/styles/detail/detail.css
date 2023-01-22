@@ -24,7 +24,6 @@ html body .app {
 }
 html body .form {
   box-sizing: border-box;
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
