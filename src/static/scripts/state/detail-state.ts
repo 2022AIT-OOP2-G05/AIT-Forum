@@ -52,10 +52,6 @@ class DetailState extends State<Detail> {
     this.detail = {} as Detail;
   }
 
-  forceRender() {
-    this.updateListeners();
-  }
-
   getDetails() {
     return { ...this.detail };
   }

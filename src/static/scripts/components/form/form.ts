@@ -83,6 +83,7 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
         toast.success({
           message: "評価を送信しました",
         });
+        detailState.fetchDetails();
       }
 
       formState.resetFormState();

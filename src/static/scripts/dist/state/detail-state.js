@@ -24,9 +24,6 @@ class DetailState extends State {
     cleanDetail() {
         this.detail = {};
     }
-    forceRender() {
-        this.updateListeners();
-    }
     getDetails() {
         return { ...this.detail };
     }
