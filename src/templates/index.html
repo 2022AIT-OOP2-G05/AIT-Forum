@@ -1,79 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="{{ url_for('static', filename='scripts/dist/main.js') }}"></script>
+    <script
+      type="module"
+      src="{{ url_for('static', filename='scripts/dist/main.js') }}"
+    ></script>
 
-    <script src="https://kit.fontawesome.com/aac0ed468b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index/main.css') }}" />
+    <script
+      src="https://kit.fontawesome.com/aac0ed468b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/index/main.css') }}"
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div id="toast" class="toast">
+      <div class="toast-icon"></div>
+      <div class="toast-text-wrapper">
+        <p class="toast-text"></p>
+      </div>
+    </div>
     <!-- header用 -->
     <template id="main-header">
-        <header class="header">
-            <div class="header-h1">
-                <h1>アプリの名前</h1>
-            </div>
-        </header>
+      <header class="header">
+        <div class="header-h1">
+          <h1>アプリの名前</h1>
+        </div>
+      </header>
     </template>
 
     <!-- main-page用 -->
     <template id="main-page">
-        <main class="main">
-            <div id="main__inner" class="main-content">
-                <nav class="tab main-content-nav">
-                    <ul id="tab-list" class="js-tab main-content-nav-content"></ul>
-                </nav>
-            </div>
-        </main>
+      <main class="main">
+        <div id="main__inner" class="main-content">
+          <nav class="tab main-content-nav">
+            <ul id="tab-list" class="js-tab main-content-nav-content"></ul>
+          </nav>
+        </div>
+      </main>
     </template>
 
     <!-- 授業個別ページを表示するエリア -->
     <template id="subject-list">
-        <section class="main-content-section">
-            <ul id="subject-list__inner" class="main-content-section-ul"></ul>
-        </section>
+      <section class="main-content-section">
+        <ul id="subject-list__inner" class="main-content-section-ul"></ul>
+      </section>
     </template>
 
     <!-- tab用 -->
     <template id="tab__item">
-        <li class="tab__item main-content-nav-content-content">
-            <span class="main-content-nav-content-content-text"></span>
-            <!-- <div class="main-content-nav-content-content-border"></div> -->
-        </li>
+      <li class="tab__item main-content-nav-content-content">
+        <span class="main-content-nav-content-content-text"></span>
+        <!-- <div class="main-content-nav-content-content-border"></div> -->
+      </li>
     </template>
 
     <!-- 授業個別ページ遷移用 -->
     <template id="subject-list-item">
-        <li>
-            <a href="" class="subject main-content-section-ul-content">
-                <h2 class="main-content-section-ul-content-name"></h2>
-                <div class="main-content-section-ul-content-meta">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="main-content-section-ul-content-rank">
-                    <div class="main-content-section-ul-content-rank-content star-box"></div>
-                </div>
-            </a>
-        </li>
+      <li>
+        <a href="" class="subject main-content-section-ul-content">
+          <h2 class="main-content-section-ul-content-name"></h2>
+          <div class="main-content-section-ul-content-meta">
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+          <div class="main-content-section-ul-content-rank">
+            <div
+              class="main-content-section-ul-content-rank-content star-box"
+            ></div>
+          </div>
+        </a>
+      </li>
     </template>
 
     <!-- 星用 -->
     <template id="star">
-        <div class="star-wrapper">
-            <input type="radio" />
-            <label></label>
-        </div>
+      <div class="star-wrapper">
+        <input type="radio" />
+        <label></label>
+      </div>
     </template>
 
     <div id="app" class="main-page"></div>
-</body>
-
+  </body>
 </html>

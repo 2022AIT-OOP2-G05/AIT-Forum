@@ -1,3 +1,4 @@
+import { toast } from "../components/toast.js";
 import { FormInput } from "../types/inputType";
 
 export class Fetch {
@@ -6,7 +7,9 @@ export class Fetch {
       const response = await fetch(`/api/${url}`);
       return await response.json();
     } catch (error) {
-      console.log(error);
+      toast.error({
+        message: "予期せぬエラーが発生しました",
+      });
     }
   }
 
@@ -19,7 +22,10 @@ export class Fetch {
       });
       return await response.json();
     } catch (error) {
-      console.log(error);
+      toast.error({
+        message: "予期せぬエラーが発生しました",
+      });
+      return { error: true };
     }
   }
 }

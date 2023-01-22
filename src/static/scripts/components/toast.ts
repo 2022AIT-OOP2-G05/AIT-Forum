@@ -1,14 +1,12 @@
-import { Component } from "../models/component-base.js";
-
 type ToastArg = {
   message: string;
 };
 
-export class Toast extends Component<HTMLDivElement, HTMLDivElement> {
+class Toast {
+  private el = document.querySelector("#toast")!;
   private iconEL: HTMLDivElement;
   private messageEl: HTMLDivElement;
   constructor() {
-    super("toast", "body", true);
     this.iconEL = this.el.querySelector(".toast-icon")!;
     this.messageEl = this.el.querySelector(".toast-text")!;
   }
@@ -40,3 +38,4 @@ export class Toast extends Component<HTMLDivElement, HTMLDivElement> {
 
   configure() {}
 }
+export const toast = new Toast();

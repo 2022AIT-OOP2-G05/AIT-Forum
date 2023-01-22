@@ -1,9 +1,9 @@
-import { toast } from "../../detail.js";
 import { Fetch } from "../../libs/fetch.js";
 import { Component } from "../../models/component-base.js";
 import { Detail } from "../../models/detail.js";
 import { detailState } from "../../state/detail-state.js";
 import { initializeFormInput } from "../../types/inputType.js";
+import { toast } from "../toast.js";
 
 import { FormInputList } from "./formInputList.js";
 import { formState } from "./formState.js";
@@ -61,7 +61,7 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
     return true;
   }
 
-  private submitHandler(event: Event) {
+  private async submitHandler(event: Event) {
     event.preventDefault();
 
     console.log(formState.getFormState());
@@ -70,10 +70,20 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
         message: "入力されていない項目があります",
       });
     } else {
-      Fetch.post(`detail/${location.pathname}`, formState.getFormState());
-      toast.success({
-        message: "評価を送信しました",
-      });
+      const res = await Fetch.post(
+        `detail/${location.pathname}`,
+        formState.getFormState()
+      );
+
+      if (res.error) {
+        toast.error({
+          message: "予期せぬエラーが発生しました",
+        });
+      } else {
+        toast.success({
+          message: "評価を送信しました",
+        });
+      }
 
       formState.resetFormState();
     }

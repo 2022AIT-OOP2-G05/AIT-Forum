@@ -1,6 +1,7 @@
 import { Fetch } from "../libs/fetch.js";
 import { State } from "../models/state.js";
 import { Detail } from "../models/detail.js";
+import { toast } from "../components/toast.js";
 
 class DetailState extends State<Detail> {
   private detail: Detail;

@@ -1,7 +1,6 @@
-import { Component } from "../models/component-base.js";
-export class Toast extends Component {
+class Toast {
     constructor() {
-        super("toast", "body", true);
+        this.el = document.querySelector("#toast");
         this.iconEL = this.el.querySelector(".toast-icon");
         this.messageEl = this.el.querySelector(".toast-text");
     }
@@ -28,3 +27,4 @@ export class Toast extends Component {
     renderContent() { }
     configure() { }
 }
+export const toast = new Toast();
