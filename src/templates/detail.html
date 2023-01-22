@@ -1,143 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      type="module"
-      src="{{ url_for('static', filename='scripts/dist/detail.js') }}"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/aac0ed468b.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles/detail/detail.css') }}"
-    />
+    <script type="module" src="{{ url_for('static', filename='scripts/dist/detail.js') }}"></script>
+    <script src="https://kit.fontawesome.com/aac0ed468b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/detail/detail.css') }}" />
     <title>Document</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="toast" class="toast">
-      <div class="toast-icon"></div>
-      <div class="toast-text-wrapper">
-        <p class="toast-text"></p>
-      </div>
+        <div class="toast-icon"></div>
+        <div class="toast-text-wrapper">
+            <p class="toast-text"></p>
+        </div>
     </div>
     <!-- 戻るボタン -->
     <template id="back-btn">
-      <p class="back_btn_BG">
-        <a class="back_btn_BG-content">
-          <i class="fa-solid back_btn_BG-content-icon"></i>
-        </a>
-      </p>
+        <p class="back_btn_BG">
+            <a class="back_btn_BG-content">
+                <i class="fa-solid back_btn_BG-content-icon"></i>
+            </a>
+        </p>
     </template>
 
     <!-- grayのheader部分 -->
 
     <template id="header">
-      <header class="header">
-        <h2 class="header-title"></h2>
-        <div class="header-meta_BG">
-          <div class="header-meta_BG-text">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-        </div>
-      </header>
+        <header class="header">
+            <h2 class="header-title"></h2>
+            <div class="header-meta_BG">
+                <div class="header-meta_BG-text">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </header>
     </template>
 
     <!-- 総合評価部分 -->
 
     <template id="total">
-      <section>
-        <h2 class="total">
-          <span class="total-text"></span>
-          <div id="star-box" class="total-star_BG"></div>
-        </h2>
-        <div class="total-bottom-border"></div>
-      </section>
+        <section>
+            <h2 class="total">
+                <span class="total-text"></span>
+                <div id="star-box" class="total-star_BG"></div>
+            </h2>
+            <div class="total-bottom-border"></div>
+        </section>
     </template>
 
     <!-- 評価の場所 -->
     <template id="evaluation-list">
-      <main class="main">
-        <section>
-          <ul id="evolution-list__inner"></ul>
-        </section>
-      </main>
+        <main class="main">
+            <section>
+                <ul id="evolution-list__inner"></ul>
+            </section>
+        </main>
     </template>
 
     <!-- 評価の場所の中身 -->
     <template id="evolution-item">
-      <li class="evo_item">
-        <p class="evo_item-text"></p>
-        <div class="evo_item-item"></div>
-      </li>
+        <li class="evo_item">
+            <p class="evo_item-text"></p>
+            <div class="evo_item-item"></div>
+        </li>
     </template>
 
     <!-- 星用 -->
     <template id="star">
-      <div class="star-wrapper star">
-        <input type="radio" class="star-ip" />
-        <label class="star-label"></label>
-      </div>
+        <div class="star-wrapper star">
+            <input type="radio" class="star-ip" />
+            <label class="star-label"></label>
+        </div>
     </template>
 
     <!-- %表示用 -->
 
     <template id="progress">
-      <div class="progress_BG">
-        <div class="progress_BG-top">
-          <div class="progress_BG-top-left">yes - 75%</div>
-          <div class="progress_BG-top-right">no - 25%</div>
+        <div class="progress_BG">
+            <div class="progress_BG-top">
+                <div class="progress_BG-top-left">yes - 75%</div>
+                <div class="progress_BG-top-right">no - 25%</div>
+            </div>
+            <div class="progress_BG-bottom">
+                <progress max="100" min="0" value="75" class="progress_BG-bottom-line"></progress>
+            </div>
         </div>
-        <div class="progress_BG-bottom">
-          <progress
-            max="100"
-            min="0"
-            value="75"
-            class="progress_BG-bottom-line"
-          ></progress>
-        </div>
-      </div>
     </template>
 
     <template id="form_header">
-      <h2><span></span></h2>
+        <h2><span></span></h2>
     </template>
 
     <template id="form-input-list">
-      <div class="evo_item">
-        <p>テキスト</p>
-        <div class="input-box evo_item-item"></div>
-      </div>
+        <div class="evo_item">
+            <p>テキスト</p>
+            <div class="input-box evo_item-item"></div>
+        </div>
     </template>
 
     <template id="form_list">
-      <form></form>
+        <form></form>
     </template>
 
     <template id="select-btn">
-      <div>
         <div>
-          <input type="radio" />
-          <label for="">YES</label>
+            <div>
+                <input type="radio" />
+                <label for="">YES</label>
+            </div>
+            <div>
+                <input type="radio" />
+                <label for="">NO</label>
+            </div>
         </div>
-        <div>
-          <input type="radio" />
-          <label for="">NO</label>
-        </div>
-      </div>
     </template>
 
     <template id="submit-btn"><button type="submit">投稿する</button></template>
 
     <div id="app"></div>
     <div id="form"></div>
-  </body>
+</body>
+
 </html>

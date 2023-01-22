@@ -1,303 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/aac0ed468b.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="module"
-      src="{{ url_for('static', filename='scripts/public/detail.js') }}"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles/detail/detail.css') }}"
-    />
+    <script src="https://kit.fontawesome.com/aac0ed468b.js" crossorigin="anonymous"></script>
+    <script type="module" src="{{ url_for('static', filename='scripts/public/detail.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/detail/detail.css') }}" />
     <title>Document</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="app">
-      <p class="back_btn_BG">
-        <a class="back_btn_BG-content">
-          <i class="fa-solid fa-arrow-left back_btn_BG-content-icon"></i> 戻る
-        </a>
-      </p>
-      <header class="header">
-        <h2 class="header-title">授業名</h2>
-        <div class="header-meta_BG">
-          <div class="header-meta_BG-text">
-            <p>授業の名前:<span>AAAA:BBB</span></p>
-            <p>曜日:<span>月曜日</span></p>
-            <p>時間:<span>２時間目</span></p>
-            <p>単位数:<span>4単位</span></p>
-          </div>
-        </div>
-      </header>
-      <section>
-        <h2>
-          <span>総合評価</span>
-          <div id="star-box">
-            <div class="star-wrapper">
-              <input type="radio" />
-              <label></label>
+        <p class="back_btn_BG">
+            <a class="back_btn_BG-content">
+                <i class="fa-solid fa-arrow-left back_btn_BG-content-icon"></i> 戻る
+            </a>
+        </p>
+        <header class="header">
+            <h2 class="header-title">授業名</h2>
+            <div class="header-meta_BG">
+                <div class="header-meta_BG-text">
+                    <p>授業の名前:<span>AAAA:BBB</span></p>
+                    <p>曜日:<span>月曜日</span></p>
+                    <p>時間:<span>２時間目</span></p>
+                    <p>単位数:<span>4単位</span></p>
+                </div>
             </div>
-            <div class="star-wrapper">
-              <input type="radio" />
-              <label></label>
-            </div>
-            <div class="star-wrapper">
-              <input type="radio" />
-              <label></label>
-            </div>
-            <div class="star-wrapper">
-              <input type="radio" />
-              <label></label>
-            </div>
-            <div class="star-wrapper">
-              <input type="radio" />
-              <label></label>
-            </div>
-          </div>
-        </h2>
-      </section>
-      <main>
+        </header>
         <section>
-          <ul id="evolution-list__inner">
-            <li>
-              <p>テキスト</p>
-              <div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-              </div>
-            </li>
-            <li>
-              <p>テキスト</p>
-              <div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-              </div>
-            </li>
-            <li>
-              <p>テキスト</p>
-              <div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-              </div>
-            </li>
-            <li>
-              <p>テキスト</p>
-              <div>
-                <progress max="100" min="0" value="10"></progress>
-              </div>
-            </li>
-            <li>
-              <p>テキスト</p>
-              <div>
-                <progress max="100" min="0" value="10"></progress>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </main>
-      <button type="button">投稿</button>
-    </div>
-    <div id="form">
-      <p>
-        <a><i class="fa-solid fa-arrow-left"></i>授業名</a>
-      </p>
-      <header>
-        <h2><span>授業名</span>の評価を投稿</h2>
-      </header>
-      <main>
-        <section>
-          <form id="form_list">
-            <div>
-              <p>テキスト</p>
-              <div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-              </div>
-            </div>
-            <div>
-              <p>テキスト</p>
-              <div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-              </div>
-            </div>
-            <div>
-              <p>テキスト</p>
-              <div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-                <div class="star-wrapper">
-                  <input type="radio" />
-                  <label></label>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <input type="radio" name="test" />
-                <label for="">YES</label>
-              </div>
-              <div>
-                <input type="radio" name="test" />
-                <label for="">NO</label>
-              </div>
-            </div>
-            <div>
-              <p>テキスト</p>
-              <div>
-                <div>
-                  <input type="radio" name="test" />
-                  <label for="">YES</label>
-                </div>
-                <div>
-                  <input type="radio" name="test" />
-                  <label for="">NO</label>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2>
+            <h2>
                 <span>総合評価</span>
                 <div id="star-box">
-                  <div class="star-wrapper">
-                    <input type="radio" />
-                    <label></label>
-                  </div>
-                  <div class="star-wrapper">
-                    <input type="radio" />
-                    <label></label>
-                  </div>
-                  <div class="star-wrapper">
-                    <input type="radio" />
-                    <label></label>
-                  </div>
-                  <div class="star-wrapper">
-                    <input type="radio" />
-                    <label></label>
-                  </div>
-                  <div class="star-wrapper">
-                    <input type="radio" />
-                    <label></label>
-                  </div>
+                    <div class="star-wrapper">
+                        <input type="radio" />
+                        <label></label>
+                    </div>
+                    <div class="star-wrapper">
+                        <input type="radio" />
+                        <label></label>
+                    </div>
+                    <div class="star-wrapper">
+                        <input type="radio" />
+                        <label></label>
+                    </div>
+                    <div class="star-wrapper">
+                        <input type="radio" />
+                        <label></label>
+                    </div>
+                    <div class="star-wrapper">
+                        <input type="radio" />
+                        <label></label>
+                    </div>
                 </div>
-              </h2>
-            </div>
-            <button type="submit">投稿する</button>
-          </form>
+            </h2>
         </section>
-      </main>
+        <main>
+            <section>
+                <ul id="evolution-list__inner">
+                    <li>
+                        <p>テキスト</p>
+                        <div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>テキスト</p>
+                        <div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>テキスト</p>
+                        <div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>テキスト</p>
+                        <div>
+                            <progress max="100" min="0" value="10"></progress>
+                        </div>
+                    </li>
+                    <li>
+                        <p>テキスト</p>
+                        <div>
+                            <progress max="100" min="0" value="10"></progress>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <button type="button">投稿</button>
     </div>
-  </body>
+    <div id="form">
+        <p>
+            <a><i class="fa-solid fa-arrow-left"></i>授業名</a>
+        </p>
+        <header>
+            <h2><span>授業名</span>の評価を投稿</h2>
+        </header>
+        <main>
+            <section>
+                <form id="form_list">
+                    <div>
+                        <p>テキスト</p>
+                        <div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>テキスト</p>
+                        <div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>テキスト</p>
+                        <div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                            <div class="star-wrapper">
+                                <input type="radio" />
+                                <label></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="radio" name="test" />
+                            <label for="">YES</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="test" />
+                            <label for="">NO</label>
+                        </div>
+                    </div>
+                    <div>
+                        <p>テキスト</p>
+                        <div>
+                            <div>
+                                <input type="radio" name="test" />
+                                <label for="">YES</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="test" />
+                                <label for="">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>
+                            <span>総合評価</span>
+                            <div id="star-box">
+                                <div class="star-wrapper">
+                                    <input type="radio" />
+                                    <label></label>
+                                </div>
+                                <div class="star-wrapper">
+                                    <input type="radio" />
+                                    <label></label>
+                                </div>
+                                <div class="star-wrapper">
+                                    <input type="radio" />
+                                    <label></label>
+                                </div>
+                                <div class="star-wrapper">
+                                    <input type="radio" />
+                                    <label></label>
+                                </div>
+                                <div class="star-wrapper">
+                                    <input type="radio" />
+                                    <label></label>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <button type="submit">投稿する</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
 </html>
