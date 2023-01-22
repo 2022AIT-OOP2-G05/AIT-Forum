@@ -380,8 +380,20 @@ html {
             transform: translate(-50%, -50%);
         }
     }
+    input[type="radio"]+.select_btn_BG-yes-label:hover {
+        background-color: rgb(244, 208, 208);
+    }
+    input[type="radio"]+.select_btn_BG-yes-label:active {
+        background-color: rgb(209, 85, 85);
+    }
     input[type="radio"]:checked+.select_btn_BG-yes-label {
         background-color: lightcoral;
+    }
+    input[type="radio"]+.select_btn_BG-no-label:hover {
+        background-color: rgb(218, 237, 243);
+    }
+    input[type="radio"]+.select_btn_BG-no-label:active {
+        background-color: rgb(78, 152, 176);
     }
     input[type="radio"]:checked+.select_btn_BG-no-label {
         background-color: lightblue;
