@@ -32,6 +32,7 @@ html {
             z-index: 999;
             overflow-y: auto;
             .F-h2 {
+                position: relative;
                 box-sizing: border-box;
                 width: $main-width;
                 height: $CF_h2-height;
@@ -41,6 +42,16 @@ html {
                 overflow: hidden;
                 padding-right: 100px;
                 margin: 40px auto;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 1px;
+                    left: 0;
+                    width: calc($main-width * 0.9);
+                    height: 1px;
+                    background-color: lightgray;
+                    z-index: 999;
+                }
             }
             .F-form {
                 width: $main-width;

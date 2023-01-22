@@ -34,6 +34,7 @@ html body .form {
   overflow-y: auto;
 }
 html body .form .F-h2 {
+  position: relative;
   box-sizing: border-box;
   width: 800px;
   height: 50px;
@@ -43,6 +44,16 @@ html body .form .F-h2 {
   overflow: hidden;
   padding-right: 100px;
   margin: 40px auto;
+}
+html body .form .F-h2::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 720px;
+  height: 1px;
+  background-color: lightgray;
+  z-index: 999;
 }
 html body .form .F-form {
   width: 800px;
