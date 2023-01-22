@@ -31,6 +31,9 @@ html {
             background-color: white;
             z-index: 999;
             overflow-y: auto;
+            .star-label {
+                cursor: pointer;
+            }
             .F-h2 {
                 position: relative;
                 box-sizing: border-box;
@@ -366,6 +369,7 @@ html {
         margin: 0 5px;
         border-radius: 5px;
         transition: .25s;
+        cursor: pointer;
         &:last-child {
             margin-right: 0;
         }
