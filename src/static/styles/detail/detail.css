@@ -24,7 +24,6 @@ html body .app {
 }
 html body .form {
   box-sizing: border-box;
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -372,6 +371,7 @@ html body .main ul {
   border-radius: 5px;
   transition: 0.25s;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 .select_btn_BG input[type=radio] + label:last-child {
   margin-right: 0;

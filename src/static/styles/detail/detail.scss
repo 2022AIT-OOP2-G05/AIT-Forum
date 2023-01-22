@@ -22,7 +22,7 @@ html {
         }
         .form {
             box-sizing: border-box;
-            display: none;
+            // display: none;
             position: absolute;
             top: 0;
             left: 0;
@@ -371,6 +371,7 @@ html {
         border-radius: 5px;
         transition: .25s;
         cursor: pointer;
+        font-size: 0.9rem;
         &:last-child {
             margin-right: 0;
         }
