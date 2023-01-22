@@ -47,6 +47,7 @@ html body .form .F-h2 {
   overflow: hidden;
   padding-right: 100px;
   margin: 40px auto;
+  font-weight: normal;
 }
 html body .form .F-h2::before {
   content: "";
