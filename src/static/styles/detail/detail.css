@@ -340,6 +340,33 @@ html body .main ul {
   color: limegreen;
 }
 
+.star {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  height: 100%;
+  margin: 0 5px;
+}
+.star:first-child {
+  margin-right: 0;
+}
+.star:last-child {
+  margin-right: 0;
+}
+.star input[type=radio] {
+  display: none;
+}
+.star input[type=radio] + label {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  height: 100%;
+  background-image: url(../../image/star-o.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.star input[type=radio]:checked + label {
+  background-image: url(../../image/star-i.svg);
+}
+
 @-webkit-keyframes show {
   0% {
     opacity: 0;
