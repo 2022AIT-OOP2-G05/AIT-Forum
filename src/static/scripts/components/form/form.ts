@@ -86,6 +86,9 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
       }
 
       formState.resetFormState();
+      const modal = document.querySelector(".form_BG")!;
+      modal.classList.add("hidden");
+      modal.classList.remove("visible");
     }
   }
 

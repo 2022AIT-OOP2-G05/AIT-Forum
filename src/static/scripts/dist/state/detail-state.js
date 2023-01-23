@@ -17,7 +17,6 @@ class DetailState extends State {
         const pathname = location.pathname;
         const detail = await Fetch.get(`detail/${pathname}`);
         this.cleanDetail();
-        console.log(detail.attendance);
         this.detail = new Detail(detail.lesson_name, detail.teacher_name, detail.day_of_week, detail.time, detail.number_of_credits, detail.level, detail.hit_level, detail.teacher_review, detail.attendance, detail.adequacy, detail.test_level, detail.task_level, detail.middle_test_level, detail.carry, detail.total);
         this.updateListeners();
     }

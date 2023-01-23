@@ -41,7 +41,6 @@ export class Form extends Component {
     }
     async submitHandler(event) {
         event.preventDefault();
-        console.log(formState.getFormState());
         if (!this.formValidation()) {
             toast.error({
                 message: "入力されていない項目があります",
@@ -61,6 +60,9 @@ export class Form extends Component {
                 detailState.fetchDetails();
             }
             formState.resetFormState();
+            const modal = document.querySelector(".form_BG");
+            modal.classList.add("hidden");
+            modal.classList.remove("visible");
         }
     }
     renderList() {

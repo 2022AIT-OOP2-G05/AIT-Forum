@@ -24,7 +24,6 @@ html body .app {
 }
 html body .form_BG {
   box-sizing: border-box;
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -86,7 +85,7 @@ html body .form_BG .F-h2 .F-close_btn {
   transition: 0.25s;
 }
 html body .form_BG .F-h2 .F-close_btn:hover {
-  border: 1px solid #78D9FF;
+  border: 1px solid #78d9ff;
   transform: translate(0, -50%) rotate(180deg);
 }
 html body .form_BG .F-h2 .F-close_btn .F-close_btn-border_1 {
@@ -143,7 +142,7 @@ html body .back_btn_BG .back_btn_BG-content .back_btn_BG-content-icon {
 html body .header {
   box-sizing: border-box;
   width: 800px;
-  background-color: #F3F9FF;
+  background-color: #f3f9ff;
   border: 1px solid lightgray;
   margin: 0 auto;
   margin-top: 75px;
@@ -503,7 +502,7 @@ html body .main ul {
   height: 100%;
   border-radius: 100px;
   border: none;
-  background-color: #78D9FF;
+  background-color: #78d9ff;
   color: black;
   cursor: pointer;
   transition: 0.25s;
@@ -581,4 +580,10 @@ html body .main ul {
     transform: translateX(100vw);
   }
 }
-/*# sourceMappingURL=detail.css.map */
+.form_BG.visible {
+  display: block;
+}
+
+.form_BG.hidden {
+  display: none;
+}/*# sourceMappingURL=detail.css.map */
