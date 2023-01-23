@@ -12,8 +12,9 @@ class Toast {
             this.messageEl.textContent = message;
             this.el.classList.add("show");
             this.timer = setTimeout(() => {
+                const toast_icon = this.el.querySelector(".toast-icon");
                 this.el.classList.remove("show");
-                this.el.classList.remove("error");
+                toast_icon.classList.remove("error");
                 this.timer = null;
             }, 3000);
         }
@@ -25,8 +26,9 @@ class Toast {
             this.messageEl.textContent = message;
             this.el.classList.add("show");
             this.timer = setTimeout(() => {
+                const toast_icon = this.el.querySelector(".toast-icon");
                 this.el.classList.remove("show");
-                this.el.classList.remove("success");
+                toast_icon.classList.remove("success");
                 this.timer = null;
             }, 3000);
         }

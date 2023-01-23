@@ -12,7 +12,6 @@ export class Progress extends Component<HTMLDivElement, HTMLProgressElement> {
   }
 
   renderContent() {
-    console.log(this.value);
     this.el.querySelector("progress")!.value = Math.floor(this.value);
     this.el.querySelector(
       ".progress_BG-top-left"

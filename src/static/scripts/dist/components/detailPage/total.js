@@ -9,7 +9,19 @@ export class Total extends Component {
         this.renderContent();
         this.renderStart();
     }
-    configure() { }
+    configure() {
+        detailState.addListener((details) => {
+            this.detail = details[0];
+            this.clearStar();
+            this.renderStart();
+        });
+    }
+    clearStar() {
+        const star_box = document.getElementById("star-box");
+        while (star_box.firstChild) {
+            star_box.removeChild(star_box.firstChild);
+        }
+    }
     renderContent() {
         this.el.querySelector("span").textContent = "総合評価";
     }

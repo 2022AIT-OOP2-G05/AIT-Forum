@@ -3,8 +3,10 @@ import { Component } from "../../models/component-base.js";
 import { detailState } from "../../state/detail-state.js";
 import { initializeFormInput } from "../../types/inputType.js";
 import { toast } from "../toast.js";
+import { Total } from "./form-total.js";
 import { FormInputList } from "./formInputList.js";
 import { formState } from "./formState.js";
+import { SubmitBtn } from "./submit-btn.js";
 export class Form extends Component {
     constructor() {
         super("form_list", "form", false, "main-form");
@@ -16,6 +18,9 @@ export class Form extends Component {
     }
     configure() {
         this.el.addEventListener("submit", this.submitHandler.bind(this));
+        this.createInitialForm();
+    }
+    createInitialForm() {
         formState.setFormState({
             ...formState.getFormState(),
             lesson_name: this.detail.lesson_name,
@@ -60,9 +65,17 @@ export class Form extends Component {
                 detailState.fetchDetails();
             }
             formState.resetFormState();
+            this.createInitialForm();
+            this.clearChild();
+            this.renderList();
             const modal = document.querySelector(".form_BG");
             modal.classList.add("hidden");
             modal.classList.remove("visible");
+        }
+    }
+    clearChild() {
+        while (this.el.firstChild) {
+            this.el.removeChild(this.el.firstChild);
         }
     }
     renderList() {
@@ -70,5 +83,7 @@ export class Form extends Component {
             const isStar = key !== "hit_level" && key !== "carry" && key !== "attendance";
             new FormInputList(isStar ? `star-${key}` : `select-${key}`, key, isStar);
         }
+        new Total();
+        new SubmitBtn();
     }
 }

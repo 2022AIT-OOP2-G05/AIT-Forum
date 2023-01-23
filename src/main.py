@@ -120,16 +120,17 @@ def average(stra) -> None:
 
  json_load["number_of_credits"]=number_of_credits
 
- json_load['level'] = math.floor(ave2)
- json_load['hit_level'] = math.floor(ave3*100)
- json_load['teacher_review'] = math.floor(ave4)
- json_load['adequacy'] = math.floor(ave5)
- json_load['test_level'] = math.floor(ave6)
- json_load['task_level'] = math.floor(ave7)
- json_load['middle_test_level'] = math.floor(ave8)
- json_load['total'] = math.floor(ave9)
- json_load["attendance"]=math.floor(attendance_ave*100)
- json_load["carry"]=math.floor(carry_ave*100)
+ print(ave2)
+ json_load['level'] = round(ave2)
+ json_load['hit_level'] = round(ave3*100)
+ json_load['teacher_review'] = round(ave4)
+ json_load['adequacy'] = round(ave5)
+ json_load['test_level'] = round(ave6)
+ json_load['task_level'] = round(ave7)
+ json_load['middle_test_level'] = round(ave8)
+ json_load['total'] = round(ave9)
+ json_load["attendance"]=round(attendance_ave*100)
+ json_load["carry"]=round(carry_ave*100)
  
  with open(f'src/data/json/items/{stra}/output/item.json', "w") as f:
    json.dump(json_load, f, indent=4)
