@@ -395,7 +395,12 @@ html {
     font-size: 1.1rem;
     z-index: 999;
     &:hover {
-        background-color: #4aa8c6;
+        background-color: #5db1d3;
+        color: white;
+    }
+    &:active {
+        background-color: #557fc8;
+        color: white;
     }
 }
 
