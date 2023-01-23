@@ -16,6 +16,10 @@ export class EvolutionList extends Component {
     }
     configure() {
         detailState.addListener((details) => {
+            const list_wrapper = this.el.querySelector("ul");
+            while (list_wrapper.firstChild) {
+                list_wrapper.removeChild(list_wrapper.firstChild);
+            }
             this.detail = details[0];
             this.evolutionItems = this.detailProcessing();
             this.renderList();

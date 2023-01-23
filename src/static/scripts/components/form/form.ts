@@ -64,7 +64,6 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
   private async submitHandler(event: Event) {
     event.preventDefault();
 
-    console.log(formState.getFormState());
     if (!this.formValidation()) {
       toast.error({
         message: "入力されていない項目があります",
@@ -83,6 +82,7 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
         toast.success({
           message: "評価を送信しました",
         });
+        detailState.fetchDetails();
       }
 
       formState.resetFormState();
