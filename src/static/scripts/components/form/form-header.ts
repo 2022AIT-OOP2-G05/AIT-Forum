@@ -12,7 +12,22 @@ export class FormHeader extends Component<HTMLDivElement, HTMLDivElement> {
     this.renderContent();
   }
 
-  configure() {}
+  configure() {
+    const modal_wrapper = document.querySelector(".form_BG")!;
+    const closeBtn = this.el.querySelector(".F-close_btn")!;
+    closeBtn.addEventListener("click", () => {
+      const modal = document.querySelector(".form_BG")!;
+      modal.classList.remove("visible");
+      modal.classList.add("hidden");
+    });
+
+    modal_wrapper.addEventListener("click", (e) => {
+      if (e.target === modal_wrapper) {
+        modal_wrapper.classList.remove("visible");
+        modal_wrapper.classList.add("hidden");
+      }
+    });
+  }
 
   renderContent() {
     this.el.querySelector(

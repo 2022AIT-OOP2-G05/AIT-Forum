@@ -44,6 +44,13 @@ export class EvolutionList extends Component<HTMLDivElement, HTMLElement> {
       this.evolutionItems = this.detailProcessing();
       this.renderList();
     });
+
+    const btn = this.el.querySelector("button")!;
+    btn.addEventListener("click", () => {
+      const modal = document.querySelector(".form_BG")!;
+      modal.classList.add("visible");
+      modal.classList.remove("hidden");
+    });
   }
 
   renderContent() {}

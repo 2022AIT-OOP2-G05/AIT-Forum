@@ -7,7 +7,21 @@ export class FormHeader extends Component {
         this.configure();
         this.renderContent();
     }
-    configure() { }
+    configure() {
+        const modal_wrapper = document.querySelector(".form_BG");
+        const closeBtn = this.el.querySelector(".F-close_btn");
+        closeBtn.addEventListener("click", () => {
+            const modal = document.querySelector(".form_BG");
+            modal.classList.remove("visible");
+            modal.classList.add("hidden");
+        });
+        modal_wrapper.addEventListener("click", (e) => {
+            if (e.target === modal_wrapper) {
+                modal_wrapper.classList.remove("visible");
+                modal_wrapper.classList.add("hidden");
+            }
+        });
+    }
     renderContent() {
         this.el.querySelector("span").textContent = `${this.detail.lesson_name}の評価を投稿`;
     }
