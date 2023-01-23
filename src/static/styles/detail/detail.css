@@ -508,7 +508,8 @@ html body .main ul {
   border-radius: 100px;
   border: none;
   background-color: #78d9ff;
-  color: black;
+  color: white;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: 0.25s;
 }
