@@ -396,7 +396,12 @@ html body .main ul {
   z-index: 999;
 }
 .send_btn:hover {
-  background-color: #4aa8c6;
+  background-color: #5db1d3;
+  color: white;
+}
+.send_btn:active {
+  background-color: #557fc8;
+  color: white;
 }
 
 .select_btn_BG {
@@ -586,4 +591,5 @@ html body .main ul {
 
 .form_BG.hidden {
   display: none;
-}/*# sourceMappingURL=detail.css.map */
+}
+/*# sourceMappingURL=detail.css.map */
