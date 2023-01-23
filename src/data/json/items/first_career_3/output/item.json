@@ -4,14 +4,14 @@
     "day_of_week": "\u6708",
     "number_of_credits": 2,
     "time": 3,
-    "attendance": 30,
-    "hit_level": 50,
-    "carry": 43,
+    "attendance": 26,
+    "hit_level": 46,
+    "carry": 37,
     "level": 4,
     "teacher_review": 4,
-    "adequacy": 3,
+    "adequacy": 4,
     "test_level": 4,
     "task_level": 4,
     "middle_test_level": 4,
-    "total": 4
+    "total": 5
 }
