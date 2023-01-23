@@ -83,6 +83,12 @@ html {
                         border: 1px solid #78d9ff;
                         transform: translate(0, -50%) rotate(180deg);
                     }
+                    &:active {
+                        .F-close_btn-border_1,
+                        .F-close_btn-border_2 {
+                            background-color: gray;
+                        }
+                    }
                     .F-close_btn-border_1 {
                         position: absolute;
                         top: 50%;
@@ -91,6 +97,7 @@ html {
                         width: 80%;
                         height: 1px;
                         background-color: black;
+                        transition: 0.25s;
                     }
                     .F-close_btn-border_2 {
                         position: absolute;
@@ -100,6 +107,7 @@ html {
                         width: 80%;
                         height: 1px;
                         background-color: black;
+                        transition: 0.25s;
                     }
                 }
             }
