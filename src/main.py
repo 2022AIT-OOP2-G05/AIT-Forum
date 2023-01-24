@@ -9,27 +9,24 @@ app.config["JSON_AS_ASCII"] = False
 
 @app.route('/')
 def index():
-
     return render_template('index.html')
 
 @app.route('/api/first')
 def firstsemester():
     with open('src/data/json/Firstsemesterclass.json') as f:
         json_data = json.load(f)
-    print(json_data)
     return jsonify(json_data)
 
 @app.route('/api/last')
 def lastsemester():
     with open('src/data/json/Lateclass.json', 'r') as f:
         json_data = json.load(f)
-    print(json_data)
     return jsonify(json_data)
 
 @app.route('/api/detail')
 @app.route('/api/detail/<name>',methods=['POST'])
 def form(name = "no name"):
-    
+
     with open(f'src/data/json/items/{name}/input/item.json') as f:
             json_data = json.load(f)
 
@@ -38,18 +35,39 @@ def form(name = "no name"):
         return jsonify(res='error'), 400
 
     data = request.get_json()
-
-
     json_data.append(data)
 
     with open(f'src/data/json/items/{name}/input/item.json', 'w') as f:
         json.dump(json_data, f, indent=4)
     
-
-
     average(name)
+    write_total(name)
 
     return jsonify(json_data)
+
+def write_total(name):
+    opening = name.split("_")[0]
+    if opening == "first":
+        with open('src/data/json/Firstsemesterclass.json') as f:
+            json_data = json.load(f)
+    else:
+        with open('src/data/json/Lateclass.json') as f:
+            json_data = json.load(f)
+
+    with open(f'src/data/json/items/{name}/output/item.json') as f:
+        items_data = json.load(f)
+
+    for v in json_data:
+        if v["lesson_name_en"] == name:
+            v["total"] = items_data["total"]
+    
+    if opening == "first":
+        with open('src/data/json/Firstsemesterclass.json', 'w') as f:
+            json.dump(json_data, f, indent=4)
+    else:
+        with open('src/data/json/Lateclass.json', 'w') as f:
+            json.dump(json_data, f, indent=4)
+
 
 def average(stra) -> None:
 
@@ -120,7 +138,6 @@ def average(stra) -> None:
 
  json_load["number_of_credits"]=number_of_credits
 
- print(ave2)
  json_load['level'] = round(ave2)
  json_load['hit_level'] = round(ave3*100)
  json_load['teacher_review'] = round(ave4)
@@ -146,6 +163,7 @@ def subject(subject):
 @app.route('/api/detail')
 @app.route('/api/detail/<subject>', methods=['GET'])
 def subject_json(subject):
+
 
     with open('src/data/json/items/'+subject+'/output/item.json') as f:
         json_data = json.load(f)
