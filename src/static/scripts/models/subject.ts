@@ -5,6 +5,6 @@ export class Subject {
     public teacher_name: string,
     public day_of_week: string,
     public time: number,
-    public number_of_credits: number
+    public total: number
   ) {}
 }

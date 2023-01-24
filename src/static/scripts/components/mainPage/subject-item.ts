@@ -10,7 +10,7 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
     teacher_name,
     day_of_week,
     time,
-    number_of_credits,
+    total,
   }: Subject) {
     super("subject-list-item", "subject-list__inner", false, "");
     this.subject = {
@@ -19,7 +19,7 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
       lesson_name_en,
       day_of_week,
       time,
-      number_of_credits,
+      total,
     };
     this.configure();
     this.renderContent();
@@ -46,7 +46,7 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
       (_, i) =>
         new Star(
           `star-box-${this.subject.lesson_name_en}`,
-          this.subject.number_of_credits - 1 >= i,
+          this.subject.total - 1 >= i,
           true,
           i
         )

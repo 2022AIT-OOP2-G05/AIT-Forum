@@ -1,145 +1,146 @@
 [
     {
-        "lesson_name": "キャリア意識形成",
+        "lesson_name": "\u30ad\u30e3\u30ea\u30a2\u610f\u8b58\u5f62\u6210",
         "lesson_name_en": "first_career_3",
-        "teacher_name": "水野　勝教",
-        "day_of_week": "月",
+        "teacher_name": "\u6c34\u91ce\u3000\u52dd\u6559",
+        "day_of_week": "\u6708",
         "time": "3",
-        "number_of_credits": "2"
+        "number_of_credits": "2",
+        "total": 3
     },
     {
-        "lesson_name": "コンピュータネットワーク",
+        "lesson_name": "\u30b3\u30f3\u30d4\u30e5\u30fc\u30bf\u30cd\u30c3\u30c8\u30ef\u30fc\u30af",
         "lesson_name_en": "first_cmpnet_4",
-        "teacher_name": "水野　勝教",
-        "day_of_week": "水",
+        "teacher_name": "\u6c34\u91ce\u3000\u52dd\u6559",
+        "day_of_week": "\u6c34",
         "time": "4",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "人工知能",
+        "lesson_name": "\u4eba\u5de5\u77e5\u80fd",
         "lesson_name_en": "first_ai_3",
-        "teacher_name": "中村　栄治",
-        "day_of_week": "水",
+        "teacher_name": "\u4e2d\u6751\u3000\u6804\u6cbb",
+        "day_of_week": "\u6c34",
         "time": "3",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "オブジェクト指向プログラミング及び演習１",
+        "lesson_name": "\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u6307\u5411\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u53ca\u3073\u6f14\u7fd2\uff11",
         "lesson_name_en": "first_obj1_3",
-        "teacher_name": "内種　岳詞",
-        "day_of_week": "木",
+        "teacher_name": "\u5185\u7a2e\u3000\u5cb3\u8a5e",
+        "day_of_week": "\u6728",
         "time": "3,4",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "コンピュータアーキテクチャ１",
+        "lesson_name": "\u30b3\u30f3\u30d4\u30e5\u30fc\u30bf\u30a2\u30fc\u30ad\u30c6\u30af\u30c1\u30e3\uff11",
         "lesson_name_en": "first_cmparc_3",
-        "teacher_name": "伊藤　暢浩",
-        "day_of_week": "火",
+        "teacher_name": "\u4f0a\u85e4\u3000\u66a2\u6d69",
+        "day_of_week": "\u706b",
         "time": "3",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "プロジェクト演習１",
+        "lesson_name": "\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u6f14\u7fd2\uff11",
         "lesson_name_en": "first_prj1_4",
-        "teacher_name": "伊藤　暢浩",
-        "day_of_week": "火",
+        "teacher_name": "\u4f0a\u85e4\u3000\u66a2\u6d69",
+        "day_of_week": "\u706b",
         "time": "4",
         "number_of_credits": "1"
     },
     {
-        "lesson_name": "物理学（電磁気学）",
+        "lesson_name": "\u7269\u7406\u5b66\uff08\u96fb\u78c1\u6c17\u5b66\uff09",
         "lesson_name_en": "first_phyelec_2_itto",
-        "teacher_name": "一刀　祐一",
-        "day_of_week": "月",
+        "teacher_name": "\u4e00\u5200\u3000\u7950\u4e00",
+        "day_of_week": "\u6708",
         "time": "2",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "物理学（電磁気学）",
+        "lesson_name": "\u7269\u7406\u5b66\uff08\u96fb\u78c1\u6c17\u5b66\uff09",
         "lesson_name_en": "first_phyelec_2_tanaka",
-        "teacher_name": "田中　優作",
-        "day_of_week": "月",
+        "teacher_name": "\u7530\u4e2d\u3000\u512a\u4f5c",
+        "day_of_week": "\u6708",
         "time": "2",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "画像処理及び演習",
+        "lesson_name": "\u753b\u50cf\u51e6\u7406\u53ca\u3073\u6f14\u7fd2",
         "lesson_name_en": "first_imgprs_1",
-        "teacher_name": "塚田　敏彦",
-        "day_of_week": "水",
+        "teacher_name": "\u585a\u7530\u3000\u654f\u5f66",
+        "day_of_week": "\u6c34",
         "time": "1,2",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "Ｗｅｂデザイン及び演習",
+        "lesson_name": "\uff37\uff45\uff42\u30c7\u30b6\u30a4\u30f3\u53ca\u3073\u6f14\u7fd2",
         "lesson_name_en": "first_webdes_1",
-        "teacher_name": "北坂　孝幸",
-        "day_of_week": "月",
+        "teacher_name": "\u5317\u5742\u3000\u5b5d\u5e78",
+        "day_of_week": "\u6708",
         "time": "1,2",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "画像処理及び演習",
+        "lesson_name": "\u753b\u50cf\u51e6\u7406\u53ca\u3073\u6f14\u7fd2",
         "lesson_name_en": "first_imgprs_3",
-        "teacher_name": "澤野　弘明",
-        "day_of_week": "火",
+        "teacher_name": "\u6fa4\u91ce\u3000\u5f18\u660e",
+        "day_of_week": "\u706b",
         "time": "3,4",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "カラーデザイン",
+        "lesson_name": "\u30ab\u30e9\u30fc\u30c7\u30b6\u30a4\u30f3",
         "lesson_name_en": "first_colordes_1",
-        "teacher_name": "河合　忍",
-        "day_of_week": "水",
+        "teacher_name": "\u6cb3\u5408\u3000\u5fcd",
+        "day_of_week": "\u6c34",
         "time": "1",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "カラーデザイン",
+        "lesson_name": "\u30ab\u30e9\u30fc\u30c7\u30b6\u30a4\u30f3",
         "lesson_name_en": "first_colordes_2",
-        "teacher_name": "河合　忍",
-        "day_of_week": "水",
+        "teacher_name": "\u6cb3\u5408\u3000\u5fcd",
+        "day_of_week": "\u6c34",
         "time": "2",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "ユーザインタフェース",
+        "lesson_name": "\u30e6\u30fc\u30b6\u30a4\u30f3\u30bf\u30d5\u30a7\u30fc\u30b9",
         "lesson_name_en": "first_userface_2",
-        "teacher_name": "小栗　真弥",
-        "day_of_week": "火",
+        "teacher_name": "\u5c0f\u6817\u3000\u771f\u5f25",
+        "day_of_week": "\u706b",
         "time": "2",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "メディア産業論",
+        "lesson_name": "\u30e1\u30c7\u30a3\u30a2\u7523\u696d\u8ad6",
         "lesson_name_en": "first_media_3",
-        "teacher_name": "久留宮　眞",
-        "day_of_week": "木",
+        "teacher_name": "\u4e45\u7559\u5bae\u3000\u771e",
+        "day_of_week": "\u6728",
         "time": "3",
         "number_of_credits": "2"
     },
     {
-        "lesson_name": "ＣＧコンテンツ基礎２",
+        "lesson_name": "\uff23\uff27\u30b3\u30f3\u30c6\u30f3\u30c4\u57fa\u790e\uff12",
         "lesson_name_en": "first_cgcont2_1",
-        "teacher_name": "鳥居　一平",
-        "day_of_week": "木",
+        "teacher_name": "\u9ce5\u5c45\u3000\u4e00\u5e73",
+        "day_of_week": "\u6728",
         "time": "1,2",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "ＣＧコンテンツ基礎２",
+        "lesson_name": "\uff23\uff27\u30b3\u30f3\u30c6\u30f3\u30c4\u57fa\u790e\uff12",
         "lesson_name_en": "first_cgcont2_3",
-        "teacher_name": "鳥居　一平",
-        "day_of_week": "水",
+        "teacher_name": "\u9ce5\u5c45\u3000\u4e00\u5e73",
+        "day_of_week": "\u6c34",
         "time": "3,4",
         "number_of_credits": "3"
     },
     {
-        "lesson_name": "コンピュータネットワーク",
+        "lesson_name": "\u30b3\u30f3\u30d4\u30e5\u30fc\u30bf\u30cd\u30c3\u30c8\u30ef\u30fc\u30af",
         "lesson_name_en": "first_cmpnet_1",
-        "teacher_name": "水野　勝教",
-        "day_of_week": "金",
+        "teacher_name": "\u6c34\u91ce\u3000\u52dd\u6559",
+        "day_of_week": "\u91d1",
         "time": "1",
         "number_of_credits": "2"
     }
