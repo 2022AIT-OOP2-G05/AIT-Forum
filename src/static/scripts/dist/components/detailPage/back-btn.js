@@ -8,7 +8,7 @@ export class BackBtn extends Component {
     configure() {
         const link = this.el.querySelector("a");
         link.addEventListener("click", () => {
-            history.back();
+            window.location.href = "/";
         });
     }
     renderContent() {

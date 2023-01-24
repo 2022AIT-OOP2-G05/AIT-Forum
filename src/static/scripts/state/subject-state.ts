@@ -30,7 +30,7 @@ export class SubjectState extends State<Subject> {
         subject.teacher_name,
         subject.day_of_week,
         subject.time,
-        subject.number_of_credits
+        subject.total
       );
     });
 

@@ -1,7 +1,7 @@
 import { Component } from "../../models/component-base.js";
 import { Star } from "./star.js";
 export class SubjectItem extends Component {
-    constructor({ lesson_name, lesson_name_en, teacher_name, day_of_week, time, number_of_credits, }) {
+    constructor({ lesson_name, lesson_name_en, teacher_name, day_of_week, time, total, }) {
         super("subject-list-item", "subject-list__inner", false, "");
         this.subject = {
             lesson_name,
@@ -9,7 +9,7 @@ export class SubjectItem extends Component {
             lesson_name_en,
             day_of_week,
             time,
-            number_of_credits,
+            total,
         };
         this.configure();
         this.renderContent();
@@ -29,6 +29,6 @@ export class SubjectItem extends Component {
         paragraph[2].textContent = `${this.subject.time}時限目`;
     }
     renderStars() {
-        Array.from({ length: 5 }).forEach((_, i) => new Star(`star-box-${this.subject.lesson_name_en}`, this.subject.number_of_credits - 1 >= i, true, i));
+        Array.from({ length: 5 }).forEach((_, i) => new Star(`star-box-${this.subject.lesson_name_en}`, this.subject.total - 1 >= i, true, i));
     }
 }

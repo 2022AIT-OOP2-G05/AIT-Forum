@@ -10,7 +10,7 @@ export class BackBtn extends Component<HTMLDivElement, HTMLParagraphElement> {
   configure() {
     const link = this.el.querySelector("a")!;
     link.addEventListener("click", () => {
-      history.back();
+      window.location.href = "/";
     });
   }
 
