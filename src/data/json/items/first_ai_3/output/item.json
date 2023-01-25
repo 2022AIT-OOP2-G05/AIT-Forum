@@ -1,21 +1,19 @@
 {
-    "id": "UUID\u3067\u751f\u6210",
-    "lesson_id": 1,
-    "lesson_name": "obj2",
-    "teacher_name": "?",
-    "day_of_week": "\u6728\u66dc\u65e5",
-    "time": "\uff13\u30fb\uff14\u9650",
-    "number_of_credits": 3,
-    "level": 2,
-    "password": "",
-    "hit_level": 0,
-    "teacher_review": 1,
-    "adequacy": 3,
+    "lesson_name": "\u4eba\u5de5\u77e5\u80fd",
+    "teacher_name": "\u4e2d\u6751\u3000\u6804\u6cbb",
+    "day_of_week": "\u6c34",
+    "number_of_credits": "2",
+    "time": "3",
+    "attendance": 20,
+    "hit_level": 20,
+    "carry": 20,
+    "level": 3,
+    "teacher_review": 3,
+    "adequacy": 2,
     "test_level": 3,
     "task_level": 3,
-    "comment": "",
     "middle_test_level": 3,
-    "carry": 100,
-    "total": 1,
-    "attendance": 100
-}
+    "total": 2
+  }
+
+  
