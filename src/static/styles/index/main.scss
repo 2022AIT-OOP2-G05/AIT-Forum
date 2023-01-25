@@ -95,6 +95,7 @@ html {
                         height: calc(100% - $Cmain_content_nav_height);
                         background-color: white;
                         border: 1px solid #4DB3FF;
+                        border-bottom: none;
                         .main-content-section-ul {
                             height: calc(100% - $Cmain_content_section_ul-padding-top);
                             width: calc(100% - ($Cmain_content_section_ul-padding-LR * 2));
