@@ -8,6 +8,6 @@ export class Header extends Component {
     configure() { }
     renderContent() {
         const title = this.el.querySelector("h1");
-        title.textContent = "アプリの名前";
+        title.textContent = "AIT-Forum";
     }
 }
