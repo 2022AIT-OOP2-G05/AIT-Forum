@@ -1,18 +1,17 @@
 {
   "lesson_name": "\u30b3\u30f3\u30d4\u30e5\u30fc\u30bf\u30cd\u30c3\u30c8\u30ef\u30fc\u30af",
-    "teacher_name": "\u6c34\u91ce\u3000\u52dd\u6559",
-    "day_of_week": "\u6c34",
-    "number_of_credits": "2",
-    "time": "4",
-    "attendance": 33,
-    "hit_level": 33,
-    "carry": 66,
-    "level": 3,
-    "teacher_review": 3,
-    "adequacy": 3,
-    "test_level": 3,
-    "task_level": 4,
-    "middle_test_level": 4,
-    "total": 3
-    
+  "teacher_name": "\u6c34\u91ce\u3000\u52dd\u6559",
+  "day_of_week": "\u6c34",
+  "number_of_credits": "2",
+  "time": "4",
+  "attendance": 0,
+  "hit_level": 0,
+  "carry": 0,
+  "level": 0,
+  "teacher_review": 0,
+  "adequacy": 0,
+  "test_level": 0,
+  "task_level": 0,
+  "middle_test_level": 0,
+  "total": 0
 }
