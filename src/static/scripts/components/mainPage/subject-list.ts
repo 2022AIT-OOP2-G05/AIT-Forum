@@ -3,7 +3,7 @@ import { Subject } from "../../models/subject.js";
 import { subjectState } from "../../state/subject-state.js";
 import { SubjectItem } from "./subject-item.js";
 
-export class SubjectList extends Component<HTMLDListElement, HTMLElement> {
+export class SubjectList extends Component<HTMLUListElement, HTMLLIElement> {
   assignedSubjects: Subject[] = [];
 
   constructor() {
