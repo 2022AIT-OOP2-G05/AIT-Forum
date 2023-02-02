@@ -41,7 +41,7 @@ export class SubjectItem extends Component<HTMLUListElement, HTMLLIElement> {
     paragraph[2].textContent = `${this.subject.time}時限目`;
   }
 
-  renderStars() {
+  private renderStars() {
     Array.from({ length: 5 }).forEach(
       (_, i) =>
         new Star(

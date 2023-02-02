@@ -20,7 +20,7 @@ export class EvolutionList extends Component<HTMLDivElement, HTMLElement> {
     this.renderList();
   }
 
-  detailProcessing() {
+  private detailProcessing() {
     const {
       lesson_name,
       teacher_name,
