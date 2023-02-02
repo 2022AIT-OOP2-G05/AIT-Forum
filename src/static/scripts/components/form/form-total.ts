@@ -40,7 +40,7 @@ export class Total extends Component<HTMLDivElement, HTMLElement> {
     this.el.querySelector("span")!.textContent = "総合評価";
   }
 
-  renderStar() {
+  private renderStar() {
     Array.from({ length: 5 }).forEach((_, i) => {
       new Star(
         "total-box",

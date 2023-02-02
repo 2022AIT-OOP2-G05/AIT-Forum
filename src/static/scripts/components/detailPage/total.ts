@@ -21,7 +21,7 @@ export class Total extends Component<HTMLDivElement, HTMLElement> {
     });
   }
 
-  clearStar() {
+  private clearStar() {
     const star_box = document.getElementById("star-box")!;
     while (star_box.firstChild) {
       star_box.removeChild(star_box.firstChild);
@@ -32,7 +32,7 @@ export class Total extends Component<HTMLDivElement, HTMLElement> {
     this.el.querySelector("span")!.textContent = "総合評価";
   }
 
-  renderStart() {
+  private renderStart() {
     Array.from({ length: 5 }).forEach((_, i) => {
       new Star("star-box", this.detail.total - 1 >= i, true, i);
     });

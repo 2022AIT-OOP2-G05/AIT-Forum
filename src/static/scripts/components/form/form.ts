@@ -101,7 +101,7 @@ export class Form extends Component<HTMLDialogElement, HTMLFormElement> {
     }
   }
 
-  clearChild() {
+  private clearChild() {
     while (this.el.firstChild) {
       this.el.removeChild(this.el.firstChild);
     }

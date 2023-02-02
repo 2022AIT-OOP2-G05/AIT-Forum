@@ -42,7 +42,7 @@ export class FormInputList extends Component<HTMLDivElement, HTMLDivElement> {
     this.el.querySelector("p")!.textContent = changeToJapanese(this.input_key);
   }
 
-  renderStar() {
+  private renderStar() {
     Array.from({ length: 5 }).forEach((_, i) => {
       new Star(
         `input-${this.parent_id}`,
@@ -55,7 +55,7 @@ export class FormInputList extends Component<HTMLDivElement, HTMLDivElement> {
     });
   }
 
-  renderSelectBtn() {
+  private renderSelectBtn() {
     new SelectBtn(`input-${this.parent_id}`, this.input_key);
   }
 }
